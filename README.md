@@ -1,88 +1,70 @@
-# Polymer App Toolbox - Starter Kit
+# Udacity - Senior Web Developer Nanodegree - By Google - Project 1
+This repository contains all my own programming project files, notes, and associated files for the [Udacity -Senior Web Developer Nanodegree - By Google - Project 1](https://www.udacity.com/course/object-oriented-javascript--ud015) course with [Udacity](https://www.udacity.com/). 
 
-[![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
+None of the provided course example files, or content are provided in this repository. To get access to these files, please sign up to the course via the above link.
 
-This template is a starting point for building apps using a drawer-based
-layout. The layout is provided by `app-layout` elements.
+All rights for the original files used and provided with this course go to 
+[Udacity](https://www.udacity.com/).  
+## Installation
 
-This template, along with the `polymer-cli` toolchain, also demonstrates use
-of the "PRPL pattern" This pattern allows fast first delivery and interaction with
-the content at the initial route requested by the user, along with fast subsequent
-navigation by pre-caching the remaining components required by the app and
-progressively loading them on-demand as the user navigates through the app.
+To install and run this locally on your computer, please use these commands:
 
-The PRPL pattern, in a nutshell:
+Install Global Dependencies:
+```
+$ npm install -g bower
+```
 
-* **Push** components required for the initial route
-* **Render** initial route ASAP
-* **Pre-cache** components for remaining routes
-* **Lazy-load** and progressively upgrade next routes on-demand
+### Use these commands once you are in your main project directory:
 
-### Migrating from Polymer Starter Kit v1?
-
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
-
-### Setup
-
-##### Prerequisites
-
-Install [polymer-cli](https://github.com/Polymer/polymer-cli):
-
-    npm install -g polymer-cli
-
-##### Initialize project from template
-
-    mkdir my-app
-    cd my-app
-    polymer init starter-kit
-
-### Start the development server
-
-This command serves the app at `http://localhost:8080` and provides basic URL
-routing for the app:
-
-    polymer serve --open
+Clone the repository from: 
+```
+$ git clone https://github.com/escobard/udacity-srwebdev-project2-public-transportation-app.git
+```
 
 
-### Build
+Install NPM:
+```
+$ npm install
+```
 
-This command performs HTML, CSS, and JS minification on the application
-dependencies, and generates a service-worker.js file with code to pre-cache the
-dependencies based on the entrypoint and fragments specified in `polymer.json`.
-The minified files are output to the `build/unbundled` folder, and are suitable
-for serving from a HTTP/2+Push compatible server.
+Install bower components:
+```
+$ bower install
+```
 
-In addition the command also creates a fallback `build/bundled` folder,
-generated using fragment bundling, suitable for serving from non
-H2/push-compatible servers or to clients that do not support H2/Push.
 
-    polymer build
+## Usage
 
-### Preview the build
+The application demo can be viewed here :[https://event-planner-e6ee3.firebaseapp.com] (https://event-planner-e6ee3.firebaseapp.com/)
 
-This command serves the minified version of the app at `http://localhost:8080`
-in an unbundled state, as it would be served by a push-compatible server:
+There will be no public access to the firebase database, but to run this application locally use the following commands:
 
-    polymer serve build/unbundled
 
-This command serves the minified version of the app at `http://localhost:8080`
-generated using fragment bundling:
+```
+$ gulp serve
+```
 
-    polymer serve build/bundled
+To publish, minimize, and compile components for production use:
 
-### Run tests
+```
+$ gulp public
+```
 
-This command will run
-[Web Component Tester](https://github.com/Polymer/web-component-tester) against the
-browsers currently installed on your machine.
+## Libraries & Frameworks
 
-    polymer test
+[Polymer](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
 
-### Adding a new view
+[Firebase](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
 
-You can extend the app by adding more views that will be demand-loaded
-e.g. based on the route, or to progressively render non-critical sections
-of the application.  Each new demand-loaded fragment should be added to the
-list of `fragments` in the included `polymer.json` file.  This will ensure
-those components and their dependencies are added to the list of pre-cached
-components (and will have bundles created in the fallback `bundled` build).
+[Google Labs Note App Tutorial](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
+
+Extended scripts and references used in the :
+ -[Building High Conversion Web Tools - By Google](https://www.udacity.com/course/building-high-conversion-web-forms--ud890) 
+ -[Web Tooling & Automation - By Google](https://www.udacity.com/course/web-tooling-automation--ud892)
+
+Various stack overflow posts, and other internet tutorials referenced in my commits. 
+
+## Contribution
+Feel free to contribute to any and all of the files within this repository as you see fit. These files are mainly for personal use, but my goal is to help others better understand JavaScript Object Oriented programming with my software and helpful commentary.
+## License
+As of October 31st, 2016, these files are open for all to use and contribute to. This repository is protected under the [MIT License](http://choosealicense.com/licenses/mit/).
