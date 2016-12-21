@@ -21,7 +21,6 @@ Clone the repository from:
 $ git clone https://github.com/escobard/udacity-srwebdev-project2-public-transportation-app.git
 ```
 
-
 Install NPM:
 ```
 $ npm install
@@ -35,9 +34,7 @@ $ bower install
 
 ## Usage
 
-The application demo can be viewed here :[https://event-planner-e6ee3.firebaseapp.com] (https://event-planner-e6ee3.firebaseapp.com/)
-
-There will be no public access to the firebase database, but to run this application locally use the following commands:
+To run this application locally use the following commands:
 
 
 ```
@@ -54,15 +51,7 @@ $ gulp public
 
 [Polymer](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
 
-[Firebase](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
 
-[Google Labs Note App Tutorial](https://codelabs.developers.google.com/codelabs/polymer-firebase-pwa/index.html?index=..%2F..%2Findex#0)
-
-Extended scripts and references used in the :
- -[Building High Conversion Web Tools - By Google](https://www.udacity.com/course/building-high-conversion-web-forms--ud890) 
- -[Web Tooling & Automation - By Google](https://www.udacity.com/course/web-tooling-automation--ud892)
-
-Various stack overflow posts, and other internet tutorials referenced in my commits. 
 
 ## Contribution
 Feel free to contribute to any and all of the files within this repository as you see fit. These files are mainly for personal use, but my goal is to help others better understand JavaScript Object Oriented programming with my software and helpful commentary.

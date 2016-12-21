@@ -1,0 +1,45 @@
+{
+  "name": "public-transportation-app",
+  "version": "1.0.0",
+  "description": "Public Transportation Application built as Project 2 of the udacity Senior Web Development Nanodegree program with Google",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "polymer-build": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escobard/udacity-srwebdev-project2-public-transportation-app.git"
+  },
+  "keywords": [
+    "public",
+    "transportation",
+    "app",
+    "for",
+    "project",
+    "2",
+    "of",
+    "the",
+    "udacity",
+    "senior",
+    "web",
+    "development",
+    "nanodegree",
+    "program",
+    "with",
+    "google"
+  ],
+  "author": "Daniel Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escobard/udacity-srwebdev-project2-public-transportation-app/issues"
+  },
+  "homepage": "https://github.com/escobard/udacity-srwebdev-project2-public-transportation-app#readme"
+}
