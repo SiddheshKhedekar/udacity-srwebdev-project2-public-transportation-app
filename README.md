@@ -1,5 +1,5 @@
-# Udacity - Senior Web Developer Nanodegree - By Google - Project 1
-This repository contains all my own programming project files, notes, and associated files for the [Udacity -Senior Web Developer Nanodegree - By Google - Project 1](https://www.udacity.com/course/object-oriented-javascript--ud015) course with [Udacity](https://www.udacity.com/). 
+# Udacity - Senior Web Developer Nanodegree - By Google - Project 12
+This repository contains all my own programming project files, notes, and associated files for the [Udacity -Senior Web Developer Nanodegree - By Google - Project 2](https://www.udacity.com/course/object-oriented-javascript--ud015) course with [Udacity](https://www.udacity.com/). 
 
 None of the provided course example files, or content are provided in this repository. To get access to these files, please sign up to the course via the above link.
 
