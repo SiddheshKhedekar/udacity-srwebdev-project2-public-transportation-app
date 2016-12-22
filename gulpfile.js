@@ -17,7 +17,7 @@ var vulcanize = require('gulp-vulcanize');
 gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 	gulp.watch('components/sass/**/*.scss', ['styles']);
 	gulp.watch('components/js/**/*.js', ['lint']);
-	gulp.watch('index.html').on('change', browserSync.reload);
+	gulp.watch('*.html').on('change', browserSync.reload);
 	gulp.watch('components/sass/*.scss').on('change', browserSync.reload);
 	gulp.watch('components/*.html').on('change', browserSync.reload);
 	gulp.watch('components/js/*.js').on('change', browserSync.reload);
@@ -124,6 +124,6 @@ gulp.task('lint', function () {
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
-     server: "./"
+     server: "./*"
  });
  browserSync.stream();
