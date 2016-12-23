@@ -61,7 +61,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         font-weight: bold;
       }
-
+      h2#mainTitle {
+          text-align: right;
+          width: 100%;
+          margin-right: 20px;
+      }
+      paper-icon-button#menu {
+          height: 60px;
+          width: 60px;
+      }
     </style>
   
     <app-location route="{{route}}"></app-location>
@@ -86,8 +94,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
-            <paper-icon-button icon="menu" onclick="drawerState()"></paper-icon-button>
-            <div main-title>Public Transportation App - v0.02</div>
+            <paper-icon-button id="menu" icon="menu" onclick="drawerState()"></paper-icon-button>
+            <h2 id="mainTitle">Public Transportation App - v0.02</h2>
           </app-toolbar>
         </app-header>
 
