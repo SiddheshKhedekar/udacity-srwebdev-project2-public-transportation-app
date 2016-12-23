@@ -17,9 +17,9 @@
 
 	======================================*/
 
-		 function appModel(controller){
+		 appModel = {
 
-		 	this._drawerState = false;
+		 	drawerState : false,
 
 		};
 
@@ -39,7 +39,7 @@
 		};
 		
 
-		openDrawer = new appController()._openDrawer(appView.menuButton,appView.drawer );
+		openDrawer = new appController()._openDrawer();
 	/* ===================================
 
 		Controller
@@ -47,12 +47,14 @@
 	======================================*/
 
 		function appController(){
-
+			var view = appView;
+			var model = appModel;	
 			// handles the event to open the application menu
-			this._openDrawer = function (menuButton, drawer){
+			this._openDrawer = function (){
+				var modelState = model.drawerState;
 				// handles the actual event to open the menu 
-				menuButton.addEventListener('tap', function(drawerState){
-				   drawerState = model._drawerState;
+				menuButton.addEventListener('tap', function(){
+				   drawerState = modelState;
 				   drawerOpened = new _stateChange(drawerState);
 				   if (drawerState === true) {
 				   		drawer.open();
