@@ -104,9 +104,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
 
-        <app-header condenses reveals effects="waterfall">
+        <app-header id="header" condenses reveals effects="waterfall">
           <app-toolbar>
-            <paper-icon-button id="menuButton" icon="menu" on-tap="_testVar"></paper-icon-button>
+            <paper-icon-button id="menuButton" icon="menu" on-tap="_openMenu"></paper-icon-button>
             <paper-dropdown-menu id="appStateMenu" label="Application State">
               <paper-listbox class="dropdown-content">
                 <paper-item>Perfect</paper-item>
@@ -140,7 +140,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           type: String,
           reflectToAttribute: true,
           observer: '_pageChanged'
-        }
+        },
       },
       observers: [
         '_routePageChanged(routeData.page)'
@@ -156,10 +156,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _showPage404: function() {
         this.page = 'view404';
       },
-      _testVar: function (){
-        drawer = this.$.drawer;
-        message = this.$.menuButton;
+      _view: function (){
+        this.drawer = this.$.drawer;
+        this.message = this.$.menuButton;
+        this.header = this.$.header;
+      },
+      _openMenu: function (){
+        var drawer = this.$.drawer;
+        var message = this.$.menuButton;
+        var header = this.$.header;
         drawer.toggle();
+        if (drawer.opened) {  
+          console.log('opened!');
+        }
+        else {
+          console.log('closed!');
+        }
       }
     });
   </script>
