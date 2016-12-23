@@ -19,10 +19,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-input/iron-input.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="my-icons.html">
 <dom-module id="my-app">
   <template>
@@ -73,8 +75,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           height: 60px;
           width: 60px;
       }
-      paper-tab {
-    color: #000;
+      paper-dropdown-menu {
+        --paper-dropdown-menu-input: #fff;
+        margin: 0px 20px 0px 20px;
+        padding-left: 25px;
+      }
+      iron-input {
+    color: #fff;
 }
     </style>
   
@@ -101,8 +108,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button id="menu" icon="menu" onclick="drawerState()"></paper-icon-button>
-            <paper-dropdown-menu label="Application State">
-              <paper-listbox class="dropdown-content" selected="1">
+            <paper-dropdown-menu id="appStateMenu" label="Application State">
+              <paper-listbox class="dropdown-content">
                 <paper-item>Perfect</paper-item>
                 <paper-item>Slow</paper-item>
                 <paper-item>Offline</paper-item>

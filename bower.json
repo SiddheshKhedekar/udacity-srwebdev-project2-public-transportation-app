@@ -19,7 +19,8 @@
     "polymer-themes": "^1.0.1",
     "paper-dropdown-menu": "polymerelements/paper-dropdown-menu#^1.4.3",
     "paper-listbox": "polymerelements/paper-listbox#^1.1.2",
-    "paper-item": "polymerelements/paper-item#^1.2.1"
+    "paper-item": "polymerelements/paper-item#^1.2.1",
+    "paper-input": "polymerelements/paper-input#^1.1.22"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
