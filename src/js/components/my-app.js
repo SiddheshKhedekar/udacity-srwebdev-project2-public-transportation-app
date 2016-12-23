@@ -9,8 +9,6 @@
 // import {main} from '../app.js';
 // extend these as new objects from the main MVC in app.js in the future for commonly used functions
 
-	var menuButton = document.querySelector('#menuButton');
-
 	/* ===================================
 
 		Model
@@ -37,7 +35,6 @@
 
 		};
 
-
 		openDrawer = new appController()._openDrawer(appView.menuButton);
 	/* ===================================
 
@@ -48,7 +45,8 @@
 		function appController(){
 			var view = appView;
 			var model = appModel;
-			var controller = this;	
+			var controller = this;
+				
 			// handles the event to open the application menu
 			this._openDrawer = function (button){
 
