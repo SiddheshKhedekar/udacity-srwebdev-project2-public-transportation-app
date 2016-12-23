@@ -72,7 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 100%;
           margin-right: 20px;
       }
-      #menu {
+      #menuButton {
           height: 60px;
           width: 60px;
       }
@@ -83,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --paper-listbox-color: #fff;
       }
     </style>
-  
+    <div id="test"></div>
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -93,7 +93,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
-      <app-drawer id="drawer" swipe-open opened>
+      <app-drawer id="drawer" swipe-open>
         <app-toolbar>View Schedules</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="view1" href="/view1">Bus</a>
@@ -106,7 +106,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
-            <paper-icon-button id="menu" icon="menu" onclick="drawerState()"></paper-icon-button>
+            <paper-icon-button id="menuButton" icon="menu" on-tap="_testVar"></paper-icon-button>
             <paper-dropdown-menu id="appStateMenu" label="Application State">
               <paper-listbox class="dropdown-content">
                 <paper-item>Perfect</paper-item>
@@ -116,6 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </paper-dropdown-menu>
             <h2 id="mainTitle">Public Transportation App - v0.02</h2>
           </app-toolbar>
+
         </app-header>
 
         <iron-pages
@@ -129,9 +130,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>
-    <script src="js/components/my-app.js"></script>
-  </template>
 
+  </template>
   <script>
     Polymer({
       is: 'my-app',
@@ -155,6 +155,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _showPage404: function() {
         this.page = 'view404';
+      },
+      _testVar: function (){
+        drawer = this.$.drawer;
+        message = this.$.menuButton;
+        drawer.toggle();
       }
     });
   </script>

@@ -9,6 +9,8 @@
 // import {main} from '../app.js';
 // extend these as new objects from the main MVC in app.js in the future for commonly used functions
 
+	var menuButton = document.querySelector('#menuButton');
+
 	/* ===================================
 
 		Model
@@ -27,46 +29,39 @@
 
 	======================================*/
 
-		function appView(controller){
+		appView = {
 
 			// calls other MVC inits
-			this._controller = appController;
-			this._elements = {
-				drawer : document.querySelector('#drawer'),
-				menuButton: document.querySelector('#menuButton')
-			};
+			drawer : document.querySelector('#drawer'),
+			menuButton : document.querySelector('#menuButton')
 
 
 		};
+		
 
+		openDrawer = new appController()._openDrawer(appView.menuButton,appView.drawer );
 	/* ===================================
 
 		Controller
 
 	======================================*/
 
-		function appController(view, model){
-
-			// calls other MVC inits
-			this.view = appView;
-			this.model = appModel;
+		function appController(){
 
 			// handles the event to open the application menu
-			this._openDrawer = function (){
-
-				// handles the selectors to open drawer
-				var menuButton = view._elements.menuButton;
-				var drawer = view._elements.drawer;
-
+			this._openDrawer = function (menuButton, drawer){
 				// handles the actual event to open the menu 
-				menuButton.addEventListener('tap', function(){
+				menuButton.addEventListener('tap', function(drawerState){
 				   drawerState = model._drawerState;
 				   drawerOpened = new _stateChange(drawerState);
 				   if (drawerState === true) {
 				   		drawer.open();
+				   		console.log('opened!');
 				   }
+
 				   else {
 				   		drawer.close();
+				   		console.log('closed!');
 				   }
 				}); 
 			};
@@ -76,5 +71,3 @@
 				 modelElement = true;
 			};
 		};
-
-export default my-app;
