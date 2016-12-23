@@ -16,11 +16,11 @@ var vulcanize = require('gulp-vulcanize');
 // defines gulp tasks on default command
 gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 	gulp.watch('components/sass/**/*.scss', ['styles']);
-	gulp.watch('components/js/**/*.js', ['lint']);
+	gulp.watch('src/js/**/*.js', ['lint']);
 	gulp.watch('*.html').on('change', browserSync.reload);
 	gulp.watch('components/sass/*.scss').on('change', browserSync.reload);
-	gulp.watch('components/*.html').on('change', browserSync.reload);
-	gulp.watch('components/js/*.js').on('change', browserSync.reload);
+	gulp.watch('src/*.html').on('change', browserSync.reload);
+	gulp.watch('src/js/*.js').on('change', browserSync.reload);
 });
 
 //publishes content, calls tasks that copy content over

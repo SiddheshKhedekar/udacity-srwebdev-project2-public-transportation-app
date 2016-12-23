@@ -60,9 +60,13 @@
 
 				// handles the actual event to open the menu 
 				menuButton.addEventListener('tap', function(){
-				   drawerOpened = new _stateChange(model._drawerState);
-				   if (drawerOpened === true) {
-				   		drawer.toggle();
+				   drawerState = model._drawerState;
+				   drawerOpened = new _stateChange(drawerState);
+				   if (drawerState === true) {
+				   		drawer.open();
+				   }
+				   else {
+				   		drawer.close();
 				   }
 				}); 
 			};
