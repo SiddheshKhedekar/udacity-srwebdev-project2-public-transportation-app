@@ -4,13 +4,18 @@
 
 ======================================*/
 
+// for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript
+
+
 	/* ===================================
 
 		Model
 
 	======================================*/
 
-		Model = {};
+		 function Model(controller){
+
+		};
 
 	/* ===================================
 
@@ -18,7 +23,9 @@
 
 	======================================*/
 
-		View = {};
+		function View(model, controller, elements){
+
+		};
 
 	/* ===================================
 
@@ -26,4 +33,8 @@
 
 	======================================*/
 
-		Controller = function(){};
+		function Controller(view, model){
+
+		};
+
+export default main;
