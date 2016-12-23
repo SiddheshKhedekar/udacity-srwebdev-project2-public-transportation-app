@@ -66,10 +66,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 100%;
           margin-right: 20px;
       }
-      paper-icon-button#menu {
+      #menu {
           height: 60px;
           width: 60px;
       }
+        paper-dropdown-menu.custom {
+    --paper-input-container-label: {
+      color: var(--paper-pink-500);
+      font-style: italic;
+      text-align: center;
+      font-weight: bold;
+    };
+    --paper-input-container-input: {
+      color: var(--paper-indigo-500);
+      font-style: normal;
+      font-family: serif;
+      text-transform: uppercase;
+    }
+    /* no underline */
+    --paper-input-container-underline: {
+      display: none;
+    };
+  }
     </style>
   
     <app-location route="{{route}}"></app-location>
@@ -95,6 +113,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button id="menu" icon="menu" onclick="drawerState()"></paper-icon-button>
+            <paper-dropdown-menu class="custom" label="Custom" no-label-float>
+              <paper-listbox class="dropdown-content">
+                <paper-item>allosaurus</paper-item>
+                <paper-item>brontosaurus</paper-item>
+                <paper-item>carcharodontosaurus</paper-item>
+                <paper-item>diplodocus</paper-item>
+              </paper-listbox>
+            </paper-dropdown-menu>
             <h2 id="mainTitle">Public Transportation App - v0.02</h2>
           </app-toolbar>
         </app-header>
