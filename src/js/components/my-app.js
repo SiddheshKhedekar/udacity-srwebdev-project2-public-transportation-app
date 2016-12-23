@@ -35,11 +35,10 @@
 			drawer : document.querySelector('#drawer'),
 			menuButton : document.querySelector('#menuButton')
 
-
 		};
-		
 
-		openDrawer = new appController()._openDrawer();
+
+		openDrawer = new appController()._openDrawer(appView.menuButton);
 	/* ===================================
 
 		Controller
@@ -48,15 +47,19 @@
 
 		function appController(){
 			var view = appView;
-			var model = appModel;	
+			var model = appModel;
+			var controller = this;	
 			// handles the event to open the application menu
-			this._openDrawer = function (){
-				var modelState = model.drawerState;
+			this._openDrawer = function (button){
+
 				// handles the actual event to open the menu 
-				menuButton.addEventListener('tap', function(){
-				   drawerState = modelState;
-				   drawerOpened = new _stateChange(drawerState);
-				   if (drawerState === true) {
+				button.addEventListener('tap', function(){
+
+					/* attempt to update model not working too well, scrapping until later date
+				   var modelState = model.drawerState;
+				   drawerOpened = new controller._stateChange(modelState);
+
+				   if (modelState == true) {
 				   		drawer.open();
 				   		console.log('opened!');
 				   }
@@ -64,12 +67,14 @@
 				   else {
 				   		drawer.close();
 				   		console.log('closed!');
-				   }
+				   }*/
+
+				   drawer.toggle();
 				}); 
 			};
 
 			// handles the event to set model states
 			this._stateChange = function (modelElement){
 				 modelElement = true;
-			};
+			}; 
 		};
