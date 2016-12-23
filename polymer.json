@@ -2,14 +2,14 @@
   "entrypoint": "index.html",
   "shell": "components/my-app.html",
   "fragments": [
-    "components/my-view1.html",
+    "components/bus-info.html",
     "components/my-view2.html",
     "components/my-view3.html",
     "components/my-view404.html"
   ],
   "sourceGlobs": [
-   "src/**/*",
-   "images/**/*",
+   "components/**/*",
+   "components/images/**/*",
    "bower.json"
   ],
   "includeDependencies": [
