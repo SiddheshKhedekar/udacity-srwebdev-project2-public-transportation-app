@@ -1,8 +1,10 @@
 ** Changelog for Event Planning Application
 
 v0.2
-- prototype for UI changes to polymer starter kit
-- prototype for refactoring polymer starter kit for this project
+- changed UI to fit project direction
+- added base MVC model for app.js and my-app.js
+- added polymer UI components to app, and bower.json
+- styled some UI elements to better fit project direction
 
 V0.1
 - base version created.
