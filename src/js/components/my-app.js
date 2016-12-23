@@ -6,7 +6,7 @@
 
 // for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript 
 
-import {main} from '../app.js';
+// import {main} from '../app.js';
 
 
 	/* ===================================
@@ -15,7 +15,9 @@ import {main} from '../app.js';
 
 	======================================*/
 
-		 function AppModel(controller){
+		 function appModel(controller){
+
+		 	this._drawerState = false;
 
 		};
 
@@ -25,13 +27,15 @@ import {main} from '../app.js';
 
 	======================================*/
 
-		function AppView(model, controller){
+		function appView(model, controller){
 
 			// calls other MVC inits
-			this._controller = AppController;
+			this._controller = appController;
 			this._elements = {
+				drawer : document.querySelector('#drawer'),
+				menuButton: document.querySelector('#menuButton')
+			};
 
-			}
 
 		};
 
@@ -41,13 +45,21 @@ import {main} from '../app.js';
 
 	======================================*/
 
-		function AppController(view, model){
+		function appController(view, model){
 
 			// calls other MVC inits
-			this._view = AppView;
+			this.view = appView;
+			this.model = appModel;
 
-			this._OpenDrawer = function (drawer){
+			this._openDrawer = function (){
+				menuButton = _view._elements.menuButton;
+				menuButton.addEventListener('tap', function(){
+				   drawerOpened =  new _stateChange(model._drawerState)
+				}); 
+			};
 
+			this._stateChange = function (modelElement){
+				 modelElement = true;
 			};
 		};
 
