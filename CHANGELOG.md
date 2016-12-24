@@ -4,7 +4,7 @@ v0.3
 - added basic JS functionality for menu, and disabled shadow-dom
 - revised and fixed MVC JS structure
 - added CSS fixes to page layout, open menu, and menu inputs
-- further refacrpred the polymer starter kit
+- further refactored the polymer starter kit
 
 v0.2
 - changed UI to fit project direction
