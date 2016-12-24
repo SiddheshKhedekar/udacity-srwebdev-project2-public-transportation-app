@@ -1,11 +1,10 @@
 ** Changelog for Event Planning Application
 
 v0.3
-- prototype to add basic JS functionality, for:
-    - offline / slow / perfect connection settings
-    - menu opening / closing
-- prototype to add more CSS fixes
-- prototype to further refactor polymer start-kit
+- added basic JS functionality for menu, and disabled shadow-dom
+- revised and fixed MVC JS structure
+- added CSS fixes to page layout, open menu, and menu inputs
+- further refacrpred the polymer starter kit
 
 v0.2
 - changed UI to fit project direction
