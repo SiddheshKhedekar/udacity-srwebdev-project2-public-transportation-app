@@ -15,9 +15,9 @@
 
 	======================================*/
 
-		 function appModel(controller){
+		 appModel = {
 
-		 	this._drawerState = false;
+		 	drawerState : false,
 
 		};
 
@@ -27,54 +27,52 @@
 
 	======================================*/
 
-		function appView(controller){
+		appView = {
 
 			// calls other MVC inits
-			this._controller = appController;
-			this._elements = {
-				drawer : document.querySelector('#drawer'),
-				menuButton: document.querySelector('#menuButton')
-			};
-
+			drawer : document.querySelector('#drawer'),
+			menuButton : document.querySelector('#menuButton')
 
 		};
 
+		openDrawer = new appController()._openDrawer(appView.menuButton);
 	/* ===================================
 
 		Controller
 
 	======================================*/
 
-		function appController(view, model){
-
-			// calls other MVC inits
-			this.view = appView;
-			this.model = appModel;
-
+		function appController(){
+			var view = appView;
+			var model = appModel;
+			var controller = this;
+				
 			// handles the event to open the application menu
-			this._openDrawer = function (){
-
-				// handles the selectors to open drawer
-				var menuButton = view._elements.menuButton;
-				var drawer = view._elements.drawer;
+			this._openDrawer = function (button){
 
 				// handles the actual event to open the menu 
-				menuButton.addEventListener('tap', function(){
-				   drawerState = model._drawerState;
-				   drawerOpened = new _stateChange(drawerState);
-				   if (drawerState === true) {
+				button.addEventListener('tap', function(){
+
+					/* attempt to update model not working too well, scrapping until later date
+				   var modelState = model.drawerState;
+				   drawerOpened = new controller._stateChange(modelState);
+
+				   if (modelState == true) {
 				   		drawer.open();
+				   		console.log('opened!');
 				   }
+
 				   else {
 				   		drawer.close();
-				   }
+				   		console.log('closed!');
+				   }*/
+
+				   drawer.toggle();
 				}); 
 			};
 
 			// handles the event to set model states
 			this._stateChange = function (modelElement){
 				 modelElement = true;
-			};
+			}; 
 		};
-
-export default my-app;

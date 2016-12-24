@@ -72,18 +72,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 100%;
           margin-right: 20px;
       }
-      #menu {
+      #menuButton {
           height: 60px;
           width: 60px;
       }
       #appStateMenu {
-        --paper-dropdown-menu-input: #fff;
         margin: 0px 20px 0px 20px;
         padding-left: 25px;
-        --paper-listbox-color: #fff;
       }
+      paper-dropdown-menu {
+    --paper-input-container-label: {
+      color: #fff;
+      text-align: left;
+      font-weight: bold;
+    };
+    --paper-input-container-input: {
+      color: #fff;
+      font-style: normal;
+    }
+    /* no underline */
+    --paper-input-container-underline: {
+      display: none;
+    };
+    --paper-dropdown-menu-input: {
+      color:#fff;
+      margin-bottom: 10px;
+    };
+    --paper-listbox: {
+      width:100%;
+    };
+  }
     </style>
-  
+    <div id="test"></div>
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -93,31 +113,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
-      <app-drawer id="drawer" swipe-open opened>
+     
+
+      <!-- Main content -->
+
+      <app-header-layout has-scrolling-region>
+        <app-drawer id="drawer" swipe-open>
         <app-toolbar>View Schedules</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="view1" href="/view1">Bus</a>
           <a name="view2" href="/view2">Train Info</a>
         </iron-selector>
       </app-drawer>
-
-      <!-- Main content -->
-      <app-header-layout has-scrolling-region>
-
-        <app-header condenses reveals effects="waterfall">
+        <app-header id="header" condenses reveals effects="waterfall">
           <app-toolbar>
-            <paper-icon-button id="menu" icon="menu" onclick="drawerState()"></paper-icon-button>
-            <paper-dropdown-menu id="appStateMenu" label="Application State">
+            <paper-icon-button id="menuButton" icon="menu"></paper-icon-button>
+            <paper-dropdown-menu id="appStateMenu" label="Connection State" >
               <paper-listbox class="dropdown-content">
                 <paper-item>Perfect</paper-item>
                 <paper-item>Slow</paper-item>
                 <paper-item>Offline</paper-item>
               </paper-listbox>
             </paper-dropdown-menu>
-            <h2 id="mainTitle">Public Transportation App - v0.02</h2>
+            <h2 id="mainTitle">Public Transportation App - v0.03</h2>
           </app-toolbar>
         </app-header>
-
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"
@@ -129,9 +149,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>
-    <script src="js/components/my-app.js"></script>
+ <script src="js/components/my-app.js"></script>
   </template>
-
   <script>
     Polymer({
       is: 'my-app',
@@ -140,7 +159,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           type: String,
           reflectToAttribute: true,
           observer: '_pageChanged'
-        }
+        },
       },
       observers: [
         '_routePageChanged(routeData.page)'
@@ -155,7 +174,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _showPage404: function() {
         this.page = 'view404';
-      }
+      },
+ /*     _view: function (){
+        this.drawer = this.$.drawer;
+        this.message = this.$.menuButton;
+        this.header = this.$.header;
+      },
+      _openMenu: function (){
+        var drawer = this.$.drawer;
+        var message = this.$.menuButton;
+        var header = this.$.header;
+        drawer.toggle();
+        if (drawer.opened) {  
+          console.log('opened!');
+        }
+        else {
+          console.log('closed!');
+        }
+      } */
     });
   </script>
 </dom-module>

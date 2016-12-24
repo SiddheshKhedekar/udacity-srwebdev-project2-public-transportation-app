@@ -21,6 +21,7 @@ gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 	gulp.watch('components/sass/*.scss').on('change', browserSync.reload);
 	gulp.watch('src/*.html').on('change', browserSync.reload);
 	gulp.watch('src/js/*.js').on('change', browserSync.reload);
+	gulp.watch('src/js/components/my-app.js').on('change', browserSync.reload);
 });
 
 //publishes content, calls tasks that copy content over
