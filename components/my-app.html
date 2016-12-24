@@ -77,11 +77,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 60px;
       }
       #appStateMenu {
-        --paper-dropdown-menu-input: #fff;
         margin: 0px 20px 0px 20px;
         padding-left: 25px;
-        --paper-listbox-color: #fff;
       }
+      paper-dropdown-menu {
+    --paper-input-container-label: {
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    };
+    /* no underline */
+    --paper-input-container-underline: {
+      display: none;
+    };
+    --paper-dropdown-menu-input: {
+      margin-bottom: 10px;
+    };
+  }
     </style>
     <div id="test"></div>
     <app-location route="{{route}}"></app-location>

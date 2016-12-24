@@ -4,7 +4,6 @@
   "fragments": [
     "components/bus-info.html",
     "components/my-view2.html",
-    "components/my-view3.html",
     "components/my-view404.html"
   ],
   "sourceGlobs": [
