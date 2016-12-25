@@ -67,6 +67,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 40px;
       }
 
+
       .drawer-list a.iron-selected {
         color: black;
 
@@ -85,7 +86,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 0px 20px 0px 20px;
         padding-left: 25px;
       }
-      paper-dropdown-menu {
+      h3.app-titles {
+      padding: 0px 15px;
+      margin: 15px 0;
+      }
+      iron-selector {
+        margin: 0px !important;
+      }
+    paper-dropdown-menu {
     --paper-input-container-label: {
       color: #fff;
       text-align: left;
@@ -106,7 +114,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     --paper-listbox: {
       width:100%;
     };
-  }
+  } 
+}
     </style>
     <div id="test"></div>
     <app-location route="{{route}}"></app-location>
@@ -131,10 +140,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Menu content -->
 
-        <app-toolbar>View Schedules</app-toolbar>
+        <app-toolbar></app-toolbar>
 
         <!-- Content Options -->
-
+        
+        <h3 class="app-titles">View Schedules</h3>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
 
           <a name="view1" href="/view1">Bus</a>
