@@ -35,6 +35,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
 
     <style>
+
+      /* App Styles */
+
       :host {
         --app-primary-color: #4285f4;
         --app-secondary-color: black;
@@ -50,6 +53,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
       }
+    
+
+    /* Polymer Native Styles */
+
+      iron-selector {
+        margin: 0px !important;
+      }
+      paper-item {
+          cursor: pointer;
+      }
+      iron-pages {
+          padding: 0 10%;
+          display: block;
+          margin: auto;
+      }
+      paper-dropdown-menu {
+      --paper-input-container-label: {
+        color: #fff;
+        text-align: left;
+        font-weight: bold;
+      };
+        --paper-input-container-input: {
+          color: #fff;
+          font-style: normal;
+        }
+        /* no underline */
+        --paper-input-container-underline: {
+          display: none;
+        };
+        --paper-dropdown-menu-input: {
+          color:#fff;
+          margin-bottom: 10px;
+        };
+        --paper-listbox: {
+          width:100%;
+        };
+      }
+
+    /* Custom Styles */
 
       .drawer-list {
         margin: 0 20px;
@@ -57,67 +99,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .drawer-list a {
         display: block;
-
         padding: 0 16px;
-
         text-decoration: none;
-
         color: var(--app-secondary-color);
-
         line-height: 40px;
       }
 
-
       .drawer-list a.iron-selected {
         color: black;
-
         font-weight: bold;
       }
+
       h2#mainTitle {
           text-align: center;
           width: 100%;
           margin-right: 0px;
       }
+
       #menuButton {
           height: 60px;
           width: 60px;
       }
+
       #appStateMenu {
         margin: 0px 20px 0px 20px;
         padding-left: 25px;
       }
+
       h3.app-titles {
       padding: 0px 15px;
       margin: 15px 0;
       }
-      iron-selector {
-        margin: 0px !important;
-      }
-      paper-item {
-          cursor: pointer;
-      }
-    paper-dropdown-menu {
-    --paper-input-container-label: {
-      color: #fff;
-      text-align: left;
-      font-weight: bold;
-    };
-    --paper-input-container-input: {
-      color: #fff;
-      font-style: normal;
-    }
-    /* no underline */
-    --paper-input-container-underline: {
-      display: none;
-    };
-    --paper-dropdown-menu-input: {
-      color:#fff;
-      margin-bottom: 10px;
-    };
-    --paper-listbox: {
-      width:100%;
-    };
-  } 
+       
 }
     </style>
     <div id="test"></div>
