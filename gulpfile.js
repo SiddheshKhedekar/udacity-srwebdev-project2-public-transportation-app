@@ -32,7 +32,8 @@ gulp.task('public', [
 	'styles',
 	'lint',
 	'copy-json'
-]);
+]
+);
 
 // copy js files over to public folder, into a single file
 // this can be re-used for CSS compilation
@@ -118,6 +119,17 @@ gulp.task('lint', function () {
 		// lint error, return the stream and pipe to failOnError last.
 		.pipe(eslint.failOnError());
 });
+
+// does not allow publishing of scripts that are synxtically incorrect
+gulp.task('host-public', function () {
+
+	// initiates browser sync on the 'public' testing folder
+	 browserSync.init({
+	     server: "./public"
+	 });
+	 browserSync.stream();
+});
+
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
