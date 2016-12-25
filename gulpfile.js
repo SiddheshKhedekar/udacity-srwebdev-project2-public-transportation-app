@@ -46,14 +46,6 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./public/components/js/'));
 });
 
-// copies scripts + concats
-gulp.task('copy-scripts', function() {
-	gulp.src('./components/js/*.js')
-		.pipe(concat('app.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./public/components/js'));
-});
-
 // copies over json files
 gulp.task('copy-json', function() {
 	gulp.src('./components/json/*.json')
@@ -84,6 +76,11 @@ gulp.task('copy-html', function() {
 // copies ALL html over from components to the public folder. This can be used for json / template files
 gulp.task('copy-html-components', function() {
 	gulp.src('./components/*.html')
+		.pipe(vulcanize({
+	      stripComments: true,
+	      inlineScripts: true,
+	      inlineCss: true
+	    }))
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public/components'));
 });
