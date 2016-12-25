@@ -31,7 +31,6 @@ gulp.task('public', [
 	'copy-images',
 	'styles',
 	'lint',
-	'copy-scripts',
 	'copy-json'
 ]);
 
@@ -63,7 +62,7 @@ gulp.task('copy-bower', function() {
 // copies ALL html over from root to the public folder. This can be used for json / template files
 // USE THIS to setup these two tasks in the future when json files are in the right place
 gulp.task('copy-html', function() {
-	gulp.src('./index.html')
+	gulp.src('index.html')
 		.pipe(vulcanize({
 	      stripComments: true,
 	      inlineScripts: true,
@@ -75,7 +74,7 @@ gulp.task('copy-html', function() {
 
 // copies ALL html over from components to the public folder. This can be used for json / template files
 gulp.task('copy-html-components', function() {
-	gulp.src('./components/*.html')
+	gulp.src('components/*.html')
 		.pipe(vulcanize({
 	      stripComments: true,
 	      inlineScripts: true,
