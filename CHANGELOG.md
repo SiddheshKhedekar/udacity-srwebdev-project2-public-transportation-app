@@ -1,5 +1,10 @@
 ** Changelog for Event Planning Application
 
+v0.4
+- prototype to register service worker for pages
+- prototype to begin structuring app production pipelines
+- prototype to continue fixing CSS styles
+
 v0.3
 - added basic JS functionality for menu, and disabled shadow-dom
 - revised and fixed MVC JS structure

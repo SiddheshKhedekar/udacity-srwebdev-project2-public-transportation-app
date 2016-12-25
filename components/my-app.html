@@ -8,6 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
+<!-- App imports -->
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
@@ -26,6 +28,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="my-icons.html">
+
+<!-- App Start -->
+
 <dom-module id="my-app">
   <template>
 
@@ -112,43 +117,85 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         tail="{{subroute}}"></app-route>
 
     <app-drawer-layout fullbleed>
+
       <!-- Drawer content -->
      
 
       <!-- Main content -->
 
       <app-header-layout has-scrolling-region>
-        <app-drawer id="drawer" swipe-open>
+
+      <!-- Drawer content -->
+      
+      <app-drawer id="drawer" swipe-open>
+
+      <!-- Menu content -->
+
         <app-toolbar>View Schedules</app-toolbar>
+
+        <!-- Content Options -->
+
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+
           <a name="view1" href="/view1">Bus</a>
+
           <a name="view2" href="/view2">Train Info</a>
+
         </iron-selector>
+
       </app-drawer>
+
+      <!-- Main content -->
+
         <app-header id="header" condenses reveals effects="waterfall">
+
+        <!-- Toolbar content -->
+
           <app-toolbar>
             <paper-icon-button id="menuButton" icon="menu"></paper-icon-button>
+
+            <h2 id="mainTitle">Public Transportation App - v0.03</h2>
+
+            <!-- Dropdown Menu content -->
+
             <paper-dropdown-menu id="appStateMenu" label="Connection State" >
+
               <paper-listbox class="dropdown-content">
+
                 <paper-item>Perfect</paper-item>
                 <paper-item>Slow</paper-item>
                 <paper-item>Offline</paper-item>
               </paper-listbox>
+
             </paper-dropdown-menu>
-            <h2 id="mainTitle">Public Transportation App - v0.03</h2>
+
           </app-toolbar>
+
         </app-header>
+
+        <!-- Fetch page content -->
+
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"
             fallback-selection="view404"
             role="main">
+
           <my-view1 name="view1"></my-view1>
+
           <my-view2 name="view2"></my-view2>
+
           <my-view404 name="view404"></my-view404>
+
         </iron-pages>
+
       </app-header-layout>
+
     </app-drawer-layout>
+
+  
+ <!-- App native script -->
+
  <script src="js/components/my-app.js"></script>
   </template>
   <script>
