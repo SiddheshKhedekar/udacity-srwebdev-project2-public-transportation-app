@@ -130,16 +130,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 0px 15px;
       margin: 15px 0;
       }
-       
+
 }
     </style>
-    <div id="test"></div>
+    
+    <!-- Defines page Route -->
+
     <app-location route="{{route}}"></app-location>
+
     <app-route
         route="{{route}}"
         pattern="/:page"
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
+
+    <!-- Drawer content -->
 
     <app-drawer-layout fullbleed>
 
@@ -149,8 +154,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
 
       <app-header-layout has-scrolling-region>
-
-      <!-- Drawer content -->
       
       <app-drawer id="drawer" swipe-open>
 
@@ -180,7 +183,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button id="menuButton" icon="menu"></paper-icon-button>
 
-            <h2 id="mainTitle">Public Transportation App - v0.03</h2>
+            <h2 id="mainTitle">Public Transportation App - v0.04</h2>
 
             <!-- Dropdown Menu content -->
 
@@ -191,6 +194,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <paper-item>Perfect</paper-item>
                 <paper-item>Slow</paper-item>
                 <paper-item>Offline</paper-item>
+
               </paper-listbox>
 
             </paper-dropdown-menu>
