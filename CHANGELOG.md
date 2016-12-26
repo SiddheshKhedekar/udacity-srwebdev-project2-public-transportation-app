@@ -1,5 +1,12 @@
 ** Changelog for Event Planning Application
 
+v0.4
+- registered service worker and cache
+- revised title, menu, and content layout on mobile dimensions
+- structured gulp pipe so it vulcanizes app correctly, running into some errors with the views will revise
+- fixed CSS toolbar, menu, and connection state styles
+- 
+
 v0.3
 - added basic JS functionality for menu, and disabled shadow-dom
 - revised and fixed MVC JS structure

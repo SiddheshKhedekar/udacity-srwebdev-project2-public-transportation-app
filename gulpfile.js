@@ -16,12 +16,12 @@ var vulcanize = require('gulp-vulcanize');
 // defines gulp tasks on default command
 gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 	gulp.watch('components/sass/**/*.scss', ['styles']);
-	gulp.watch('src/js/**/*.js', ['lint']);
+	gulp.watch('components/js/**/*.js', ['lint']);
 	gulp.watch('*.html').on('change', browserSync.reload);
 	gulp.watch('components/sass/*.scss').on('change', browserSync.reload);
-	gulp.watch('src/*.html').on('change', browserSync.reload);
-	gulp.watch('src/js/*.js').on('change', browserSync.reload);
-	gulp.watch('src/js/components/my-app.js').on('change', browserSync.reload);
+	gulp.watch('components/*.html').on('change', browserSync.reload);
+	gulp.watch('components/js/*.js').on('change', browserSync.reload);
+	gulp.watch('components/js/components/my-app.js').on('change', browserSync.reload);
 });
 
 //publishes content, calls tasks that copy content over
@@ -31,9 +31,9 @@ gulp.task('public', [
 	'copy-images',
 	'styles',
 	'lint',
-	'copy-scripts',
 	'copy-json'
-]);
+]
+);
 
 // copy js files over to public folder, into a single file
 // this can be re-used for CSS compilation
@@ -44,14 +44,6 @@ gulp.task('scripts', function() {
     }))
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./public/components/js/'));
-});
-
-// copies scripts + concats
-gulp.task('copy-scripts', function() {
-	gulp.src('./components/js/*.js')
-		.pipe(concat('app.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./public/components/js'));
 });
 
 // copies over json files
@@ -71,7 +63,7 @@ gulp.task('copy-bower', function() {
 // copies ALL html over from root to the public folder. This can be used for json / template files
 // USE THIS to setup these two tasks in the future when json files are in the right place
 gulp.task('copy-html', function() {
-	gulp.src('./index.html')
+	gulp.src('index.html')
 		.pipe(vulcanize({
 	      stripComments: true,
 	      inlineScripts: true,
@@ -83,7 +75,12 @@ gulp.task('copy-html', function() {
 
 // copies ALL html over from components to the public folder. This can be used for json / template files
 gulp.task('copy-html-components', function() {
-	gulp.src('./components/*.html')
+	gulp.src('components/*.html')
+		.pipe(vulcanize({
+	      stripComments: true,
+	      inlineScripts: true,
+	      inlineCss: true
+	    }))
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public/components'));
 });
@@ -122,6 +119,17 @@ gulp.task('lint', function () {
 		// lint error, return the stream and pipe to failOnError last.
 		.pipe(eslint.failOnError());
 });
+
+// does not allow publishing of scripts that are synxtically incorrect
+gulp.task('host-public', function () {
+
+	// initiates browser sync on the 'public' testing folder
+	 browserSync.init({
+	     server: "./public"
+	 });
+	 browserSync.stream();
+});
+
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
