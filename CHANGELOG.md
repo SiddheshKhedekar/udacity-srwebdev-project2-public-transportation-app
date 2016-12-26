@@ -2,7 +2,7 @@
 
 v0.4
 - registered service worker and cache
-- prototype to revise layout for mobile and reponsive dimensions
+- revised title, menu, and content layout on mobile dimensions
 - structured gulp pipe so it vulcanizes app correctly, running into some errors with the views will revise
 - fixed CSS toolbar, menu, and connection state styles
 - 
