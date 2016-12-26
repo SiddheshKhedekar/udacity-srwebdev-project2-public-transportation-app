@@ -1,7 +1,7 @@
 ** Changelog for Event Planning Application
 
 v0.4
-- prototype to register service worker for pages
+- registered service worker and cache
 - prototype to revise layout for mobile and reponsive dimensions
 - structured gulp pipe so it vulcanizes app correctly, running into some errors with the views will revise
 - fixed CSS toolbar, menu, and connection state styles

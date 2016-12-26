@@ -74,7 +74,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --paper-input-container-input: {
           color: #fff;
           font-style: normal;
-        }
+        };
         /* no underline */
         --paper-input-container-underline: {
           display: none;
@@ -126,8 +126,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 0px 15px;
       margin: 15px 0;
       }
-
-}
+    
+      /* Responsive Custom Styles */
+      @media screen and (max-width: 750px) {
+        #appStateMenu {
+            display: none;
+        }
+        #mainTitle {
+            font-size: 18px;
+        }
+        iron-pages {
+          padding: 0;
+        }
+      }
+    }
     </style>
     
     <!-- Defines page Route -->
