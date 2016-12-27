@@ -64,11 +64,6 @@ gulp.task('copy-bower', function() {
 // USE THIS to setup these two tasks in the future when json files are in the right place
 gulp.task('copy-html', function() {
 	gulp.src('index.html')
-		.pipe(vulcanize({
-	      stripComments: true,
-	      inlineScripts: true,
-	      inlineCss: true
-	    }))
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public'));
 });
@@ -133,6 +128,6 @@ gulp.task('host-public', function () {
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
-     server: "./"
+     server: "./public"
  });
  browserSync.stream();
