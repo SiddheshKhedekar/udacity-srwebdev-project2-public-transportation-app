@@ -51,11 +51,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         } else {
           onload();
         }
-      })();
+      })();</script><script>/* ===================================
 
-      // Load pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
+	SW handle 
+
+======================================*/
+
+	// does not register service worker if unsupported
+      if (!navigator.serviceWorker) {
+
+      } 
+
+    // registers SW
+      else if('serviceWorker' in navigator) 
+      {
+		window.addEventListener('load', function() {
           navigator.serviceWorker.register('/service-worker.js');
         });
       }</script></head><body><div hidden="" by-vulcanize=""><script>(function () {
@@ -21685,13 +21695,10 @@ this.currentTarget=a,this.defaultPrevented=!1,this.eventPhase=Event.AT_TARGET,th
     });</script></dom-module><iron-iconset-svg name="icons" size="24"><svg><defs><g id="arrow-back"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></g><g id="menu"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></g><g id="chevron-right"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></g><g id="close"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g></defs></svg></iron-iconset-svg><dom-module id="my-app" assetpath="components/"><template><style>/* App Styles */
 
       :host {
-        --app-primary-color: #4285f4;
+        --app-primary-color:#02823b;
         --app-secondary-color: black;
-
         display: block;
-
       }
-
       app-header {
         color: #fff;
         background-color: var(--app-primary-color);
@@ -21723,14 +21730,13 @@ this.currentTarget=a,this.defaultPrevented=!1,this.eventPhase=Event.AT_TARGET,th
         --paper-input-container-input: {
           color: #fff;
           font-style: normal;
-        }
+        };
         /* no underline */
         --paper-input-container-underline: {
           display: none;
         };
         --paper-dropdown-menu-input: {
           color:#fff;
-          margin-bottom: 10px;
         };
         --paper-listbox: {
           width:100%;
@@ -21776,8 +21782,20 @@ this.currentTarget=a,this.defaultPrevented=!1,this.eventPhase=Event.AT_TARGET,th
       padding: 0px 15px;
       margin: 15px 0;
       }
-
-}</style><app-location route="{{route}}"></app-location><app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route><app-drawer-layout fullbleed="">git s<app-header-layout has-scrolling-region=""><app-drawer id="drawer" swipe-open=""><app-toolbar></app-toolbar><h3 class="app-titles">View Schedules</h3><iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation"><a name="view1" href="/view1">Bus</a> <a name="view2" href="/view2">Train Info</a></iron-selector></app-drawer><app-header id="header" condenses="" reveals="" effects="waterfall"><app-toolbar><paper-icon-button id="menuButton" icon="menu"></paper-icon-button><h2 id="mainTitle">Public Transportation App - v0.04</h2><paper-dropdown-menu id="appStateMenu" label="Connection State"><paper-listbox class="dropdown-content"><paper-item>Perfect</paper-item><paper-item>Slow</paper-item><paper-item>Offline</paper-item></paper-listbox></paper-dropdown-menu></app-toolbar></app-header><iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main"><my-view1 name="view1"></my-view1><my-view2 name="view2"></my-view2><my-view404 name="view404"></my-view404></iron-pages></app-header-layout></app-drawer-layout><script>/* ===================================
+    
+      /* Responsive Custom Styles */
+      @media screen and (max-width: 750px) {
+        #appStateMenu {
+            display: none;
+        }
+        #mainTitle {
+            font-size: 18px;
+        }
+        iron-pages {
+          padding: 0;
+        }
+      }
+    }</style><app-location route="{{route}}"></app-location><app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route><app-drawer-layout fullbleed=""><app-header-layout has-scrolling-region=""><app-drawer id="drawer" swipe-open=""><app-toolbar></app-toolbar><h3 class="app-titles">View Schedules</h3><iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation"><a name="view1" href="/view1">Bus</a> <a name="view2" href="/view2">Train Info</a></iron-selector></app-drawer><app-header id="header" condenses="" reveals="" effects="waterfall"><app-toolbar><paper-icon-button id="menuButton" icon="menu"></paper-icon-button><h2 id="mainTitle">Public Transportation App - v0.04</h2><paper-dropdown-menu id="appStateMenu" label="Connection State"><paper-listbox class="dropdown-content" selected="0"><paper-item>Perfect</paper-item><paper-item>Slow</paper-item><paper-item>Offline</paper-item></paper-listbox></paper-dropdown-menu></app-toolbar></app-header><iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main"><my-view1 name="view1"></my-view1><my-view2 name="view2"></my-view2><my-view404 name="view404"></my-view404></iron-pages></app-header-layout></app-drawer-layout><script>/* ===================================
 
 	Main JS document for my-app.html
 
