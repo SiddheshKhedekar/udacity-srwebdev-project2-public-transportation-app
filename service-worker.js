@@ -14,17 +14,17 @@ self.addEventListener('install', function(event) {
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
         '/',
-        '/public/index.html',
-        '/public/service-worker.js',
-        '/public/components/my-app.html',
-        '/public/components/my-icons.html',
-        '/public/components/my-view1.html',
-        '/public/components/my-view2.html',
-        '/public/components/my-view404.html',
-        '/public/components/shared-styles.html',
-        '/public/components/js/app.js',
-        '/public/components/js/sw/sw-handle.js',
-        '/public/components/js/components/my-app.js'
+        '/index.html',
+        '/service-worker.js',
+        '/components/my-app.html',
+        '/components/my-icons.html',
+        '/components/my-view1.html',
+        '/components/my-view2.html',
+        '/components/my-view404.html',
+        '/components/shared-styles.html',
+        '/components/js/app.js',
+        '/components/js/sw/sw-handle.js',
+        '/components/js/components/my-app.js'
       ]);
     })
   );
