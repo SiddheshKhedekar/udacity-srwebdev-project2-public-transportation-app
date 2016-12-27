@@ -12,7 +12,8 @@
     // registers SW
       else if('serviceWorker' in navigator) 
       {
-		window.addEventListener('load', function() {
+        console.log('SW registered!')
+		    window.addEventListener('load', function() {
           navigator.serviceWorker.register('/service-worker.js');
         });
       }

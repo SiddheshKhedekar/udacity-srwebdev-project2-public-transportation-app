@@ -12,6 +12,7 @@ var babel = require('gulp-babel');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var vulcanize = require('gulp-vulcanize');
+var minifyInline = require('gulp-minify-inline');
 
 // defines gulp tasks on default command
 gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
@@ -29,6 +30,8 @@ gulp.task('public', [
 	'copy-html',
 	'copy-html-components',
 	'copy-images',
+	'copy-scripts',
+	'copy-sw',
 	'styles',
 	'lint',
 	'copy-json'
@@ -53,23 +56,29 @@ gulp.task('copy-json', function() {
 });
 
 
-// copies over json files
+/* copies over json files
 gulp.task('copy-bower', function() {
 	gulp.src('./components/bower_components/**')
 		.pipe(gulp.dest('./public/components/bower_components'));
 });
-
+*/
 
 // copies ALL html over from root to the public folder. This can be used for json / template files
 // USE THIS to setup these two tasks in the future when json files are in the right place
 gulp.task('copy-html', function() {
 	gulp.src('index.html')
-		.pipe(vulcanize({
-	      stripComments: true,
-	      inlineScripts: true,
-	      inlineCss: true
-	    }))
+		.pipe(minifyInline())
 		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(gulp.dest('./public'));
+});
+
+// copies SW over from root to the public folder. 
+gulp.task('copy-sw', function() {
+	gulp.src('service-worker.js')
+	    .pipe(babel({
+	            presets: ['es2015']
+	    }))
+	    .pipe(uglify())
 		.pipe(gulp.dest('./public'));
 });
 
@@ -81,6 +90,7 @@ gulp.task('copy-html-components', function() {
 	      inlineScripts: true,
 	      inlineCss: true
 	    }))
+		.pipe(minifyInline())
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public/components'));
 });
@@ -92,6 +102,16 @@ gulp.task('copy-images', function() {
 		.pipe(gulp.dest('public/components/img/*'));
 });
 
+// copy js files over to public folder, into a single file
+// this can be re-used for CSS compilation
+gulp.task('copy-scripts', function() {
+  gulp.src('./components/js/**')
+    .pipe(babel({
+            presets: ['es2015']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/components/js/'));
+});
 
 // copies css over to the public folder, after converting from scss
 gulp.task('styles', function() {
@@ -120,19 +140,9 @@ gulp.task('lint', function () {
 		.pipe(eslint.failOnError());
 });
 
-// does not allow publishing of scripts that are synxtically incorrect
-gulp.task('host-public', function () {
-
-	// initiates browser sync on the 'public' testing folder
-	 browserSync.init({
-	     server: "./public"
-	 });
-	 browserSync.stream();
-});
-
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
-     server: "./"
+     server: "./public"
  });
  browserSync.stream();

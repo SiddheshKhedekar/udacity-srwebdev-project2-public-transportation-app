@@ -38,3 +38,11 @@
 		};
 
 export default main;
+
+class App extends Application {
+	component(props){
+		
+	}
+
+
+};
