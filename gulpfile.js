@@ -31,6 +31,7 @@ gulp.task('public', [
 	'copy-html-components',
 	'copy-images',
 	'copy-scripts',
+	'copy-sw',
 	'styles',
 	'lint',
 	'copy-json'
@@ -55,12 +56,12 @@ gulp.task('copy-json', function() {
 });
 
 
-// copies over json files
+/* copies over json files
 gulp.task('copy-bower', function() {
 	gulp.src('./components/bower_components/**')
 		.pipe(gulp.dest('./public/components/bower_components'));
 });
-
+*/
 
 // copies ALL html over from root to the public folder. This can be used for json / template files
 // USE THIS to setup these two tasks in the future when json files are in the right place
@@ -68,6 +69,16 @@ gulp.task('copy-html', function() {
 	gulp.src('index.html')
 		.pipe(minifyInline())
 		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(gulp.dest('./public'));
+});
+
+// copies SW over from root to the public folder. 
+gulp.task('copy-sw', function() {
+	gulp.src('service-worker.js')
+	    .pipe(babel({
+	            presets: ['es2015']
+	    }))
+	    .pipe(uglify())
 		.pipe(gulp.dest('./public'));
 });
 
@@ -94,11 +105,11 @@ gulp.task('copy-images', function() {
 // copy js files over to public folder, into a single file
 // this can be re-used for CSS compilation
 gulp.task('copy-scripts', function() {
-  gulp.src('./components/js/*.js')
+  gulp.src('./components/js/**')
     .pipe(babel({
             presets: ['es2015']
     }))
-    .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./public/components/js/'));
 });
 
