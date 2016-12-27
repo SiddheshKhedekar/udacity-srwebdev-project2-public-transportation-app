@@ -12,6 +12,7 @@ var babel = require('gulp-babel');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var vulcanize = require('gulp-vulcanize');
+var minifyInline = require('gulp-minify-inline');
 
 // defines gulp tasks on default command
 gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
@@ -29,6 +30,7 @@ gulp.task('public', [
 	'copy-html',
 	'copy-html-components',
 	'copy-images',
+	'copy-scripts',
 	'styles',
 	'lint',
 	'copy-json'
@@ -64,7 +66,7 @@ gulp.task('copy-bower', function() {
 // USE THIS to setup these two tasks in the future when json files are in the right place
 gulp.task('copy-html', function() {
 	gulp.src('index.html')
-		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(minifyInline())
 		.pipe(gulp.dest('./public'));
 });
 
@@ -76,7 +78,7 @@ gulp.task('copy-html-components', function() {
 	      inlineScripts: true,
 	      inlineCss: true
 	    }))
-		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(minifyInline())
 		.pipe(gulp.dest('./public/components'));
 });
 
@@ -87,6 +89,17 @@ gulp.task('copy-images', function() {
 		.pipe(gulp.dest('public/components/img/*'));
 });
 
+// copy js files over to public folder, into a single file
+// this can be re-used for CSS compilation
+gulp.task('copy-scripts', function() {
+  gulp.src('./components/js/*.js')
+    .pipe(babel({
+            presets: ['es2015']
+    }))
+    .pipe(uglify())
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./public/components/js/'));
+});
 
 // copies css over to the public folder, after converting from scss
 gulp.task('styles', function() {

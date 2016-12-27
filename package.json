@@ -11,7 +11,6 @@
     "polymer-build": "^0.5.1",
     "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.18.5",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.2.2",
@@ -22,7 +21,9 @@
     "gulp-vulcanize": "^6.1.0",
     "gulp-eslint": "^3.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-minify-inline": "^0.2.1"
+  },
   "scripts": {
     "test": "test"
   },
