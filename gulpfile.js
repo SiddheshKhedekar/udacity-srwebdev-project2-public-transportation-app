@@ -67,6 +67,7 @@ gulp.task('copy-bower', function() {
 gulp.task('copy-html', function() {
 	gulp.src('index.html')
 		.pipe(minifyInline())
+		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public'));
 });
 
@@ -79,6 +80,7 @@ gulp.task('copy-html-components', function() {
 	      inlineCss: true
 	    }))
 		.pipe(minifyInline())
+		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./public/components'));
 });
 
