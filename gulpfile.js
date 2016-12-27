@@ -98,7 +98,6 @@ gulp.task('copy-scripts', function() {
     .pipe(babel({
             presets: ['es2015']
     }))
-    .pipe(uglify())
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./public/components/js/'));
 });
