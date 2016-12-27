@@ -2,8 +2,9 @@
 
 v0.5
 - app minimized, vulcanized, and cocact' ready for offline caching
-- prototype to begin GTFS insertion into the app
-- prototype to add app connection states
+- public version of the app works offline completely, success!
+- still need to cache any future images. 
+- connection states to be added last if at all
 
 v0.4
 - registered service worker and cache
