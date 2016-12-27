@@ -1,7 +1,7 @@
 ** Changelog for Event Planning Application
 
 v0.5
-- prototype to cache all app content for offline use
+- app minimized, vulcanized, and cocact' ready for offline caching
 - prototype to begin GTFS insertion into the app
 - prototype to add app connection states
 
