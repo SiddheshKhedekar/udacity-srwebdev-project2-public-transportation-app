@@ -1,5 +1,10 @@
 ** Changelog for Event Planning Application
 
+v0.5
+- prototype to cache all app content for offline use
+- prototype to begin GTFS insertion into the app
+- prototype to add app connection states
+
 v0.4
 - registered service worker and cache
 - revised title, menu, and content layout on mobile dimensions
