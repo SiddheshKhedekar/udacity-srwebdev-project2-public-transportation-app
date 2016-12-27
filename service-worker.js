@@ -7,7 +7,7 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v5.4';
+var staticCacheName = 'pta-static-v5.5';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -30,11 +30,20 @@ self.addEventListener('install', function(event) {
   );
 });
 
+// adds cleanup for old caches
 self.addEventListener('activate', function(event) {
-
- /* event.waitUntil(
-  ); */
-  
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith('pta-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
 });
 
 self.addEventListener('fetch', function(event) {
