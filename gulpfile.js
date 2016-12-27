@@ -140,19 +140,9 @@ gulp.task('lint', function () {
 		.pipe(eslint.failOnError());
 });
 
-// does not allow publishing of scripts that are synxtically incorrect
-gulp.task('host-public', function () {
-
-	// initiates browser sync on the 'public' testing folder
-	 browserSync.init({
-	     server: "./public"
-	 });
-	 browserSync.stream();
-});
-
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
-     server: "./public"
+     server: "./"
  });
  browserSync.stream();
