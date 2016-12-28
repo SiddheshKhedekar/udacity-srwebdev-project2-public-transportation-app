@@ -9,6 +9,11 @@
 // import {main} from '../app.js';
 // extend these as new objects from the main MVC in app.js in the future for commonly used functions
 
+
+import Model from './model';
+import View from './view';
+import Controller from './controller';
+
 	/* ===================================
 
 		Model
@@ -20,6 +25,12 @@
 		 	drawerState : false,
 
 		};
+
+		class appModel extends Model {
+			elements{
+				drawerState : false
+			}
+		}
 
 	/* ===================================
 
@@ -36,12 +47,21 @@
 		};
 
 		openDrawer = new appController()._openDrawer(appView.menuButton);
+
+		class appView extends View {
+			elements{
+			}
+		}
 	/* ===================================
 
 		Controller
 
 	======================================*/
-
+		class appController extends Controller {
+			elements{
+				drawerState : false
+			}
+		}
 		function appController(){
 			var view = appView;
 			var model = appModel;
