@@ -1,10 +1,18 @@
 ** Changelog for Event Planning Application
 
+v0.6
+- SCRAPPED EMC6 DUE TO CONFLICT WITH VULCANIZE
+- fixed gulp public pipe, to only publish essential files.
+- files not vulcanize over to the /public directory when saved, site will now be tested via public folder.
+- attempted to add MongoDB, scrapped due to high learning curve and time commitment needed at this point.
+- converted all but stop time GTFS csv's into JSON's to use for the app
+- will need to shorten the stop_time.csv before 
+
 v0.5
-- app minimized, vulcanized, and cocact' ready for offline caching
+- app minimized, vulcanized, and cocat' ready for offline caching
 - public version of the app works offline completely, success!
 - still need to cache any future images. 
-- connection states to be added last if at allsds
+- connection states to be added last if at all
 
 v0.4
 - registered service worker and cache

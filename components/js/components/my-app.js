@@ -5,9 +5,16 @@
 ======================================*/
 
 // for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript 
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('DB ON!')
+});
 // import {main} from '../app.js';
 // extend these as new objects from the main MVC in app.js in the future for commonly used functions
+
 
 	/* ===================================
 
@@ -20,6 +27,8 @@
 		 	drawerState : false,
 
 		};
+
+
 
 	/* ===================================
 
@@ -36,6 +45,8 @@
 		};
 
 		openDrawer = new appController()._openDrawer(appView.menuButton);
+
+
 	/* ===================================
 
 		Controller
