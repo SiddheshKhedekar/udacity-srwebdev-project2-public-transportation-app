@@ -22,7 +22,6 @@
 		};
 
 
-
 	/* ===================================
 
 		View
@@ -45,7 +44,8 @@
 		Controller
 
 	======================================*/
-
+		class appController extends Controller {
+		}
 		function appController(){
 			var view = appView;
 			var model = appModel;
