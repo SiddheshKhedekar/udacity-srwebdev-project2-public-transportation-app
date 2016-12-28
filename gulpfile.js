@@ -143,6 +143,6 @@ gulp.task('lint', function () {
 
 // use browser-sync start --server --index index.html --files="public/*.css"
  browserSync.init({
-     server: "./"
+     server: "./public"
  });
  browserSync.stream();
