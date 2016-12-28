@@ -4,7 +4,7 @@ v0.5
 - app minimized, vulcanized, and cocact' ready for offline caching
 - public version of the app works offline completely, success!
 - still need to cache any future images. 
-- connection states to be added last if at all
+- connection states to be added last if at allsds
 
 v0.4
 - registered service worker and cache
