@@ -7,14 +7,14 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v6.2';
+var staticCacheName = 'pta-static-v6.3';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
         '/',
-        '/index.html',
+        /*'/index.html',
         '/service-worker.js',
         '/components/my-app.html',
         '/components/my-icons.html',
@@ -24,7 +24,7 @@ self.addEventListener('install', function(event) {
         '/components/shared-styles.html',
         '/components/js/app.js',
         '/components/js/sw/sw-handle.js',
-        '/components/js/components/my-app.js'
+        '/components/js/components/my-app.js' */
       ]);
     })
   );
@@ -46,9 +46,9 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-
-self.addEventListener('fetch', function(event) {
-  // TODO: respond to requests for the root page with
+/*self.addEventListener('fetch', function(event) {
+  
+ // TODO: respond to requests for the root page with
   // the page skeleton from the cache
   // parses the request URL form the cache
   var requestURL = new URL(event.request.url);
@@ -63,11 +63,11 @@ self.addEventListener('fetch', function(event) {
       // no need to go the network as a fallback if this fails, as /skeleton is cached no matter what during the sw install
       return;
     }
-  }
+  } 
 
   event.respondWith(
     caches.match(event.request).then(function(response) {
       return response || fetch(event.request);
     })
   );
-});
+});*/

@@ -1,5 +1,9 @@
 ** Changelog for Event Planning Application
 
+v0.6
+- prototype to add EMC6 JS to custom JS files, test with babel
+- prototype to add GTFS JSON fetches, and begin building the bus list
+
 v0.5
 - app minimized, vulcanized, and cocact' ready for offline caching
 - public version of the app works offline completely, success!
