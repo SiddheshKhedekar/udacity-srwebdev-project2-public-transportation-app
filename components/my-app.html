@@ -111,12 +111,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 99%;
           margin: 0px;
           position: absolute;
-
+          font-size: 30px;
       }
 
       #menuButton {
           height: 60px;
           width: 60px;
+          z-index: 1;
       }
 
       #appStateMenu {
@@ -129,7 +130,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 0px 15px;
       margin: 15px 0;
       }
-    
+      #menuTitle{
+        padding: 0px 16px;
+        color: #045a2b;
+      }
+
       /* Responsive Custom Styles */
       @media screen and (max-width: 750px) {
         #appStateMenu {
@@ -142,6 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           padding: 0;
         }
       }
+
     }
     </style>
     
@@ -164,7 +170,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
 
       <app-header-layout has-scrolling-region>
-      
+        
       <app-drawer id="drawer" swipe-open>
 
       <!-- Menu content -->
@@ -173,7 +179,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Content Options -->
         
-        <h3 class="app-titles">Views</h3>
+        <h3 id="menuTitle" class="app-titles">Menu</h3>
 
 
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
@@ -197,7 +203,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button id="menuButton" icon="menu"></paper-icon-button>
 
-            <h2 id="mainTitle">Public Transportation App - v0.07</h2>
+            <h1 id="mainTitle">Public Transportation App - v0.07</h1>
 
             <!-- Dropdown Menu content -->
 
