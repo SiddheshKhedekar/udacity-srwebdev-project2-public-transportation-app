@@ -13,6 +13,10 @@ v0.6
 - converted all but stop time GTFS csv's into JSON's to use for the app
 - will need to shorten the stop_time.csv before 
 
+v0.6
+- prototype to add EMC6 JS to custom JS files, test with babel
+- prototype to add GTFS JSON fetches, and begin building the bus list
+
 v0.5
 - app minimized, vulcanized, and cocat' ready for offline caching
 - public version of the app works offline completely, success!
