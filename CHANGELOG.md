@@ -1,7 +1,8 @@
 ** Changelog for Event Planning Application
 v0.7
 - fixed git conflict problem
-- prototype to begin adding view HTML
+- added HTML, CSS and images to each view
+- prototype to add bus-schedules template
 - prototype to begin refactoring and adding JSON files to generate the bus schedules / stops
 - prototype to begin injecting JSON info into indexDB
 

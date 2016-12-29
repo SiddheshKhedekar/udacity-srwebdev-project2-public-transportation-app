@@ -1,7 +1,7 @@
 <!--
 @license
 Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.ioLICENSE.txt
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
@@ -10,27 +10,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="my-view3">
+<dom-module id="bus-schedule">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-        text-align: center;
         padding: 10px;
-      }
-      .card img{
-        width: 50%;
+        text-align: center;
       }
     </style>
 
-    <main class="card">
-      <img src="img/c-train-schedule.jpg" alt="c-train route map">
-    </main>
+    <section class="schedules-container">
+      <h2>Welcome to the Calgary Transit Public Transportation Application</h2>
+    </section>
+    
   </template>
 
   <script>
     Polymer({
-      is: 'my-view3'
+      is: 'bus-schedule'
     });
   </script>
 </dom-module>
