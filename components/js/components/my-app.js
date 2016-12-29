@@ -5,13 +5,8 @@
 ======================================*/
 
 // for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript 
-
 // import {main} from '../app.js';
 // extend these as new objects from the main MVC in app.js in the future for commonly used functions
-
-import Model from '../components/model';
-import View from '../components/view';
-import Controller from '../components/controller';
 
 	/* ===================================
 
@@ -25,12 +20,6 @@ import Controller from '../components/controller';
 
 		};
 
-		class appModel extends Model {
-			elements{
-				drawerState : false
-			}
-			console.log(appModel);
-		}
 
 	/* ===================================
 
@@ -48,10 +37,6 @@ import Controller from '../components/controller';
 
 		openDrawer = new appController()._openDrawer(appView.menuButton);
 
-		class appView extends View {
-			elements{
-			}
-		}
 	/* ===================================
 
 		Controller

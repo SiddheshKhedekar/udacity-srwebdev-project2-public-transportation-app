@@ -106,27 +106,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-weight: bold;
       }
 
-      h2#mainTitle {
+      #mainTitle {
           text-align: center;
-          width: 100%;
-          margin-right: 0px;
+          width: 99%;
+          margin: 0px;
+          position: absolute;
+          font-size: 30px;
       }
 
       #menuButton {
           height: 60px;
           width: 60px;
+          z-index: 1;
       }
 
       #appStateMenu {
-        margin: 0px 20px 0px 20px;
-        padding-left: 25px;
+        margin-left:auto;
+        display: block;
       }
 
-      h3.app-titles {
+      app-titles {
       padding: 0px 15px;
       margin: 15px 0;
       }
-    
+      #menuTitle{
+        padding: 0px 16px;
+        color: #045a2b;
+      }
+
       /* Responsive Custom Styles */
       @media screen and (max-width: 750px) {
         #appStateMenu {
@@ -139,6 +146,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           padding: 0;
         }
       }
+
     }
     </style>
     
@@ -161,7 +169,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
 
       <app-header-layout has-scrolling-region>
-      
+        
       <app-drawer id="drawer" swipe-open>
 
       <!-- Menu content -->
@@ -170,14 +178,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Content Options -->
         
-        <h3 class="app-titles">Viewasdfedules</h3>
+        <h3 id="menuTitle" class="app-titles">Menu</h3>
 
 
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
 
-          <a name="view1" href="/view1">Bus</a>
+          <a name="view1" href="/view1">Home</a>
 
-          <a name="view2" href="/view2">Train Info</a>
+          <a name="view2" href="/view2">Bus Info</a>
+
+          <a name="view2" href="/view3">Train Info</a>
 
         </iron-selector>
 
@@ -192,7 +202,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button id="menuButton" icon="menu"></paper-icon-button>
 
-            <h2 id="mainTitle">Public Transportation App - v0.06</h2>
+            <h1 id="mainTitle">Public Transportation App - v0.07</h1>
+
 
             <!-- Dropdown Menu content -->
 
@@ -223,6 +234,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view1 name="view1"></my-view1>
 
           <my-view2 name="view2"></my-view2>
+
+          <my-view3 name="view3"></my-view3>
 
           <my-view404 name="view404"></my-view404>
 
