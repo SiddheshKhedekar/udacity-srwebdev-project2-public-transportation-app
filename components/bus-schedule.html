@@ -9,21 +9,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="shared-styles.html">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <dom-module id="bus-schedule">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 10px;
+        padding: 0px;
         text-align: center;
+      }
+      h3 {
+        margin: 0;
       }
     </style>
 
     <section class="schedules-container">
-      <h2>Welcome to the Calgary Transit Public Transportation Application</h2>
+      <h3>Choose a route</h3>
+      <select id="first">
+    <option value="all">All</option>
+    <option value="WHDH">WHDH</option>
+    <option value="TF">TF</option>
+</select>
+
+<select id="second">
+    <option value="all">All</option>
+</select>
+
+<select id="third">
+    <option value="all">All</option>
+</select>
     </section>
+    <script>
+  var accounts = ["WHDH","TF"];
+var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
+var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WHDH_2": ["/live/whdh2/1","/live/whdh2/2","/live/whdh2/3"], "TF_1": ["/live/tf1/1","/live/tf1/2","/live/tf1/3"], "TF_2": ["/live/tf2/1","/live/tf2/2","/live/tf2/3"]};
+
+$('#first').change(function() {
     
+    $('#second').find('option')
+    .remove()
+    .end()
+    .append('<option value="All">All</option>')
+    .val('All');
+    
+    $.each(mediaGroups[$(this).val()], function(key, value) {   
+     $('#second')
+         .append($("<option></option>")
+         .attr("value",value)
+         .text(value)); 
+    });
+});
+
+$('#second').change(function() {
+    $('#third').find('option')
+    .remove()
+    .end()
+    .append('<option value="All">All</option>')
+    .val('All');
+    
+    $.each(clipUrls[$(this).val()], function(key, value) {   
+     $('#third')
+         .append($("<option></option>")
+         .attr("value",value)
+         .text(value)); 
+    });
+});
+</script>
   </template>
 
   <script>

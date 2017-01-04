@@ -1,4 +1,5 @@
 ** Changelog for Event Planning Application
+
 v0.7
 - fixed git conflict problem
 - added HTML, CSS and images to each view
