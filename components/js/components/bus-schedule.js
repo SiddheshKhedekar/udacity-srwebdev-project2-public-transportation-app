@@ -1,5 +1,10 @@
-// gets all the required JSON data then assigns them to the required variables
+// creates the empty variables where we will store our JSON data
+var routes;
+var stops;
+var trips;
+var stop_times;
 
+// fetches JSON data
 
 /* Script Triple Select Dropdown List, from: coursesweb.net/javascript/ */
 var SList = new Object();             // JS object that stores data for options
