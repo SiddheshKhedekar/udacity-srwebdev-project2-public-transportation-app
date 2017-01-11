@@ -1,0 +1,100 @@
+{
+   "16-20449": {
+      "route_short_name": 16,
+      "route_long_name": "Palliser",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "16-20450": {
+      "route_short_name": 16,
+      "route_long_name": "Palliser",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "39-20449": {
+      "route_short_name": 39,
+      "route_long_name": "Acadia",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "39-20450": {
+      "route_short_name": 39,
+      "route_long_name": "Acadia",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "56-20449": {
+      "route_short_name": 56,
+      "route_long_name": "Woodbine",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "56-20450": {
+      "route_short_name": 56,
+      "route_long_name": "Woodbine",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "79-20449": {
+      "route_short_name": 79,
+      "route_long_name": "Acadia/Oakridge",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "79-20450": {
+      "route_short_name": 79,
+      "route_long_name": "Acadia/Oakridge",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "80-20449": {
+      "route_short_name": 80,
+      "route_long_name": "Oakridge/Acadia",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "80-20450": {
+      "route_short_name": 80,
+      "route_long_name": "Oakridge/Acadia",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "81-20449": {
+      "route_short_name": 81,
+      "route_long_name": "Macleod Trail",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "81-20450": {
+      "route_short_name": 81,
+      "route_long_name": "Macleod Trail",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "84-20449": {
+      "route_short_name": 84,
+      "route_long_name": "Palliser",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   },
+   "84-20450": {
+      "route_short_name": 84,
+      "route_long_name": "Palliser",
+      "route_desc": "",
+      "route_type": 3,
+      "route_url": ""
+   }
+}

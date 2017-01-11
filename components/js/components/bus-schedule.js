@@ -10,6 +10,11 @@ var txtsl3 = 'Select Option:';         // text for the third dropdown list
  The key in this object must be the same with the values of the options added in the first select
  The values in the array associated to each key represent options of the seccond select
 */
+
+var json = $.getJSON("./components/json/routes.json", function(result){
+      console.log(result);
+    });
+console.log(json)
 SList.slist2 = {
  "s1_opt1": ['s1o1_opt1', 's1o1_opt2'],
  "s1_opt2": ['s1o2_opt1', 's1o2_opt2'],
