@@ -75,7 +75,8 @@ $('#routes').change(function() {
     .append('<option value="All">All</option>')
     .val('All');
     
-    $.each(trips[$(this).val()], function(key, value) {   
+    $.each(trips[$(this).val()], function(key, value) {
+      console.log(value.service_id);   
      $('#stops')
          .append($("<option></option>")
          .attr("value",value)
