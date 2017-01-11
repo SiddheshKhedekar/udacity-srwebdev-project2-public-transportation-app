@@ -4,96 +4,45 @@ var stops;
 var trips;
 var stop_times;
 
-// fetches JSON data
-
-/* Script Triple Select Dropdown List, from: coursesweb.net/javascript/ */
-var SList = new Object();             // JS object that stores data for options
-
-// HERE replace the values with the text you want to be displayed near Select
-var txtsl2 = 'Select Option:';         // text for the seccond dropdown list
-var txtsl3 = 'Select Option:';         // text for the third dropdown list
-
-/*
- Property with options for the Seccond select list
- The key in this object must be the same with the values of the options added in the first select
- The values in the array associated to each key represent options of the seccond select
-*/
-
-var json = $.getJSON("./components/json/routes.json", function(result){
-      console.log(result);
-      return result;
+// fetches JSON data 
+$.getJSON("./components/json/routes.json", function(result){
+      routes = result;
+      console.log(routes);
     });
 
-console.log(json)
-SList.slist2 = {
- "s1_opt1": ['s1o1_opt1', 's1o1_opt2'],
- "s1_opt2": ['s1o2_opt1', 's1o2_opt2'],
-};
 
-/*
- Property with options for the Third select list
- The key in this object must be the same with the values (options) added in each Array in "slist2" above
- The values in the array associated to each key represent options of the third select
-*/
-SList.slist3 = {
- "s1o1_opt1": ['s2o1_1_opt1', 's2o1_1_opt2'],
- "s1o1_opt2": ['s2o1_2_opt1', 's2o1_2_opt2'],
- "s1o2_opt1": ['s2o2_1_opt1', 's2o2_1_opt2'],
- "s1o2_opt2": ['s2o2_2_opt1', 's2o2_2_opt2'],
-};
 
-/*
- Property with content associated to the options of the third select list
- The key in this object must be the same with the values (options) added in each Array in "slist3" above
- The values of each key represent the content displayed after the user selects an option in 3rd dropdown list
-*/
-SList.scontent = {
- "s2o1_1_opt1": 'Content for s2o1_1_opt1',
- "s2o1_1_opt2": 'Content for s2o1_1_opt2',
- "s2o1_2_opt1": 'Content for s2o1_2_opt1',
- "s2o1_2_opt2": 'Content for s2o1_2_opt2',
- "s2o2_1_opt1": 'Content for s2o2_1_opt1',
- "s2o2_1_opt2": 'Content for s2o2_1_opt2',
- "s2o2_2_opt1": 'Content for s2o2_2_opt1',
- "s2o2_2_opt2": 'Content for s2o2_2_opt2',
-};
+var accounts = ["WHDH","TF"];
+var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
+var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WHDH_2": ["/live/whdh2/1","/live/whdh2/2","/live/whdh2/3"], "TF_1": ["/live/tf1/1","/live/tf1/2","/live/tf1/3"], "TF_2": ["/live/tf2/1","/live/tf2/2","/live/tf2/3"]};
 
-    /* From here no need to modify */
+$('#first').change(function() {
+    
+    $('#second').find('option')
+    .remove()
+    .end()
+    .append('<option value="All">All</option>')
+    .val('All');
+    
+    $.each(mediaGroups[$(this).val()], function(key, value) {   
+     $('#second')
+         .append($("<option></option>")
+         .attr("value",value)
+         .text(value)); 
+    });
+});
 
-// function to get the dropdown list, or content
-SList.getSelect = function(slist, option) {
-  document.getElementById('scontent').innerHTML = '';           // empty option-content
-
-  if(SList[slist][option]) {
-    // if option from the last Select, add text-content, else, set dropdown list
-    if(slist == 'scontent') document.getElementById('scontent').innerHTML = SList[slist][option];
-    else {
-      var addata = '<option>- - -</option>';
-      for(var i=0; i<SList[slist][option].length; i++) {
-        addata += '<option value="'+SList[slist][option][i]+'">'+SList[slist][option][i]+'</option>';
-      }
-
-      // cases for each dropdown list
-      switch(slist) {
-        case 'slist2':
-          document.getElementById('slist2').innerHTML = txtsl2+' <select name="slist2" onchange="SList.getSelect(\'slist3\', this.value);">'+addata+'</select>';
-          document.getElementById('slist3').innerHTML = '';
-          break;
-        case 'slist3':
-          document.getElementById('slist3').innerHTML = txtsl3+' <select name="slist3" onchange="SList.getSelect(\'scontent\', this.value);">'+addata+'</select>';
-          break;
-      }
-    }
-  }
-  else {
-    // empty the tags for select lists
-    if(slist == 'slist2') {
-      document.getElementById('slist2').innerHTML = '';
-      document.getElementById('slist3').innerHTML = '';
-    }
-    else if(slist == 'slist3') {
-      document.getElementById('slist3').innerHTML = '';
-    }
-  }
-}
--->
+$('#second').change(function() {
+    $('#third').find('option')
+    .remove()
+    .end()
+    .append('<option value="All">All</option>')
+    .val('All');
+    
+    $.each(clipUrls[$(this).val()], function(key, value) {   
+     $('#third')
+         .append($("<option></option>")
+         .attr("value",value)
+         .text(value)); 
+    });
+});

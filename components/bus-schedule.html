@@ -25,15 +25,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <section class="schedules-container">
       <h3>Choose a route</h3>
-      <!-- The first select list -->
-Select Route: <select name="slist1" onchange="SList.getSelect('slist2', this.value);">
- <option>- - -</option>
- <option value="s1_opt1">S1 Option1</option>
- <option value="s1_opt2">S1 Option2</option>
+<select id="first">
+    <option value="all">All</option>
+    <option value="WHDH">WHDH</option>
+    <option value="TF">TF</option>
 </select>
-<!-- Tags for the other 2 dropdown list, and for text-content -->
-<span id="slist2"></span> <span id="slist3"></span> <div id="scontent"></div>
-      
+
+<select id="second">
+    <option value="all">All</option>
+</select>
+
+<select id="third">
+    <option value="all">All</option>
+</select>
     </section>
  <script src="js/components/bus-schedule.js"></script>
   </template>
