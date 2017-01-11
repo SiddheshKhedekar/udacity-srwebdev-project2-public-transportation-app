@@ -1,3 +1,6 @@
+// gets all the required JSON data then assigns them to the required variables
+
+
 /* Script Triple Select Dropdown List, from: coursesweb.net/javascript/ */
 var SList = new Object();             // JS object that stores data for options
 
@@ -13,7 +16,9 @@ var txtsl3 = 'Select Option:';         // text for the third dropdown list
 
 var json = $.getJSON("./components/json/routes.json", function(result){
       console.log(result);
+      return result;
     });
+
 console.log(json)
 SList.slist2 = {
  "s1_opt1": ['s1o1_opt1', 's1o1_opt2'],
