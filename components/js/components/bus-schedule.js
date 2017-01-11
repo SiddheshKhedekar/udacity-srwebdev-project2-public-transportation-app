@@ -52,3 +52,5 @@ $('#second').change(function() {
          .text(value)); 
     });
 });
+
+// test for fetch values
