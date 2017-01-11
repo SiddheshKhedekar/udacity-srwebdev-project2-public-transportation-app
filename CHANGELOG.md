@@ -3,7 +3,7 @@
 v0.7
 - fixed git conflict problem
 - added HTML, CSS and images to each view
-- prototype to add bus-schedules template
+- added bus-schedule jQuery to manipulate json data
 - prototype to begin refactoring and adding JSON files to generate the bus schedules / stops
 - prototype to begin injecting JSON info into indexDB
 

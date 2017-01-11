@@ -1,5 +1,5 @@
 {
-  "entrypoint": "index.html",
+  "main": "index.html",
   "shell": "components/my-app.html",
   "fragments": [
     "components/my-view1.html",
