@@ -76,10 +76,10 @@ $('#routes').change(function() {
     .val('All');
     
     $.each(trips[$(this).val()], function(key, tripvalue) {
-      console.log(tripvalue.service_id);   
+      console.log(tripvalue);   
      $('#stops')
          .append($("<option></option>")
-         .attr("value",tripvalue.service_id)
-         .text(tripvalue.service_id)); 
+         .attr("tripvalue",tripvalue)
+         .text(tripvalue)); 
     });
 });
