@@ -1,100 +1,37 @@
 {
-   "16-20449": {
-      "route_short_name": 16,
-      "route_long_name": "Palliser",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
+   "route_id": {
+      "FIELD2": "route_short_name",
+      "FIELD3": "route_long_name",
+      "FIELD4": "route_desc",
+      "FIELD5": "route_type",
+      "FIELD6": "route_url"
    },
-   "16-20450": {
-      "route_short_name": 16,
-      "route_long_name": "Palliser",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
+   "201-20433": {
+      "FIELD2": "201",
+      "FIELD3": "Red Line - Somerset - Bridlewood / Tuscany CTrain",
+      "FIELD4": "",
+      "FIELD5": "0",
+      "FIELD6": ""
    },
-   "39-20449": {
-      "route_short_name": 39,
-      "route_long_name": "Acadia",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
+   "201-20444": {
+      "FIELD2": "201",
+      "FIELD3": "Red Line - Somerset - Bridlewood / Tuscany CTrain",
+      "FIELD4": "",
+      "FIELD5": "0",
+      "FIELD6": ""
    },
-   "39-20450": {
-      "route_short_name": 39,
-      "route_long_name": "Acadia",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
+   "202-20433": {
+      "FIELD2": "202",
+      "FIELD3": "Blue Line - Saddletowne / 69 Street CTrain",
+      "FIELD4": "",
+      "FIELD5": "0",
+      "FIELD6": ""
    },
-   "56-20449": {
-      "route_short_name": 56,
-      "route_long_name": "Woodbine",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "56-20450": {
-      "route_short_name": 56,
-      "route_long_name": "Woodbine",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "79-20449": {
-      "route_short_name": 79,
-      "route_long_name": "Acadia/Oakridge",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "79-20450": {
-      "route_short_name": 79,
-      "route_long_name": "Acadia/Oakridge",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "80-20449": {
-      "route_short_name": 80,
-      "route_long_name": "Oakridge/Acadia",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "80-20450": {
-      "route_short_name": 80,
-      "route_long_name": "Oakridge/Acadia",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "81-20449": {
-      "route_short_name": 81,
-      "route_long_name": "Macleod Trail",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "81-20450": {
-      "route_short_name": 81,
-      "route_long_name": "Macleod Trail",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "84-20449": {
-      "route_short_name": 84,
-      "route_long_name": "Palliser",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
-   },
-   "84-20450": {
-      "route_short_name": 84,
-      "route_long_name": "Palliser",
-      "route_desc": "",
-      "route_type": 3,
-      "route_url": ""
+   "202-20444": {
+      "FIELD2": "202",
+      "FIELD3": "Blue Line - Saddletowne / 69 Street CTrain",
+      "FIELD4": "",
+      "FIELD5": "0",
+      "FIELD6": ""
    }
 }
