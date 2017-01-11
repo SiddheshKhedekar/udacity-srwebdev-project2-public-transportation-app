@@ -4,13 +4,19 @@ var stops;
 var trips;
 var stop_times;
 
-// fetches JSON data 
-$.getJSON("./components/json/routes.json", function(result){
-      routes = result;
-      console.log(routes);
+// creates the object to fetch the appropriate data for each JSON
+function fetchJSON (file, variable){
+  $.getJSON(file, function(result){
+      variable = result;
+      console.log(variable);
     });
+};
 
-
+// assigns JSON to variable using OOJS
+var routeFetch = new fetchJSON("./components/json/routes.json", routes);
+var stopsFetch = new fetchJSON("./components/json/routes.json", stops);
+var tripsFetch = new fetchJSON("./components/json/routes.json", trips);
+var stoptimesFetch = new fetchJSON("./components/json/routes.json", stop_times);
 
 var accounts = ["WHDH","TF"];
 var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
