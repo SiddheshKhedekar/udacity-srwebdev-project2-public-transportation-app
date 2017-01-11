@@ -75,11 +75,14 @@ $('#routes').change(function() {
     .append('<option value="All">All</option>')
     .val('All');
     
-    $.each(trips[$(this).val()], function(key, value) {
-      console.log(value.service_id);   
-     $('#stops')
-         .append($("<option></option>")
-         .attr("value",value)
-         .text(value)); 
+    $.each(trips[$(this).val()], function(key, tripvalue) {
+      console.log(tripvalue.service_id);  
+      $.each(stop_times[tripvalue], function(key, stop_tripvalue) {
+      console.log(stop_tripvalue);  
+      $('#stops')
+           .append($("<option></option>")
+           .attr("value",stop_tripvalue)
+           .text(stop_tripvalue)); 
+      }); 
     });
 });
