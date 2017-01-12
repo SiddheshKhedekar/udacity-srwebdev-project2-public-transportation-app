@@ -1,7 +1,7 @@
 ** Changelog for Event Planning Application
 
 v0.75
-- refactored GTFS data, generated train routes, trips, stops, stop_times data
+- refactored GTFS data, generated train stop times
 - added jQuery functionality to manipulate GTFS data
 - added HTML / CSS to display GTFS data
 
