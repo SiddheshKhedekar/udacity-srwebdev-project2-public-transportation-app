@@ -33,6 +33,7 @@ var dates = $('#dates');
 var dir = $('#direction');
 var nb = $('#nb');
 var sb = $('#sb');
+var sDisplay = $('#sDisplay');
 
 // sets variables for route select elements
 var nbFrom = $('#northBoundFrom');
@@ -135,7 +136,8 @@ route.change(function() {
 
     // grabs the chosen times
     $.each(stop_times[nbVal], function (key, value) {
-    console.log(value.arrival_time); 
+    console.log(value.arrival_time);
+    sDisplay.append($("<p></p>").attr("class",key).text(value.arrival_time)); 
     });
 
    /* $('#stops').find('option')
@@ -146,10 +148,7 @@ route.change(function() {
     
     $.each(stop_times[$(this).val()], function(key, stops) {
       console.log(key);   
-     $('#stops')
-         .append($("<option></option>")
-         .attr("tripvalue",stops)
-         .text(stops)); 
+
     }); */
 });
 };
