@@ -64,6 +64,7 @@
       var datesValue = dates.val();
       
       switch(datesValue) {
+        
         case "WEEK":
         
         dir.removeClass('hidden');
@@ -75,6 +76,7 @@
         });
 
           break;
+
         case "SAT":
 
         dir.removeClass('hidden');
@@ -86,6 +88,7 @@
         });    
 
           break;
+
         case "SUN":
 
         dir.removeClass('hidden');
@@ -97,6 +100,7 @@
         });
 
             break;
+
         default:
             dir.addClass('hidden');
     }
@@ -162,7 +166,6 @@
       });
 
     };
-
 
     // creates constructor for fetching route times
     function routeTimes(JSON, rValue, rText, stationContainer){
