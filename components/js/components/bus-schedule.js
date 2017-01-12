@@ -38,6 +38,8 @@ var dir = $('#direction');
 var nb = $('#nb');
 var sb = $('#sb');
 var sDisplay = $('#sDisplay');
+var sFrom = $('#sFromContainer');
+var sTo = $('#sToContainer');
 
 // sets variables for route select elements
 var nbFrom = $('#northBoundFrom');
@@ -138,24 +140,10 @@ function fetchTimes(routeFrom, routeTo){
 
     // sets the values of each stop value
     rFromVal = routeFrom.val();
+    
+    // creates the object for fetching the appropriate JSON data
+    routeFromFetch = new routeTimes(stop_times, rFromVal, sFrom);
 
-    // fethes the times for routeTo
-    $.each(stop_times[rToVal], function (key, value) {
-
-      console.log(value.arrival_time);
-
-    });
-
-     /* $('#stops').find('option')
-      .remove()
-      .end()
-      .append('<option value="All">All</option>')
-      .val('All');
-      
-      $.each(stop_times[$(this).val()], function(key, stops) {
-        console.log(key);   
-
-      }); */
   });
   
     routeTo.change(function() {
@@ -163,36 +151,23 @@ function fetchTimes(routeFrom, routeTo){
       // sets the values of each stop value
       rToVal = routeTo.val();
 
-      // fethes the times for routeTo
-      $.each(stop_times[rToVal], function (key, value) {
+      // creates the object for fetching the appropriate JSON data
+      routeFromFetch = new routeTimes(stop_times, rToVal, sTo);
 
-        console.log(value.arrival_time);
-
-      });
-
-     /* $('#stops').find('option')
-      .remove()
-      .end()
-      .append('<option value="All">All</option>')
-      .val('All');
-      
-      $.each(stop_times[$(this).val()], function(key, stops) {
-        console.log(key);   
-
-      }); */
   });
 
 };
 
 
 // creates constructor for fetching route times
-function routeTimes(JSON, rValue, stationContainer, timeContainer){
+function routeTimes(JSON, rValue, stationContainer){
 
   $.each(JSON[rValue], function (key, value) {
+      var station = rValue;
       console.log(value.arrival_time);
-      console.log(rValue);
-      stationContainer.append($("<span></span>").attr("class", "sTime").text(rValue));
-      timeContainer.append($("<span></span>").attr("class", "sStation").text(value.arrival_time));
+      console.log(station);
+      stationContainer.append($("<span></span>").attr("class", "sTime").text(station));
+      stationContainer.append($("<span></span>").attr("class", "sStation").text(value.arrival_time));
   });
       
 };
