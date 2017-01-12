@@ -102,6 +102,7 @@ dir.change(function(data){
     nbTo.removeClass('hidden');
     sbFrom.addClass('hidden');
     sbTo.addClass('hidden');
+    fromFetch = new fetchTimes(nbFrom);
   }
   else if (dirValue === "SB") {
     sbFrom.removeClass('hidden');
@@ -118,18 +119,19 @@ dir.change(function(data){
 });
 
 
+// creates the object for 
+function fetchTimes(route){
 // handles fetching of stop data
-nbFrom.change(function() {
-    var nbVal = nbFrom.val();
-    /* can fetch individual object values
-    $.each(stops, function (key, value) {
-    console.log(value.FIELD3); */
+route.change(function() {
+
+    // sets the value of the constructor
+    var nbVal = route.val();
+
+    // grabs the chosen times
     $.each(stop_times[nbVal], function (key, value) {
     console.log(value.arrival_time); 
-    // the below can be used to filter data with specific values
-    var sTime = value.schedule_day;
-    console.log(sTime);
-});
+    });
+
    /* $('#stops').find('option')
     .remove()
     .end()
@@ -144,3 +146,4 @@ nbFrom.change(function() {
          .text(stops)); 
     }); */
 });
+};
