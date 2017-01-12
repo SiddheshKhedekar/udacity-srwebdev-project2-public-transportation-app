@@ -44,13 +44,16 @@
     var sDisplay = $('#sDisplay');
     var sFrom = $('#sFromContainer');
     var sTo = $('#sToContainer');
+    var sContainer = $('#sDisplay');
 
     // sets variables for route select elements
     var nbFrom = $('#northBoundFrom');
     var nbTo = $('#northBoundTo');
     var sbFrom = $('#southBoundFrom');
     var sbTo = $('#southBoundTo');
-    var optSelect = $('option:selected');
+
+    //sets variables for general elements
+    var sButton = $('#disSchedules');
 
 /* ===================================
 
@@ -166,9 +169,12 @@
           // sets the values of each stop value
           rToVal = routeTo.val();
           rToText = routeTo.children("option").filter(":selected").text();
+
           // creates the object for fetching the appropriate JSON data
           routeFromFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
 
+          // will need to add better logic to this later
+          sButton.removeClass('hidden');
       });
 
     };
@@ -184,3 +190,8 @@
       });
           
     };
+
+    // creates the handler for when the schedule button is clicked
+    sButton.click(function(){
+      sContainer.removeClass('hidden');
+    });
