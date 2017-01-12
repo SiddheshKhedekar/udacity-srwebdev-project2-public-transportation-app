@@ -165,8 +165,8 @@ function routeTimes(JSON, rValue, stationContainer){
       var station = rValue;
       console.log(value.arrival_time);
       console.log(station);
-      stationContainer.append($("<span></span>").attr("class", "sTime").text(station));
-      stationContainer.append($("<span></span>").attr("class", "sStation").text(value.arrival_time));
+      stationContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(station));
+      stationContainer.append($("<span></span>").attr("class", "sStation bus-schedule").text(value.arrival_time));
   });
       
 };
