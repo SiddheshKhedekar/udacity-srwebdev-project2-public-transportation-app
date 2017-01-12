@@ -7,6 +7,14 @@
 // for this project, I will stick to jQuery to grab JSON data
 // I will need to ask a bunch of questions about json filters, as I could not filter much data and instead created many JSON files
 
+  /* ===================================
+
+    Model
+
+  ======================================*/
+
+    // Holds the stop_times JSON object
+    var stop_times;
 
   /* ===================================
 
@@ -14,37 +22,16 @@
 
   ======================================*/
 
-// creates the routes JSON object
-var routes;
-// fetches JSON
-$.getJSON("./components/json/routes.json", function(data){
-      routes = data;
-      // console.log(routes);
-  });
 
-// creates the stops JSON object
-var stops;
-// fetches JSON
-$.getJSON("./components/json/stops.json", function(data){
-      stops = data;
-      // console.log(stops);
-  });
-
-// creates the stops JSON object
-var trips;
-// fetches JSON
-$.getJSON("./components/json/trips.json", function(data){
-      trips = data;
-      // console.log(trips);
-  });
-
-// creates the stop_times JSON object
-var stop_times;
 // fetches JSON
 $.getJSON("./components/json/stop_times.json", function(data){
       stop_times = data;
       // console.log(stop_times);
   });
+
+// sets variables for containers
+var dates = $('dates');
+var dir = $('direction');
 
 // sets variables for route select elements
 var nbFrom = $('#northBoundFrom');
@@ -52,29 +39,36 @@ var nbTo = $('#northBoundTo');
 var sbFrom = $('#southBoundFrom');
 var sbTo = $('#southBoundTo');
 
-var accounts = ["WHDH","TF"];
-var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
-var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WHDH_2": ["/live/whdh2/1","/live/whdh2/2","/live/whdh2/3"], "TF_1": ["/live/tf1/1","/live/tf1/2","/live/tf1/3"], "TF_2": ["/live/tf2/1","/live/tf2/2","/live/tf2/3"]};
-
 /* ===================================
 
     Controller
 
 ======================================*/
+// displays direction inputs after dates have been selected
+dates.change(function(data){
 
-$('#direction').change(function(data){
+  // sets the value of the date inputs
+  datesValue = dates.val();
+
+
+
+});
+
+// grabs the correct input for the schedules
+
+dir.change(function(data){
   
   // sets the value of the from route
-  var direction = $('#direction').val();
+  var dirValue = dir.val();
 
   // creates if handlers for route display
-  if (direction === "NB") {
+  if (dirValue === "NB") {
     nbFrom.removeClass('hidden');
     nbTo.removeClass('hidden');
     sbFrom.addClass('hidden');
     sbTo.addClass('hidden');
   }
-  else if (direction === "SB") {
+  else if (dirValue === "SB") {
     sbFrom.removeClass('hidden');
     sbTo.removeClass('hidden');
     nbFrom.addClass('hidden');
@@ -114,38 +108,4 @@ nbFrom.change(function() {
          .attr("tripvalue",stops)
          .text(stops)); 
     }); */
-});
-
-
-
-// handles JSON fetch
-$('#first').change(function() {
-    
-    $('#second').find('option')
-    .remove()
-    .end()
-    .append('<option value="All">All</option>')
-    .val('All');
-    
-    $.each(mediaGroups[$(this).val()], function(key, value) {   
-     $('#second')
-         .append($("<option></option>")
-         .attr("value",value)
-         .text(value)); 
-    });
-});
-
-$('#second').change(function() {
-    $('#third').find('option')
-    .remove()
-    .end()
-    .append('<option value="All">All</option>')
-    .val('All');
-    
-    $.each(clipUrls[$(this).val()], function(key, value) {   
-     $('#third')
-         .append($("<option></option>")
-         .attr("value",value)
-         .text(value)); 
-    });
 });
