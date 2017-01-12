@@ -7,21 +7,20 @@
 // for this project, I will stick to jQuery to grab JSON data
 // I will need to ask a bunch of questions about json filters, as I could not filter much data and instead created many JSON files
 
-  /* ===================================
+/* ===================================
 
     Model
 
-  ======================================*/
+======================================*/
 
     // Holds the stop_times JSON object
     var stop_times;
 
-  /* ===================================
+/* ===================================
 
     View
 
-  ======================================*/
-
+ ======================================*/
 
 /* fetches JSON
 $.getJSON("./components/json/stop_times.json", function(data){
@@ -52,13 +51,37 @@ dates.change(function(data){
   
   switch(datesValue) {
     case "WEEK":
+    
     dir.removeClass('hidden');
-        break;
+
+    //fetches JSON
+    $.getJSON("./components/json/stops_week.json", function(data){
+          stop_times = data;
+          console.log(stop_times);
+    });
+
+      break;
     case "SAT":
+
     dir.removeClass('hidden');
-        break;
+    
+    //fetches JSON
+    $.getJSON("./components/json/stops_sat.json", function(data){
+          stop_times = data;
+          console.log(stop_times);
+    });    
+
+      break;
     case "SUN":
+
     dir.removeClass('hidden');
+
+    //fetches JSON
+    $.getJSON("./components/json/stops_sun.json", function(data){
+          stop_times = data;
+          console.log(stop_times);
+    });
+
         break;
     default:
         dir.addClass('hidden');
