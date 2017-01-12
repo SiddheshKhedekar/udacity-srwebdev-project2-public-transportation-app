@@ -16,6 +16,10 @@
     // Holds the stop_times JSON object
     var stop_times;
 
+    // holds the values of the route options
+    var rFromVal;
+    var rToVal;
+
 /* ===================================
 
     View
@@ -103,12 +107,12 @@ dir.change(function(data){
   if (dirValue === "NB") {
     nbHandle = new handleDisplay(nb, sb, false);
     nfromFetch = new fetchTimes(nbFrom);
-    ntoFetch = new fetchTimes(nbTo);
+    ntoFetch = new fetchTimes(nbTo, nbFrom);
   }
   else if (dirValue === "SB") {
     sbHandle = new handleDisplay(sb, nb, false);
     sfromFetch = new fetchTimes(sbFrom);
-    stoFetch = new fetchTimes(sbTo);
+    stoFetch = new fetchTimes(sbTo, sbFrom);
   }
   else {
     sbHandle = new handleDisplay(sb, nb, true);
@@ -127,28 +131,68 @@ function handleDisplay(showEl, hideEl, hideBoth){
 }; 
 
 // creates the constructor for fetching route times
-function fetchTimes(route){
-// handles fetching of stop data
-route.change(function() {
+function fetchTimes(routeFrom, routeTo){
+  
+  // handles fetching of stop data
+  routeFrom.change(function() {
 
-    // sets the value of the constructor
-    var nbVal = route.val();
+    // sets the values of each stop value
+    rFromVal = routeFrom.val();
 
-    // grabs the chosen times
-    $.each(stop_times[nbVal], function (key, value) {
-    console.log(value.arrival_time);
-    sDisplay.append($("<p></p>").attr("class",key).text(value.arrival_time)); 
+    // fethes the times for routeTo
+    $.each(stop_times[rToVal], function (key, value) {
+
+      console.log(value.arrival_time);
+
     });
 
-   /* $('#stops').find('option')
-    .remove()
-    .end()
-    .append('<option value="All">All</option>')
-    .val('All');
-    
-    $.each(stop_times[$(this).val()], function(key, stops) {
-      console.log(key);   
+     /* $('#stops').find('option')
+      .remove()
+      .end()
+      .append('<option value="All">All</option>')
+      .val('All');
+      
+      $.each(stop_times[$(this).val()], function(key, stops) {
+        console.log(key);   
 
-    }); */
-});
+      }); */
+  });
+  
+    routeTo.change(function() {
+
+      // sets the values of each stop value
+      rToVal = routeTo.val();
+
+      // fethes the times for routeTo
+      $.each(stop_times[rToVal], function (key, value) {
+
+        console.log(value.arrival_time);
+
+      });
+
+     /* $('#stops').find('option')
+      .remove()
+      .end()
+      .append('<option value="All">All</option>')
+      .val('All');
+      
+      $.each(stop_times[$(this).val()], function(key, stops) {
+        console.log(key);   
+
+      }); */
+  });
+
+};
+
+
+// creates constructor for fetching route times
+function routeTimes(JSON, rValue, stationContainer, timeContainer){
+
+  $.each(JSON[rValue], function (key, value) {
+      console.log(value.arrival_time);
+      console.log(rValue);
+      stationContainer.append($("<span></span>").attr("class", "sTime").text(rValue));
+      timeContainer.append($("<span></span>").attr("class", "sStation").text(value.arrival_time));
+  });
+      
 };
