@@ -63,8 +63,6 @@ var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WH
 
 ======================================*/
 
-
-
 $('#direction').change(function(data){
   
   // sets the value of the from route

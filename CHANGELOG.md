@@ -1,11 +1,15 @@
 ** Changelog for Event Planning Application
 
+v0.75
+- refactored GTFS data, generated train routes, trips, stops, stop_times data
+- added jQuery functionality to manipulate GTFS data
+- added HTML / CSS to display GTFS data
+
 v0.7
 - fixed git conflict problem
 - added HTML, CSS and images to each view
 - added bus-schedule jQuery to manipulate json data
-- prototype to begin refactoring and adding JSON files to generate the bus schedules / stops
-- prototype to begin injecting JSON info into indexDB
+
 
 v0.6
 - SCRAPPED EMC6 DUE TO CONFLICT WITH VULCANIZE
