@@ -1,5 +1,9 @@
 ** Changelog for Event Planning Application
 
+v0.8
+- prototype to display schedule data
+- prototype to display all data while offline
+
 v0.75
 - refactored GTFS data, generated train stop times
 - added jQuery functionality to manipulate GTFS data
