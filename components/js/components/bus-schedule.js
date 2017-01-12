@@ -4,9 +4,8 @@
 
 ======================================*/
 
-// for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript 
-// import {main} from '../app.js';
-// extend these as new objects from the main MVC in app.js in the future for commonly used functions
+// for this project, I will stick to jQuery to grab JSON data
+// I will need to ask a bunch of questions about json filters, as I could not filter much data and instead created many JSON files
 
 
   /* ===================================
@@ -99,7 +98,7 @@ nbFrom.change(function() {
     $.each(stop_times[nbVal], function (key, value) {
     console.log(value.arrival_time); 
     // the below can be used to filter data with specific values
-    var sTime = value.arrival_time == '19:13:00';
+    var sTime = value.schedule_day;
     console.log(sTime);
 });
    /* $('#stops').find('option')
