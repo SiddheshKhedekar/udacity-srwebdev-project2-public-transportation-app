@@ -24,13 +24,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .hidden {
         display: none;
       }
+      #sDisplay table {
+          width: 80%;
+          float: none;
+          margin: 1% auto;
+      }
     </style>
 
     <section class="schedules-container">
       <h3>View train Schedules</h3>
       <div id="tripDate">
         <select id="dates">
-            <option value="none">Which day are you traveling?</option>
+            <option value="none">When are you traveling?</option>
             <option value="WEEK">Weekday</option>
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
@@ -159,21 +164,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </select>
       </div>
       <div id="sDisplay">
-        <table>
-          <tr>
-            <th class="sFrom">Station From</th>
-            <th class="sDept">Departure</th> 
-            <th class="sTo">Station To</th>
-            <th class="sArr">Arrival</th>
-            <th class="sTime">Approx. Travel Time</th>
-          </tr>
-          <tr>
-            <td class="sFrom">Jill</td>
-            <td class="sDept">Smith</td> 
-            <td class="sTo">50</td>
-            <td class="sArr">50</td>
-            <td class="sTime">50</td>
-          </tr>
+          <div id="sHeaders">
+            <h4 class="sFrom">Station From</h4>
+            <h4 class="sDept">Departure</h4> 
+            <h4 class="sTo">Station To</h4>
+            <h4 class="sArr">Arrival</h4>
+            <h4 class="sTime">Approx. Travel Time</h4>
+          </div>
+          <div id="sContainer">
+            <div id="sFromContainer">
+              <span class="sFrom">Jill</span>
+              <span class="sDept">Smith</span> 
+            </div>
+            <div id="sToContainer">
+              <span class="sTo">50</span>
+              <span class="sArr">50</span>
+            </div>
+            <div id="sTimeContainer">
+              <span class="sTime">50</span>
+            </div>
+          </div>
         </table>
       </div>
     </section>
