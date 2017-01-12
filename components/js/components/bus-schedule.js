@@ -47,13 +47,11 @@ $.getJSON("./components/json/stop_times.json", function(data){
       console.log(stop_times);
   });
 
-// gets the value of the from route
-var fromRoute;
-
-$('#northBoundFrom').change(function(data){
-    fromRoute = ($('#northBoundFrom').val());
-});
-
+// sets variables for route select elements
+var nbFrom = $('#northBoundFrom');
+var nbTo = $('#northBoundTo');
+var sbFrom = $('#southBoundFrom');
+var sbTo = $('#southBoundTo');
 
 var accounts = ["WHDH","TF"];
 var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
@@ -66,6 +64,35 @@ var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WH
 ======================================*/
 
 
+
+$('#direction').change(function(data){
+  
+  // sets the value of the from route
+  var direction = $('#direction').val();
+
+  // creates if handlers for route display
+  if (direction === "NB") {
+    nbFrom.removeClass('hidden');
+    nbTo.removeClass('hidden');
+    sbFrom.addClass('hidden');
+    sbTo.addClass('hidden');
+  }
+  else if (direction === "SB") {
+    sbFrom.removeClass('hidden');
+    sbTo.removeClass('hidden');
+    nbFrom.addClass('hidden');
+    nbTo.addClass('hidden');
+  }
+  else {
+    nbFrom.addClass('hidden');
+    nbTo.addClass('hidden');
+    sbFrom.addClass('hidden');
+    sbTo.addClass('hidden');
+  }
+});
+
+
+// handles JSON fetch
 $('#first').change(function() {
     
     $('#second').find('option')

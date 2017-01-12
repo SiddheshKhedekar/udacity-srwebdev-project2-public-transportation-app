@@ -21,19 +21,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       h3 {
         margin: 0;
       }
+      .hidden {
+        display: none;
+      }
     </style>
 
     <section class="schedules-container">
       <h3>View train Schedules</h3>
       <div id="tripDirection">
-        <select id="routes">
-            <option value="all">Which direction are you heading?</option>
-            <option value="201-20433">NB</option>
-            <option value="201-20444">SB</option>
+        <select id="direction">
+            <option value="none">Which direction are you heading?</option>
+            <option value="NB">NB</option>
+            <option value="SB">SB</option>
         </select>
       </div>
       <div id="fromStop">
-        <select id="northBoundFrom">
+        <select class="hidden" id="northBoundFrom">
           <option value="9390">Somerset - Bridelwood</option>
           <option value="9391">Shawnessy</option>
           <option value="9261">Fish Creek - Lacombe</option>
@@ -59,7 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <option value="3816">Crowfoot</option>
           <option value="3640">Tuscany</option>
         </select>
-        <select id="southBoundFrom">
+        <select class="hidden" id="southBoundFrom">
           <option value="3641">Tuscany</option>
           <option value="3817">Crowfoot</option>
           <option value="3960">Dalhousie</option>
@@ -88,7 +91,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </select>
       </div>
       <div id="toStop">
-        <select id="northBoundTo">
+        <select class="hidden" id="northBoundTo">
             <option value="9390">Somerset - Bridelwood</option>
             <option value="9391">Shawnessy</option>
             <option value="9261">Fish Creek - Lacombe</option>
@@ -114,7 +117,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <option value="3816">Crowfoot</option>
             <option value="3640">Tuscany</option>
         </select>
-        <select id="southBoundFrom">
+        <select class="hidden" id="southBoundTo">
             <option value="3641">Tuscany</option>
             <option value="3817">Crowfoot</option>
             <option value="3960">Dalhousie</option>
