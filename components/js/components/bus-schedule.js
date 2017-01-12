@@ -99,7 +99,7 @@ nbFrom.change(function() {
     $.each(stop_times[nbVal], function (key, value) {
     console.log(value.arrival_time); 
     // the below can be used to filter data with specific values
-    sTime = value.arrival_time == '19:13:00';
+    var sTime = value.arrival_time == '19:13:00';
     console.log(sTime);
 });
    /* $('#stops').find('option')
