@@ -113,11 +113,11 @@
       // creates if handlers for route display
       if (dirValue === "NB") {
         nbHandle = new handleDisplay(nb, sb, false);
-        nbFetch = new fetchTimes(nbTo, nbFrom);
+        nbFetch = new fetchTimes(nbFrom, nbTo);
       }
       else if (dirValue === "SB") {
         sbHandle = new handleDisplay(sb, nb, false);
-        sbFetch = new fetchTimes(sbTo, sbFrom);
+        sbFetch = new fetchTimes(sbFrom, sbTo);
       }
       else {
         sbHandle = new handleDisplay(sb, nb, true);
