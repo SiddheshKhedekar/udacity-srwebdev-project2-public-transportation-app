@@ -23,15 +23,15 @@
   ======================================*/
 
 
-// fetches JSON
+/* fetches JSON
 $.getJSON("./components/json/stop_times.json", function(data){
       stop_times = data;
       // console.log(stop_times);
-  });
+  }); */
 
 // sets variables for containers
-var dates = $('dates');
-var dir = $('direction');
+var dates = $('#dates');
+var dir = $('#direction');
 
 // sets variables for route select elements
 var nbFrom = $('#northBoundFrom');
@@ -48,9 +48,21 @@ var sbTo = $('#southBoundTo');
 dates.change(function(data){
 
   // sets the value of the date inputs
-  datesValue = dates.val();
-
-
+  var datesValue = dates.val();
+  
+  switch(datesValue) {
+    case "WEEK":
+    dir.removeClass('hidden');
+        break;
+    case "SAT":
+    dir.removeClass('hidden');
+        break;
+    case "SUN":
+    dir.removeClass('hidden');
+        break;
+    default:
+        dir.addClass('hidden');
+}
 
 });
 
