@@ -20,7 +20,7 @@ var routes;
 // fetches JSON
 $.getJSON("./components/json/routes.json", function(data){
       routes = data;
-      console.log(routes);
+      // console.log(routes);
   });
 
 // creates the stops JSON object
@@ -28,7 +28,7 @@ var stops;
 // fetches JSON
 $.getJSON("./components/json/stops.json", function(data){
       stops = data;
-      console.log(stops);
+      // console.log(stops);
   });
 
 // creates the stops JSON object
@@ -36,7 +36,7 @@ var trips;
 // fetches JSON
 $.getJSON("./components/json/trips.json", function(data){
       trips = data;
-      console.log(trips);
+      // console.log(trips);
   });
 
 // creates the stop_times JSON object
@@ -44,7 +44,7 @@ var stop_times;
 // fetches JSON
 $.getJSON("./components/json/stop_times.json", function(data){
       stop_times = data;
-      console.log(stop_times);
+      // console.log(stop_times);
   });
 
 // sets variables for route select elements
@@ -90,6 +90,32 @@ $('#direction').change(function(data){
 });
 
 
+// handles fetching of stop data
+nbFrom.change(function() {
+    var nbVal = nbFrom.val();
+    /* can fetch individual object values
+    $.each(stops, function (key, value) {
+    console.log(value.FIELD3); */
+    $.each(stop_times[nbVal], function (key, value) {
+    console.log(value.arrival_time); 
+});
+   /* $('#stops').find('option')
+    .remove()
+    .end()
+    .append('<option value="All">All</option>')
+    .val('All');
+    
+    $.each(stop_times[$(this).val()], function(key, stops) {
+      console.log(key);   
+     $('#stops')
+         .append($("<option></option>")
+         .attr("tripvalue",stops)
+         .text(stops)); 
+    }); */
+});
+
+
+
 // handles JSON fetch
 $('#first').change(function() {
     
@@ -119,23 +145,5 @@ $('#second').change(function() {
          .append($("<option></option>")
          .attr("value",value)
          .text(value)); 
-    });
-});
-
-// test for fetch values
-$('#routes').change(function() {
-    
-    $('#stops').find('option')
-    .remove()
-    .end()
-    .append('<option value="All">All</option>')
-    .val('All');
-    
-    $.each(trips[$(this).val()], function(key, tripvalue) {
-      console.log(tripvalue);   
-     $('#stops')
-         .append($("<option></option>")
-         .attr("tripvalue",tripvalue)
-         .text(tripvalue)); 
     });
 });
