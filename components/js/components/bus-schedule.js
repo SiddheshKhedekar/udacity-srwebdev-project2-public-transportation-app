@@ -64,7 +64,7 @@
       var datesValue = dates.val();
       
       switch(datesValue) {
-        
+
         case "WEEK":
         
         dir.removeClass('hidden');
@@ -147,7 +147,7 @@
 
         // sets the values of each stop value
         rFromVal = routeFrom.val();
-        rFromText = routeTo.children("option").filter(":selected").text();
+        rFromText = routeFrom.children("option").filter(":selected").text();
         
         // creates the object for fetching the appropriate JSON data
         routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFrom);
