@@ -1,3 +1,20 @@
+/* ===================================
+
+  JS document to handle train schedules
+
+======================================*/
+
+// for this project, will use the MVC sample defined here : https://alexatnet.com/articles/model-view-controller-mvc-javascript 
+// import {main} from '../app.js';
+// extend these as new objects from the main MVC in app.js in the future for commonly used functions
+
+
+  /* ===================================
+
+    View
+
+  ======================================*/
+
 // creates the routes JSON object
 var routes;
 // fetches JSON
@@ -30,10 +47,24 @@ $.getJSON("./components/json/stop_times.json", function(data){
       console.log(stop_times);
   });
 
+// gets the value of the from route
+var fromRoute;
+
+$('#northBoundFrom').change(function(data){
+    fromRoute = ($('#northBoundFrom').val());
+});
+
 
 var accounts = ["WHDH","TF"];
 var mediaGroups = {"WHDH": ["WHDH_1","WHDH_2"], "TF": ["TF_1","TF_2"]};
 var clipUrls = {"WHDH_1": ["/live/whdh1/1","/live/whdh1/2","/live/whdh1/3"], "WHDH_2": ["/live/whdh2/1","/live/whdh2/2","/live/whdh2/3"], "TF_1": ["/live/tf1/1","/live/tf1/2","/live/tf1/3"], "TF_2": ["/live/tf2/1","/live/tf2/2","/live/tf2/3"]};
+
+/* ===================================
+
+    Controller
+
+======================================*/
+
 
 $('#first').change(function() {
     
