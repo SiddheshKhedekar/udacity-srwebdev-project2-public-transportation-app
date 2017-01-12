@@ -102,13 +102,16 @@ dir.change(function(data){
     nbTo.removeClass('hidden');
     sbFrom.addClass('hidden');
     sbTo.addClass('hidden');
-    fromFetch = new fetchTimes(nbFrom);
+    nfromFetch = new fetchTimes(nbFrom);
+    ntoFetch = new fetchTimes(nbTo);
   }
   else if (dirValue === "SB") {
     sbFrom.removeClass('hidden');
     sbTo.removeClass('hidden');
     nbFrom.addClass('hidden');
     nbTo.addClass('hidden');
+    sfromFetch = new fetchTimes(sbFrom);
+    stoFetch = new fetchTimes(sbTo);
   }
   else {
     nbFrom.addClass('hidden');
