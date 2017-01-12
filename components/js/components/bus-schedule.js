@@ -31,6 +31,8 @@ $.getJSON("./components/json/stop_times.json", function(data){
 // sets variables for containers
 var dates = $('#dates');
 var dir = $('#direction');
+var nb = $('#nb');
+var sb = $('#sb');
 
 // sets variables for route select elements
 var nbFrom = $('#northBoundFrom');
@@ -98,31 +100,32 @@ dir.change(function(data){
 
   // creates if handlers for route display
   if (dirValue === "NB") {
-    nbFrom.removeClass('hidden');
-    nbTo.removeClass('hidden');
-    sbFrom.addClass('hidden');
-    sbTo.addClass('hidden');
+    nbHandle = new handleDisplay(nb, sb, false);
     nfromFetch = new fetchTimes(nbFrom);
     ntoFetch = new fetchTimes(nbTo);
   }
   else if (dirValue === "SB") {
-    sbFrom.removeClass('hidden');
-    sbTo.removeClass('hidden');
-    nbFrom.addClass('hidden');
-    nbTo.addClass('hidden');
+    sbHandle = new handleDisplay(sb, nb, false);
     sfromFetch = new fetchTimes(sbFrom);
     stoFetch = new fetchTimes(sbTo);
   }
   else {
-    nbFrom.addClass('hidden');
-    nbTo.addClass('hidden');
-    sbFrom.addClass('hidden');
-    sbTo.addClass('hidden');
+    sbHandle = new handleDisplay(sb, nb, true);
   }
 });
 
+// creates the constructor for setting element display
+function handleDisplay(showEl, hideEl, hideBoth){
+    if (hideBoth === true) {
+      showEl.addClass('hidden');
+      hideEl.addClass('hidden');
+    } else {
+      showEl.removeClass('hidden');
+      hideEl.addClass('hidden');
+    }
+}; 
 
-// creates the object for 
+// creates the constructor for fetching route times
 function fetchTimes(route){
 // handles fetching of stop data
 route.change(function() {

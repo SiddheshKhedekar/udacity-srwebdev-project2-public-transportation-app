@@ -43,8 +43,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <option value="SB">SB</option>
         </select>
       </div>
-      <div id="fromStop">
-        <select class="hidden" id="northBoundFrom">
+      <div class="hidden" id="nb">
+        <select id="northBoundFrom">
           <option value="none">Select your Starting Point</option>
           <option value="9390">Somerset - Bridelwood</option>
           <option value="9391">Shawnessy</option>
@@ -71,7 +71,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <option value="3816">Crowfoot</option>
           <option value="3640">Tuscany</option>
         </select>
-        <select class="hidden" id="southBoundFrom">
+        <select id="northBoundTo">
+            <option value="none">Select your Destination</option>
+            <option value="9390">Somerset - Bridelwood</option>
+            <option value="9391">Shawnessy</option>
+            <option value="9261">Fish Creek - Lacombe</option>
+            <option value="9262">Canyon Meadows</option>
+            <option value="6801">Anderson</option>
+            <option value="6802">Southland</option>
+            <option value="6803">Heritage</option>
+            <option value="6804">Chinook</option>
+            <option value="6805">39th Avenue</option>
+            <option value="6806">Erlton / Stampede</option>
+            <option value="6807">Victoria Park / Stampede</option>
+            <option value="6822">City Hall</option>
+            <option value="6823">1st Street SW</option>
+            <option value="6824">4th Street SW</option>
+            <option value="6825">7th Street SW</option>
+            <option value="6820">Sunnyside</option>
+            <option value="6819">SAIT / ACAD / Jubilee</option>
+            <option value="6818">Lions Park</option>
+            <option value="6817">Banff Trail</option>
+            <option value="6816">University</option>
+            <option value="4934">Brentwood</option>
+            <option value="4155">Dalhousie</option>
+            <option value="3816">Crowfoot</option>
+            <option value="3640">Tuscany</option>
+        </select>
+        
+      </div>
+      <div class="hidden" id="sb">
+        <select id="southBoundFrom">
           <option value="none">Select your Starting Point</option>
           <option value="3641">Tuscany</option>
           <option value="3817">Crowfoot</option>
@@ -99,36 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <option value="9392">Shawnessy</option>
           <option value="9386">Somerset - Bridelwood</option>
         </select>
-      </div>
-      <div id="toStop">
-        <select class="hidden" id="northBoundTo">
-            <option value="none">Select your Destination</option>
-            <option value="9390">Somerset - Bridelwood</option>
-            <option value="9391">Shawnessy</option>
-            <option value="9261">Fish Creek - Lacombe</option>
-            <option value="9262">Canyon Meadows</option>
-            <option value="6801">Anderson</option>
-            <option value="6802">Southland</option>
-            <option value="6803">Heritage</option>
-            <option value="6804">Chinook</option>
-            <option value="6805">39th Avenue</option>
-            <option value="6806">Erlton / Stampede</option>
-            <option value="6807">Victoria Park / Stampede</option>
-            <option value="6822">City Hall</option>
-            <option value="6823">1st Street SW</option>
-            <option value="6824">4th Street SW</option>
-            <option value="6825">7th Street SW</option>
-            <option value="6820">Sunnyside</option>
-            <option value="6819">SAIT / ACAD / Jubilee</option>
-            <option value="6818">Lions Park</option>
-            <option value="6817">Banff Trail</option>
-            <option value="6816">University</option>
-            <option value="4934">Brentwood</option>
-            <option value="4155">Dalhousie</option>
-            <option value="3816">Crowfoot</option>
-            <option value="3640">Tuscany</option>
-        </select>
-        <select class="hidden" id="southBoundTo">
+        <select id="southBoundTo">
             <option value="none">Select your Destination</option>
             <option value="3641">Tuscany</option>
             <option value="3817">Crowfoot</option>
