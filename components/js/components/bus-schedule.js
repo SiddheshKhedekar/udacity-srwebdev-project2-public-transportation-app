@@ -108,13 +108,11 @@ dir.change(function(data){
   // creates if handlers for route display
   if (dirValue === "NB") {
     nbHandle = new handleDisplay(nb, sb, false);
-    nfromFetch = new fetchTimes(nbFrom);
-    ntoFetch = new fetchTimes(nbTo, nbFrom);
+    nbFetch = new fetchTimes(nbTo, nbFrom);
   }
   else if (dirValue === "SB") {
     sbHandle = new handleDisplay(sb, nb, false);
-    sfromFetch = new fetchTimes(sbFrom);
-    stoFetch = new fetchTimes(sbTo, sbFrom);
+    sbFetch = new fetchTimes(sbTo, sbFrom);
   }
   else {
     sbHandle = new handleDisplay(sb, nb, true);
@@ -135,7 +133,7 @@ function handleDisplay(showEl, hideEl, hideBoth){
 // creates the constructor for fetching route times
 function fetchTimes(routeFrom, routeTo){
   
-  // handles fetching of stop data
+  // handles fetching of stop from data
   routeFrom.change(function() {
 
     // sets the values of each stop value
@@ -146,7 +144,8 @@ function fetchTimes(routeFrom, routeTo){
 
   });
   
-    routeTo.change(function() {
+  // handles fetching stop to data
+  routeTo.change(function() {
 
       // sets the values of each stop value
       rToVal = routeTo.val();
