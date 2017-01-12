@@ -140,10 +140,13 @@
     }; 
 
     // creates the constructor for fetching route times
-    function fetchTimes(routeFrom, routeTo, optSelected){
+    function fetchTimes(routeFrom, routeTo){
       
       // handles fetching of stop from data
       routeFrom.change(function() {
+
+        // removes current selection data
+        sFrom.find('span').remove().end();
 
         // sets the values of each stop value
         rFromVal = routeFrom.val();
@@ -156,6 +159,9 @@
       
       // handles fetching stop to data
       routeTo.change(function() {
+          
+          // removes current selection data
+          sTo.find('span').remove().end();
 
           // sets the values of each stop value
           rToVal = routeTo.val();
