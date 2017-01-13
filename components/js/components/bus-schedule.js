@@ -221,7 +221,7 @@
 
           default:
             sButton.removeAttr('disabled');
-            sbutton.removeClass('disabled');
+            sButton.removeClass('disabled');
         };
       });
     };
