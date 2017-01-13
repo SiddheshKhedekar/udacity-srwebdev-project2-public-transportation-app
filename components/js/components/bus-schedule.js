@@ -171,7 +171,7 @@
           var rFromText = routeFrom.children("option").filter(":selected").text();
           
           // creates the object for fetching the appropriate JSON data
-          this.routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
+          var routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
         
         // handles fetching stop to data
           // sets the values of each stop value
@@ -179,12 +179,20 @@
           var rToText = routeTo.children("option").filter(":selected").text();
 
           // creates the object for fetching the appropriate JSON data
-          this.routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
+          var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
           // handles data render filtering
 
-          seen = {};
-          $('.sTimeContainer > span.sTime').each(function() {
+          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
+              var seen = {};
+              var txt = $(this).text();
+              if (seen[txt])
+                  $(this).remove();
+              else
+                  seen[txt] = true;
+          });
+          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
+              var seen = {};
               var txt = $(this).text();
               if (seen[txt])
                   $(this).remove();
