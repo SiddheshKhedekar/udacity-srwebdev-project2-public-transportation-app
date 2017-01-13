@@ -115,7 +115,6 @@
     });
 
     // grabs the correct input for the schedules
-
     dir.change(function(data){
       
       // sets the value of the from route
@@ -152,12 +151,7 @@
       // creates the handler for when the schedule button is clicked
       sButton.click(function(){
 
-        $("#sFromContainer > span:gt(5)").remove();
-        $("#sToContainer > span:gt(5)").remove();
-
-
       // handles fetching of stop from data
-
         // removes current selection data
         sFrom.find('span').remove().end();
         // removes current selection data
@@ -169,24 +163,20 @@
         
         // creates the object for fetching the appropriate JSON data
         routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFrom);
-
       
       // handles fetching stop to data
+        // sets the values of each stop value
+        rToVal = routeTo.children("option").filter(":selected").attr("alt");
+        rToText = routeTo.children("option").filter(":selected").text();
 
-          
-         
-
-          // sets the values of each stop value
-          rToVal = routeTo.children("option").filter(":selected").attr("alt");
-          rToText = routeTo.children("option").filter(":selected").text();
-
-          // creates the object for fetching the appropriate JSON data
-          routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
-
-          sContainer.removeClass('hidden');
+        // creates the object for fetching the appropriate JSON data
+        routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
+        $("#sFromContainer > span:gt(5)").remove();
+        $("#sToContainer > span:gt(5)").remove();
+        sContainer.removeClass('hidden');
       });
       
-      // sets the disabler
+      // sets option disabler
       optionDisable = new disableOptions(routeFrom, routeTo);
     };
 
@@ -201,7 +191,6 @@
       });
           
     };
-    
 
     // disable options fiddle =  http://jsfiddle.net/q7He9/2/
     // creates constructor for disabled options
