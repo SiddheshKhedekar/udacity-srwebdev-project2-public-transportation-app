@@ -115,6 +115,8 @@
 
         default:
             dir.addClass('hidden');
+            this.hideSchedule = new handleDisplay(sButton, sContainer, true)
+            this.hideRoutes = new handleDisplay(sb, nb, true);
     }
 
     });
@@ -127,15 +129,15 @@
 
       // creates if handlers for route display
       if (dirValue === "NB") {
-        nbHandle = new handleDisplay(nb, sb, false);
-        nbFetch = new fetchTimes(nbFrom, nbTo);
+        this.nbHandle = new handleDisplay(nb, sb, false);
+        this.nbFetch = new fetchTimes(nbFrom, nbTo);
       }
       else if (dirValue === "SB") {
-        sbHandle = new handleDisplay(sb, nb, false);
-        sbFetch = new fetchTimes(sbFrom, sbTo);
+        this.sbHandle = new handleDisplay(sb, nb, false);
+        this.sbFetch = new fetchTimes(sbFrom, sbTo);
       }
       else {
-        sbHandle = new handleDisplay(sb, nb, true);
+        this.sbHandle = new handleDisplay(sb, nb, true);
       }
     });
 
@@ -171,19 +173,19 @@
           // handles fetching of stop from data
           sContainer.find('span').remove().end();
           // sets the values of each stop value
-          rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
-          rFromText = routeFrom.children("option").filter(":selected").text();
+          var rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
+          var rFromText = routeFrom.children("option").filter(":selected").text();
           
           // creates the object for fetching the appropriate JSON data
-          routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
+          this.routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
         
         // handles fetching stop to data
           // sets the values of each stop value
-          rToVal = routeTo.children("option").filter(":selected").attr("alt");
-          rToText = routeTo.children("option").filter(":selected").text();
+          var rToVal = routeTo.children("option").filter(":selected").attr("alt");
+          var rToText = routeTo.children("option").filter(":selected").text();
 
           // creates the object for fetching the appropriate JSON data
-          routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
+          this.routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
           // handles data render filtering
 
@@ -208,7 +210,7 @@
       });
       
       // sets option disabler
-      optionDisable = new disableOptions(routeFrom, routeTo);
+      this.optionDisable = new disableOptions(routeFrom, routeTo);
       
       // hides button and schedule when either stop input changes
 
