@@ -28,6 +28,8 @@
     var fromTime;
     var toTime;
 
+    // holds the values of filtered data
+    var seen = {};
 /* ===================================
 
     View
@@ -150,13 +152,13 @@
 
     // creates the constructor for fetching route times
     function fetchTimes(routeFrom, routeTo){
-      
+      sContainer.find('span').remove().end();
       // creates the handler for when the schedule button is clicked
       sButton.click(function(){
 
       // handles fetching of stop from data
         // removes current selection data
-        sContainer.find('span').remove().end();
+
 
         // sets the values of each stop value
         rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
@@ -175,29 +177,26 @@
 
         // handles data render filtering
 
-
-        /* var seen = {};
-        $('#sFromContainer > span.sTime').each(function() {
+        
+        $('.sTimeContainer > span.sTime').each(function() {
             var txt = $(this).text();
             if (seen[txt])
                 $(this).remove();
             else
                 seen[txt] = true;
         });
-        $('#sToContainer > span.sTime').each(function() {
-            var txt = $(this).text();
-            if (seen[txt])
-                $(this).remove();
-            else
-                seen[txt] = true;
-        });
-        $("#sFromContainer > span:gt(5)").remove();
-        $("#sToContainer > span:gt(5)").remove(); */
+        $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
+        $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
+        $("#sToContainer .sTimeContainer > span:gt(30)").remove();
+        $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
         sContainer.removeClass('hidden');
       });
       
       // sets option disabler
       optionDisable = new disableOptions(routeFrom, routeTo);
+      
+      // hides button and schedule when 
+
     };
 
     // creates constructor for fetching route times
