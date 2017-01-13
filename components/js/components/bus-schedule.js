@@ -159,15 +159,12 @@
         if (clicks) {
         // even clicks
         // removes current selection data
-          sContainer.find('span').remove().end();
-          sContainer.addClass('hidden');
-          sButton.html('Load Schedules');
-          seen = null;
+        this.loadSchedule = new handleScheduleButton("clear and hide");
           
         } else {
           // odd clicks
           // handles fetching of stop from data
-          sContainer.find('span').remove().end();
+          this.clearSchedule = new handleScheduleButton("clear");
           // sets the values of each stop value
           var rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
           var rFromText = routeFrom.children("option").filter(":selected").text();
@@ -278,11 +275,6 @@
             sContainer.addClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case "disabled":
-            sButton.prop('disabled', true);
-            sButton.addClass('disabled');
-            sContainer.find('span').remove().end();
-            break;
           case "hidden":
             sButton.addClass('hidden');
             sContainer.addClass('hidden');
@@ -297,12 +289,14 @@
           case "show button":
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
+            break;
+          case "clear and hide":
             sContainer.find('span').remove().end();
+            sContainer.addClass('hidden');
+            sButton.html('Load Schedules');
             break;
           case "clear":
-            
-            sButton.removeAttr('disabled');
-            sButton.removeClass('disabled');
+            sContainer.find('span').remove().end();
             break;
           default:
             sButton.html('Clear Schedules');
