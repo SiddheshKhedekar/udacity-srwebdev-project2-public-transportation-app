@@ -206,7 +206,7 @@
       // sets option disabler
       this.optionDisable = new disableOptions(routeFrom, routeTo);
 
-      // handles button state when from option state
+      /*// handles button state when from option state
       routeTo.change(function(){
 
         // sets the value of the date inputs
@@ -215,15 +215,13 @@
         switch(rToValue) {
 
           case "none":
-            sButton.attr('disabled');
-            sButton.addClass('disabled');
+            this.disableBttn = new handleScheduleButton(disabled);
             break;
 
           default:
-            sButton.removeAttr('disabled');
-            sButton.removeClass('disabled');
+            this.enableBttn = new handleScheduleButton();
         };
-      });
+      });*/
     };
 
     // creates constructor for fetching route times
@@ -259,3 +257,37 @@
           });
       });
     };
+
+    /*// handle schedule and button states
+    function handleScheduleButton(state){
+      
+        switch(state) {
+
+          case "disabled and hidden":
+            sButton.attr('disabled');
+            sButton.addClass('disabled');
+            sButton.addClass('disabled');
+            sContainer.addClass('hidden');
+            sContainer.find('span').remove().end();
+            break;
+          case "disabled":
+            sButton.attr('disabled');
+            sButton.addClass('disabled');
+            sContainer.find('span').remove().end();
+            break;
+          case "hidden":
+            sButton.addClass('hidden');
+            sContainer.addClass('hidden');
+            sContainer.find('span').remove().end();
+            break;
+          case "hide schedule":
+            sButton.removeAttr('disabled');
+            sButton.removeClass('disabled');
+            sContainer.find('span').remove().end();
+            break;
+          default:
+            sButton.removeAttr('disabled');
+            sButton.removeClass('disabled');
+        };
+    };
+*/
