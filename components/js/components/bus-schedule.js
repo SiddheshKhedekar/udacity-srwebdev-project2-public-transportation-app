@@ -134,13 +134,13 @@
       if (dirValue === "NB") {
         this.nbHandle = new handleDisplay(nb, sb, false);
         this.nbButton = new handleDisplay(sButton, sContainer, false);
-        this.nbFetch = new fetchTimes(nbFrom, nbTo);
+        this.nbFetch = fetchTimes(nbFrom, nbTo);
 
       }
       else if (dirValue === "SB") {
-        this.sbButton = new handleDisplay(sButton, sContainer, false);
         this.sbHandle = new handleDisplay(sb, nb, false);
-        sbFetch = new fetchTimes(sbFrom, sbTo);
+        this.sbButton = new handleDisplay(sButton, sContainer, false);
+        this.sbFetch = fetchTimes(sbFrom, sbTo);
       }
       else {
         this.routesHandle = new handleDisplay(sb, nb, true);
@@ -275,6 +275,12 @@
             sContainer.addClass('hidden');
             sButton.html('Load Schedules');
             sContainer.find('span').remove().end();
+            break;
+          case "disable":
+            sButton.prop('disabled', true);
+            sButton.addClass('disabled');
+            sButton.addClass('disabled');
+            sButton.html('Load Schedules');
             break;
           case "hidden":
             sButton.addClass('hidden');
