@@ -205,8 +205,7 @@
           $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
           $("#sToContainer .sTimeContainer > span:gt(30)").remove();
           $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
-          sContainer.removeClass('hidden');
-          sButton.html('Clear Schedules');
+          this.showClearButton = new handleScheduleButton("clear");
         }
         $(this).data("clicks", !clicks);
       
@@ -292,10 +291,18 @@
           case "show both":
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
+            sContainer.removeClass('hidden');
             sContainer.find('span').remove().end();
+            break;
+          case "clear":
+            sButton.html('Clear Schedules');
+            sButton.removeAttr('disabled');
+            sButton.removeClass('disabled');
+            sContainer.removeClass('hidden');
             break;
           default:
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
+            sContainer.removeClass('hidden');
         };
     };
