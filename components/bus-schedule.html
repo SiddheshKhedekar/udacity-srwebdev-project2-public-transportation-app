@@ -51,11 +51,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .sStation {
           float: left;
-          width: 50%;
+          width: 100%;
       }
       .sTime {
-          float: right;
-          width: 50%;
+          float: left;
+          width: 100%;
       }
       #sToContainer {
           display: inline-block;
@@ -76,6 +76,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 15%;
           color: #fff;
           background-color: #02823b;
+      }
+      .sTimeContainer {
+          width: 50%;
+          float: left;
+      }
+
+      .sStationContainer {
+          width: 50%;
+          float: left;
       }
       #disSchedules:hover {
           color: #fff;
@@ -225,12 +234,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </div>
           <div id="sContainer">
             <div id="sFromContainer">
-              <span class="sTime">Jill</span>
-              <span class="sStation">Smith</span> 
+              <div class="sTimeContainer">
+                <span class="sTime">Jill</span>
+              </div>
+              <div class="sStationContainer">
+                <span class="sStation">Smith</span> 
+              </div>
             </div>
             <div id="sToContainer">
-              <span class="sTime">50</span>
-              <span class="sStation">50</span>
+              <div class="sTimeContainer">
+                <span class="sTime">Jill</span>
+              </div>
+              <div class="sStationContainer">
+                <span class="sStation">Smith</span> 
+              </div>
             </div>
           </div>
       </div>

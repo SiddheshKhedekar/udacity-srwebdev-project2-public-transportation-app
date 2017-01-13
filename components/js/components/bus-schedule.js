@@ -46,9 +46,12 @@
     var nb = $('#nb');
     var sb = $('#sb');
     var sDisplay = $('#sDisplay');
-    var sFrom = $('#sFromContainer');
-    var sTo = $('#sToContainer');
+    var sFromTime = $('#sFromContainer .sTimeContainer');
+    var sFromStation = $('#sFromContainer .sStationContainer');
+    var sToTime = $('#sToContainer .sTimeContainer');
+    var sToStation = $('#sToContainer .sStationContainer');
     var sContainer = $('#sDisplay');
+
 
     // sets variables for route select elements
     var nbFrom = $('#northBoundFrom');
@@ -153,16 +156,14 @@
 
       // handles fetching of stop from data
         // removes current selection data
-        sFrom.find('span').remove().end();
-        // removes current selection data
-        sTo.find('span').remove().end();
+        sContainer.find('span').remove().end();
 
         // sets the values of each stop value
         rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
         rFromText = routeFrom.children("option").filter(":selected").text();
         
         // creates the object for fetching the appropriate JSON data
-        routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFrom);
+        routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
       
       // handles fetching stop to data
         // sets the values of each stop value
@@ -170,12 +171,12 @@
         rToText = routeTo.children("option").filter(":selected").text();
 
         // creates the object for fetching the appropriate JSON data
-        routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
+        routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
         // handles data render filtering
 
 
-        var seen = {};
+        /* var seen = {};
         $('#sFromContainer > span.sTime').each(function() {
             var txt = $(this).text();
             if (seen[txt])
@@ -191,7 +192,7 @@
                 seen[txt] = true;
         });
         $("#sFromContainer > span:gt(5)").remove();
-        $("#sToContainer > span:gt(5)").remove();
+        $("#sToContainer > span:gt(5)").remove(); */
         sContainer.removeClass('hidden');
       });
       
@@ -200,13 +201,13 @@
     };
 
     // creates constructor for fetching route times
-    function routeTimes(JSON, rValue, rText, stationContainer){
+    function routeTimes(JSON, rValue, rText, timeContainer, stationContainer){
 
       $.each(JSON[rValue], function (key, value) {
           console.log(value.arrival_time);
           console.log(rText);
+          timeContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
           stationContainer.append($("<span></span>").attr("class", "sStation bus-schedule").text(rText));
-          stationContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
       });
           
     };
