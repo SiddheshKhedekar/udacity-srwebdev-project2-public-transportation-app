@@ -24,6 +24,10 @@
     var rFromText;
     var rToText;
 
+    // holds the values of the schedule times
+    var fromTime;
+    var toTime;
+
 /* ===================================
 
     View
@@ -191,6 +195,16 @@
           
     };
 
+    // creates the constructor for calculating route travel time
+    function calculateTime(){
+      
+      $.each(blah, function(){
+
+      });
+      
+
+
+    };
     // creates the handler for when the schedule button is clicked
     sButton.click(function(){
       sContainer.removeClass('hidden');
