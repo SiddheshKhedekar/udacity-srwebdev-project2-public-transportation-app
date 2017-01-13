@@ -29,7 +29,8 @@
     var toTime;
 
     // holds the values of filtered data
-    var seen;
+    var checkFromValues;
+    var checkToValues;
 
 /* ===================================
 
@@ -183,22 +184,21 @@
           var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
           // handles data render filtering
-
+          checkFromValues = {}
           $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
-              var seen = {};
               var txt = $(this).text();
-              if (seen[txt])
+              if (checkFromValues[txt])
                   $(this).remove();
               else
-                  seen[txt] = true;
+                  checkFromValues[txt] = true;
           });
+          checkToValues = {}
           $('#sToContainer .sTimeContainer > span.sTime').each(function() {
-              var seen = {};
               var txt = $(this).text();
-              if (seen[txt])
+              if (checkToValues[txt])
                   $(this).remove();
               else
-                  seen[txt] = true;
+                  checkToValues[txt] = true;
           });
 
           $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
@@ -215,7 +215,7 @@
       // sets option disabler
       this.optionDisable = new disableOptions(routeFrom, routeTo);
 
-      /*// handles button state when from option state
+      // handles button state when from option state
       routeTo.change(function(){
 
         // sets the value of the date inputs
@@ -224,13 +224,13 @@
         switch(rToValue) {
 
           case "none":
-            this.disableBttn = new handleScheduleButton(disabled);
+            this.disableBttn = new handleScheduleButton(1);
             break;
 
           default:
             this.enableBttn = new handleScheduleButton();
         };
-      });*/
+      });
     };
 
     // creates constructor for fetching route times
@@ -267,29 +267,29 @@
       });
     };
 
-    /*// handle schedule and button states
+    // handle schedule and button states
     function handleScheduleButton(state){
       
         switch(state) {
 
-          case "disabled and hidden":
+          case 1:
             sButton.attr('disabled');
             sButton.addClass('disabled');
             sButton.addClass('disabled');
             sContainer.addClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case "disabled":
+          case 2:
             sButton.attr('disabled');
             sButton.addClass('disabled');
             sContainer.find('span').remove().end();
             break;
-          case "hidden":
+          case 3:
             sButton.addClass('hidden');
             sContainer.addClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case "hide schedule":
+          case 4:
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
             sContainer.find('span').remove().end();
@@ -299,4 +299,3 @@
             sButton.removeClass('disabled');
         };
     };
-*/
