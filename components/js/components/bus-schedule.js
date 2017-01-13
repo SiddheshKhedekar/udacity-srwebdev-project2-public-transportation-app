@@ -134,8 +134,7 @@
         sbHandle = new handleDisplay(sb, nb, true);
       }
     });
-    var testAlt = nbFrom.children("option").filter(":selected").attr("alt");
-    console.log(testAlt);
+    
     // creates the constructor for setting element display
     function handleDisplay(showEl, hideEl, hideBoth){
         if (hideBoth === true) {
@@ -157,7 +156,7 @@
         sFrom.find('span').remove().end();
 
         // sets the values of each stop value
-        rFromVal = routeFrom.val();
+        rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
         rFromText = routeFrom.children("option").filter(":selected").text();
         
         // creates the object for fetching the appropriate JSON data
@@ -172,7 +171,7 @@
           sTo.find('span').remove().end();
 
           // sets the values of each stop value
-          rToVal = routeTo.val();
+          rToVal = routeTo.children("option").filter(":selected").attr("alt");
           rToText = routeTo.children("option").filter(":selected").text();
 
           // creates the object for fetching the appropriate JSON data
