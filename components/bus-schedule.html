@@ -24,6 +24,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .hidden {
         display: none;
       }
+      .disabled {
+        background-color: #C0C0C0 !important;
+      }
       #sHeaders {
           width: 100%;
           background-color: #02823b;
@@ -32,7 +35,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #sHeaders h4 {
-          width: 20%;
+          width: 25%;
           float: left;
           color: #fff;
           margin: 1% 0;
@@ -45,31 +48,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       #sFromContainer {
           display: inline-block;
-          width: 40%;
+          width: 50%;
           float: left;
       }
 
       .sStation {
           float: left;
-          width: 50%;
+          width: 100%;
       }
       .sTime {
-          float: right;
-          width: 50%;
+          float: left;
+          width: 100%;
       }
       #sToContainer {
           display: inline-block;
-          width: 40%;
-          float: left;
-      }
-      #sTimeContainer {
-          display: inline-block;
-          width: 20%;
+          width: 50%;
           float: left;
       }
       #sTimeContainer .sTime {
           width: 100%;
           float: left;
+      }
+      #disSchedules {
+          margin: 1% 0;
+          width: 15%;
+          color: #fff;
+          background-color: #02823b;
+      }
+      .sTimeContainer {
+          width: 50%;
+          float: right;
+      }
+
+      .sStationContainer {
+          width: 50%;
+          float: left;
+      }
+      #disSchedules:hover {
+          color: #fff;
+          background-color: #3f51b5;
       }
     </style>
 
@@ -92,139 +109,143 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
       <div class="hidden" id="nb">
         <select id="northBoundFrom">
-          <option value="none">Select your Starting Point</option>
-          <option value="9390">Somerset - Bridelwood</option>
-          <option value="9391">Shawnessy</option>
-          <option value="9261">Fish Creek - Lacombe</option>
-          <option value="9262">Canyon Meadows</option>
-          <option value="6801">Anderson</option>
-          <option value="6802">Southland</option>
-          <option value="6803">Heritage</option>
-          <option value="6804">Chinook</option>
-          <option value="6805">39th Avenue</option>
-          <option value="6806">Erlton / Stampede</option>
-          <option value="6807">Victoria Park / Stampede</option>
-          <option value="6822">City Hall</option>
-          <option value="6823">1st Street SW</option>
-          <option value="6824">4th Street SW</option>
-          <option value="6825">7th Street SW</option>
-          <option value="6820">Sunnyside</option>
-          <option value="6819">SAIT / ACAD / Jubilee</option>
-          <option value="6818">Lions Park</option>
-          <option value="6817">Banff Trail</option>
-          <option value="6816">University</option>
-          <option value="4934">Brentwood</option>
-          <option value="4155">Dalhousie</option>
-          <option value="3816">Crowfoot</option>
-          <option value="3640">Tuscany</option>
+          <option value="100" alt="none">Select your Starting Point</option>
+          <option value="101" alt="9390">Somerset - Bridelwood</option>
+          <option value="102" alt="9391">Shawnessy</option>
+          <option value="103" alt="9261">Fish Creek - Lacombe</option>
+          <option value="104" alt="9262">Canyon Meadows</option>
+          <option value="105" alt="6801">Anderson</option>
+          <option value="106" alt="6802">Southland</option>
+          <option value="107" alt="6803">Heritage</option>
+          <option value="108" alt="6804">Chinook</option>
+          <option value="109" alt="6805">39th Avenue</option>
+          <option value="110" alt="6806">Erlton / Stampede</option>
+          <option value="111" alt="6807">Victoria Park / Stampede</option>
+          <option value="112" alt="6822">City Hall</option>
+          <option value="113"  alt="6823">1st Street SW</option>
+          <option value="114"  alt="6824">4th Street SW</option>
+          <option value="115"  alt="6825">7th Street SW</option>
+          <option value="116"  alt="6820">Sunnyside</option>
+          <option value="117"  alt="6819">SAIT / ACAD / Jubilee</option>
+          <option value="118"  alt="6818">Lions Park</option>
+          <option value="119"  alt="6817">Banff Trail</option>
+          <option value="120"  alt="6816">University</option>
+          <option value="121"  alt="4934">Brentwood</option>
+          <option value="122"  alt="4155">Dalhousie</option>
+          <option value="123"  alt="3816">Crowfoot</option>
+          <option value="124"  alt="3640">Tuscany</option>
         </select>
         <select id="northBoundTo">
-            <option value="none">Select your Destination</option>
-            <option value="9390">Somerset - Bridelwood</option>
-            <option value="9391">Shawnessy</option>
-            <option value="9261">Fish Creek - Lacombe</option>
-            <option value="9262">Canyon Meadows</option>
-            <option value="6801">Anderson</option>
-            <option value="6802">Southland</option>
-            <option value="6803">Heritage</option>
-            <option value="6804">Chinook</option>
-            <option value="6805">39th Avenue</option>
-            <option value="6806">Erlton / Stampede</option>
-            <option value="6807">Victoria Park / Stampede</option>
-            <option value="6822">City Hall</option>
-            <option value="6823">1st Street SW</option>
-            <option value="6824">4th Street SW</option>
-            <option value="6825">7th Street SW</option>
-            <option value="6820">Sunnyside</option>
-            <option value="6819">SAIT / ACAD / Jubilee</option>
-            <option value="6818">Lions Park</option>
-            <option value="6817">Banff Trail</option>
-            <option value="6816">University</option>
-            <option value="4934">Brentwood</option>
-            <option value="4155">Dalhousie</option>
-            <option value="3816">Crowfoot</option>
-            <option value="3640">Tuscany</option>
+          <option value="99" alt="none">Select your Starting Point</option>
+          <option value="100" alt="9390">Somerset - Bridelwood</option>
+          <option value="101" alt="9391">Shawnessy</option>
+          <option value="102" alt="9261">Fish Creek - Lacombe</option>
+          <option value="103" alt="9262">Canyon Meadows</option>
+          <option value="104" alt="6801">Anderson</option>
+          <option value="105" alt="6802">Southland</option>
+          <option value="106" alt="6803">Heritage</option>
+          <option value="107" alt="6804">Chinook</option>
+          <option value="108" alt="6805">39th Avenue</option>
+          <option value="109" alt="6806">Erlton / Stampede</option>
+          <option value="110" alt="6807">Victoria Park / Stampede</option>
+          <option value="111" alt="6822">City Hall</option>
+          <option value="112"  alt="6823">1st Street SW</option>
+          <option value="113"  alt="6824">4th Street SW</option>
+          <option value="114"  alt="6825">7th Street SW</option>
+          <option value="115"  alt="6820">Sunnyside</option>
+          <option value="116"  alt="6819">SAIT / ACAD / Jubilee</option>
+          <option value="117"  alt="6818">Lions Park</option>
+          <option value="118"  alt="6817">Banff Trail</option>
+          <option value="119"  alt="6816">University</option>
+          <option value="120"  alt="4934">Brentwood</option>
+          <option value="121"  alt="4155">Dalhousie</option>
+          <option value="122"  alt="3816">Crowfoot</option>
+          <option value="123"  alt="3640">Tuscany</option>
         </select>
         
       </div>
       <div class="hidden" id="sb">
         <select id="southBoundFrom">
-          <option value="none">Select your Starting Point</option>
-          <option value="3641">Tuscany</option>
-          <option value="3817">Crowfoot</option>
-          <option value="3960">Dalhousie</option>
-          <option value="4934">Brentwood</option>
-          <option value="8566">University</option>
-          <option value="8565">Banff Trail</option>
-          <option value="8564">Lions Park</option>
-          <option value="8563">SAIT / ACAD / Jubilee</option>
-          <option value="8562">Sunnyside</option>
-          <option value="6827">8th Street SW</option>
-          <option value="6828">6th Street SW</option>
-          <option value="6829">3rd Street SW</option>
-          <option value="6830">Center Street SW</option>
-          <option value="6831">City Hall</option>
-          <option value="8556">Victoria Park / Stampede</option>
-          <option value="8557">Erlton / Stampede</option>
-          <option value="8558">39th Avenue</option>
-          <option value="8559">Chinook</option>
-          <option value="8560">Heritage</option>
-          <option value="8561">Southland</option>
-          <option value="9263">Anderson</option>
-          <option value="9264">Canyon Meadows</option>
-          <option value="9387">Fish Creek - Lacombe</option>
-          <option value="9392">Shawnessy</option>
-          <option value="9386">Somerset - Bridelwood</option>
+          <option value="100" alt="none">Select your Starting Point</option>
+          <option value="101" alt="3641">Tuscany</option>
+          <option value="102" alt="3817">Crowfoot</option>
+          <option value="103" alt="3960">Dalhousie</option>
+          <option value="104" alt="4934">Brentwood</option>
+          <option value="105" alt="8566">University</option>
+          <option value="106" alt="8565">Banff Trail</option>
+          <option value="107" alt="8564">Lions Park</option>
+          <option value="108" alt="8563">SAIT / ACAD / Jubilee</option>
+          <option value="109" alt="8562">Sunnyside</option>
+          <option value="110" alt="6827">8th Street SW</option>
+          <option value="111" alt="6828">6th Street SW</option>
+          <option value="112" alt="6829">3rd Street SW</option>
+          <option value="113" alt="6830">Center Street SW</option>
+          <option value="114" alt="6831">City Hall</option>
+          <option value="115" alt="8556">Victoria Park / Stampede</option>
+          <option value="116" alt="8557">Erlton / Stampede</option>
+          <option value="117" alt="8558">39th Avenue</option>
+          <option value="118" alt="8559">Chinook</option>
+          <option value="119" alt="8560">Heritage</option>
+          <option value="120" alt="8561">Southland</option>
+          <option value="121" alt="9263">Anderson</option>
+          <option value="122" alt="9264">Canyon Meadows</option>
+          <option value="123" alt="9387">Fish Creek - Lacombe</option>
+          <option value="124" alt="9392">Shawnessy</option>
+          <option value="125" alt="9386">Somerset - Bridelwood</option>
         </select>
         <select id="southBoundTo">
-            <option value="none">Select your Destination</option>
-            <option value="3641">Tuscany</option>
-            <option value="3817">Crowfoot</option>
-            <option value="3960">Dalhousie</option>
-            <option value="4934">Brentwood</option>
-            <option value="8566">University</option>
-            <option value="8565">Banff Trail</option>
-            <option value="8564">Lions Park</option>
-            <option value="8563">SAIT / ACAD / Jubilee</option>
-            <option value="8562">Sunnyside</option>
-            <option value="6827">8th Street SW</option>
-            <option value="6828">6th Street SW</option>
-            <option value="6829">3rd Street SW</option>
-            <option value="6830">Center Street SW</option>
-            <option value="6831">City Hall</option>
-            <option value="8556">Victoria Park / Stampede</option>
-            <option value="8557">Erlton / Stampede</option>
-            <option value="8558">39th Avenue</option>
-            <option value="8559">Chinook</option>
-            <option value="8560">Heritage</option>
-            <option value="8561">Southland</option>
-            <option value="9263">Anderson</option>
-            <option value="9264">Canyon Meadows</option>
-            <option value="9387">Fish Creek - Lacombe</option>
-            <option value="9392">Shawnessy</option>
-            <option value="9386">Somerset - Bridelwood</option>
+          <option value="99" alt="none">Select your Starting Point</option>
+          <option value="100" alt="3641">Tuscany</option>
+          <option value="101" alt="3817">Crowfoot</option>
+          <option value="102" alt="3960">Dalhousie</option>
+          <option value="103" alt="4934">Brentwood</option>
+          <option value="104" alt="8566">University</option>
+          <option value="105" alt="8565">Banff Trail</option>
+          <option value="106" alt="8564">Lions Park</option>
+          <option value="107" alt="8563">SAIT / ACAD / Jubilee</option>
+          <option value="108" alt="8562">Sunnyside</option>
+          <option value="109" alt="6827">8th Street SW</option>
+          <option value="110" alt="6828">6th Street SW</option>
+          <option value="111" alt="6829">3rd Street SW</option>
+          <option value="112" alt="6830">Center Street SW</option>
+          <option value="113" alt="6831">City Hall</option>
+          <option value="114" alt="8556">Victoria Park / Stampede</option>
+          <option value="115" alt="8557">Erlton / Stampede</option>
+          <option value="116" alt="8558">39th Avenue</option>
+          <option value="117" alt="8559">Chinook</option>
+          <option value="118" alt="8560">Heritage</option>
+          <option value="119" alt="8561">Southland</option>
+          <option value="120" alt="9263">Anderson</option>
+          <option value="121" alt="9264">Canyon Meadows</option>
+          <option value="122" alt="9387">Fish Creek - Lacombe</option>
+          <option value="123" alt="9392">Shawnessy</option>
+          <option value="124" alt="9386">Somerset - Bridelwood</option>
           </select>
       </div>
-      <paper-button class="hidden" id="disSchedules" raised>raised</paper-button>
+      <paper-button class="hidden disabled" disabled id="disSchedules" raised >Load Schedules</paper-button>
       <div class="hidden" id="sDisplay">
           <div id="sHeaders">
             <h4 class="sFrom">Station From</h4>
             <h4 class="sDept">Departure</h4> 
             <h4 class="sTo">Station To</h4>
             <h4 class="sArr">Arrival</h4>
-            <h4 class="sTime">Approx. Travel Time</h4>
           </div>
           <div id="sContainer">
             <div id="sFromContainer">
-              <span class="sTime">Jill</span>
-              <span class="sStation">Smith</span> 
+              <div class="sTimeContainer">
+                <span class="sTime">Jill</span>
+              </div>
+              <div class="sStationContainer">
+                <span class="sStation">Smith</span> 
+              </div>
             </div>
             <div id="sToContainer">
-              <span class="sTime">50</span>
-              <span class="sStation">50</span>
-            </div>
-            <div id="sTimeContainer">
-              <span class="sTime">50</span>
+              <div class="sTimeContainer">
+                <span class="sTime">Jill</span>
+              </div>
+              <div class="sStationContainer">
+                <span class="sStation">Smith</span> 
+              </div>
             </div>
           </div>
       </div>
