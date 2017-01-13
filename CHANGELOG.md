@@ -1,5 +1,10 @@
 ** Changelog for Event Planning Application
 
+v0.9
+- clean up styles on responsive and mobile dimensions
+- refactor production code
+- test production
+
 v0.8
 - display schedule data
 - prototype to display all data while offline
