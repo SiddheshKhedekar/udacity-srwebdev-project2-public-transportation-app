@@ -163,8 +163,9 @@
         // removes current selection data
           sContainer.find('span').remove().end();
           sContainer.addClass('hidden');
+          sButton.html('Load Schedules');
           seen = null;
-        
+          
         } else {
           // odd clicks
           // handles fetching of stop from data
@@ -200,7 +201,7 @@
           $("#sToContainer .sTimeContainer > span:gt(30)").remove();
           $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
           sContainer.removeClass('hidden');
-
+          sButton.html('Clear Schedules');
         }
         $(this).data("clicks", !clicks);
       
@@ -209,7 +210,7 @@
       // sets option disabler
       optionDisable = new disableOptions(routeFrom, routeTo);
       
-      // hides button and schedule when 
+      // hides button and schedule when either stop input changes
 
     };
 
