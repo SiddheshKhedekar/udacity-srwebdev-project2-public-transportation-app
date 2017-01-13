@@ -180,7 +180,9 @@
           // will need to add better logic to this later
           sButton.removeClass('hidden');
       });
-
+      
+      // sets the disabler
+      optionDisable = new disableOptions(routeFrom, routeTo);
     };
 
     // creates constructor for fetching route times
