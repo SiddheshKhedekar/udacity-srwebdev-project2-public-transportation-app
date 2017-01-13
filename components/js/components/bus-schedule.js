@@ -205,7 +205,7 @@
           $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
           $("#sToContainer .sTimeContainer > span:gt(30)").remove();
           $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
-          this.showClearButton = new handleScheduleButton("clear");
+          this.showClearButton = new handleScheduleButton();
         }
         $(this).data("clicks", !clicks);
       
@@ -227,7 +227,7 @@
             break;
 
           default:
-            this.enableBttn = new handleScheduleButton();
+            this.enableBttn = new handleScheduleButton("show button");
         };
       });
     };
@@ -294,13 +294,18 @@
             sContainer.removeClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case "clear":
-            sButton.html('Clear Schedules');
+          case "show button":
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
-            sContainer.removeClass('hidden');
+            sContainer.find('span').remove().end();
+            break;
+          case "clear":
+            
+            sButton.removeAttr('disabled');
+            sButton.removeClass('disabled');
             break;
           default:
+            sButton.html('Clear Schedules');
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
             sContainer.removeClass('hidden');
