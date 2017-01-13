@@ -134,7 +134,7 @@
         sbHandle = new handleDisplay(sb, nb, true);
       }
     });
-    
+
     // creates the constructor for setting element display
     function handleDisplay(showEl, hideEl, hideBoth){
         if (hideBoth === true) {
@@ -175,7 +175,7 @@
           rToText = routeTo.children("option").filter(":selected").text();
 
           // creates the object for fetching the appropriate JSON data
-          routeFromFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
+          routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
 
           // will need to add better logic to this later
           sButton.removeClass('hidden');
@@ -197,20 +197,15 @@
     
 
     // disable options fiddle =  http://jsfiddle.net/q7He9/2/
-    nbFrom.on('change', function(){
-        var self = this;
-        nbTo.find('option').prop('disabled', function(){
-            return this.value && this.value < self.value && self.value
-        });
-    });
-
-    nbTo.on('change', function(){
-        var self = this;
-        nbFrom.find('option').prop('disabled', function(){
-            return this.value && this.value > self.value && self.value
-        });
-    });
-
+    // creates constructor for disabled options
+    function disableOptions(from, to){
+      from.on('change', function(){
+          var self = this;
+          to.find('option').prop('disabled', function(){
+              return this.value < self.value;
+          });
+      });
+    };
     // creates the handler for when the schedule button is clicked
     sButton.click(function(){
       sContainer.removeClass('hidden');
