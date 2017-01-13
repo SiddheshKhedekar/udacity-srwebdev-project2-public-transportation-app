@@ -152,13 +152,21 @@
 
     // creates the constructor for fetching route times
     function fetchTimes(routeFrom, routeTo){
-      sContainer.find('span').remove().end();
+      
       // creates the handler for when the schedule button is clicked
       sButton.click(function(){
-
+      
+      // handles second click on load schedules
+        var clicks = $(this).data('clicks');
+        if (clicks) {
+           // odd clicks
+        } else {
+           // even clicks
+        }
+        $(this).data("clicks", !clicks);
       // handles fetching of stop from data
         // removes current selection data
-
+        sContainer.find('span').remove().end();
 
         // sets the values of each stop value
         rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
