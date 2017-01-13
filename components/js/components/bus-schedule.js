@@ -149,11 +149,19 @@
     // creates the constructor for fetching route times
     function fetchTimes(routeFrom, routeTo){
       
+      // creates the handler for when the schedule button is clicked
+      sButton.click(function(){
+
+        $("#sFromContainer > span:gt(5)").remove();
+        $("#sToContainer > span:gt(5)").remove();
+
+
       // handles fetching of stop from data
-      routeFrom.change(function() {
 
         // removes current selection data
         sFrom.find('span').remove().end();
+        // removes current selection data
+        sTo.find('span').remove().end();
 
         // sets the values of each stop value
         rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
@@ -162,13 +170,11 @@
         // creates the object for fetching the appropriate JSON data
         routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFrom);
 
-      });
       
       // handles fetching stop to data
-      routeTo.change(function() {
+
           
-          // removes current selection data
-          sTo.find('span').remove().end();
+         
 
           // sets the values of each stop value
           rToVal = routeTo.children("option").filter(":selected").attr("alt");
@@ -177,8 +183,7 @@
           // creates the object for fetching the appropriate JSON data
           routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
 
-          // will need to add better logic to this later
-          sButton.removeClass('hidden');
+          sContainer.removeClass('hidden');
       });
       
       // sets the disabler
@@ -208,9 +213,3 @@
           });
       });
     };
-    // creates the handler for when the schedule button is clicked
-    sButton.click(function(){
-      sContainer.removeClass('hidden');
-      $("#sFromContainer > span:gt(5)").remove();
-      $("#sToContainer > span:gt(5)").remove();
-    });
