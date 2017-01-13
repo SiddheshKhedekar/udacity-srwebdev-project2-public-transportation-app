@@ -194,19 +194,23 @@
       });
           
     };
+    
 
-    // creates the constructor for calculating route travel time
-    function calculateTime(){
-      
-      $.each(blah, function(){
-        
-        
+    // disable options fiddle =  http://jsfiddle.net/q7He9/2/
+    $('select[name=from]').on('change', function(){
+        var self = this;
+        $('select[name=to]').find('option').prop('disabled', function(){
+            return this.value && this.value < self.value && self.value
+        });
+    });
 
-      });
-      
+    $('select[name=to]').on('change', function(){
+        var self = this;
+        $('select[name=from]').find('option').prop('disabled', function(){
+            return this.value && this.value > self.value && self.value
+        });
+    });
 
-
-    };
     // creates the handler for when the schedule button is clicked
     sButton.click(function(){
       sContainer.removeClass('hidden');
