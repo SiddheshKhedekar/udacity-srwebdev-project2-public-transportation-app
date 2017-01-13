@@ -211,4 +211,6 @@
     // creates the handler for when the schedule button is clicked
     sButton.click(function(){
       sContainer.removeClass('hidden');
+      $("#sFromContainer > span:gt(5)").remove();
+      $("#sToContainer > span:gt(5)").remove();
     });
