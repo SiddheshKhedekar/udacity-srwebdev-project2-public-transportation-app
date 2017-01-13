@@ -224,7 +224,7 @@
         switch(rToValue) {
 
           case "none":
-            this.disableBttn = new handleScheduleButton(1);
+            this.disableBttn = new handleScheduleButton("disabled and hidden");
             break;
 
           default:
@@ -272,24 +272,24 @@
       
         switch(state) {
 
-          case 1:
-            sButton.attr('disabled');
+          case "disabled and hidden":
+            sButton.prop('disabled', true);
             sButton.addClass('disabled');
             sButton.addClass('disabled');
             sContainer.addClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case 2:
-            sButton.attr('disabled');
+          case "disabled":
+            sButton.prop('disabled', true);
             sButton.addClass('disabled');
             sContainer.find('span').remove().end();
             break;
-          case 3:
+          case "hidden":
             sButton.addClass('hidden');
             sContainer.addClass('hidden');
             sContainer.find('span').remove().end();
             break;
-          case 4:
+          case "show both":
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
             sContainer.find('span').remove().end();
