@@ -62103,60 +62103,6 @@
    ],
    "6822": [
       {
-         "trip_id": 34172238,
-         "arrival_time": "4:23:00",
-         "departure_time": "4:23:00",
-         "stop_sequence": 6,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172254,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172255,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172256,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172257,
-         "arrival_time": "4:59:00",
-         "departure_time": "4:59:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172258,
-         "arrival_time": "5:00:00",
-         "departure_time": "5:00:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
          "trip_id": 34172259,
          "arrival_time": "5:03:00",
          "departure_time": "5:03:00",
@@ -65264,60 +65210,6 @@
    ],
    "6823": [
       {
-         "trip_id": 34172238,
-         "arrival_time": "4:24:00",
-         "departure_time": "4:24:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172254,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172255,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172256,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172257,
-         "arrival_time": "4:59:00",
-         "departure_time": "4:59:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172258,
-         "arrival_time": "5:00:00",
-         "departure_time": "5:00:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
          "trip_id": 34172259,
          "arrival_time": "5:03:00",
          "departure_time": "5:03:00",
@@ -68353,60 +68245,6 @@
    ],
    "6824": [
       {
-         "trip_id": 34172238,
-         "arrival_time": "4:24:00",
-         "departure_time": "4:24:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172254,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172255,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172256,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172257,
-         "arrival_time": "4:59:00",
-         "departure_time": "4:59:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172258,
-         "arrival_time": "5:00:00",
-         "departure_time": "5:00:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
          "trip_id": 34172259,
          "arrival_time": "5:03:00",
          "departure_time": "5:03:00",
@@ -71441,60 +71279,6 @@
       }
    ],
    "6825": [
-      {
-         "trip_id": 34172238,
-         "arrival_time": "4:24:00",
-         "departure_time": "4:24:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172254,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172255,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172256,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172257,
-         "arrival_time": "4:59:00",
-         "departure_time": "4:59:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
-      {
-         "trip_id": 34172258,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "WEEK"
-      },
       {
          "trip_id": 34172259,
          "arrival_time": "5:03:00",
