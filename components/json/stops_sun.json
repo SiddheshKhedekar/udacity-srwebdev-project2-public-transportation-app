@@ -1,78 +1,6 @@
 {
    "3640": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225386,
-         "arrival_time": "5:35:00",
-         "departure_time": "5:35:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969979,
-         "arrival_time": "5:35:00",
-         "departure_time": "5:35:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225272,
          "arrival_time": "5:46:00",
          "departure_time": "5:46:00",
@@ -4180,78 +4108,6 @@
       }
    ],
    "3816": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "5:12:00",
-         "departure_time": "5:12:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "5:12:00",
-         "departure_time": "5:12:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225386,
-         "arrival_time": "5:32:00",
-         "departure_time": "5:32:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969979,
-         "arrival_time": "5:32:00",
-         "departure_time": "5:32:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225272,
          "arrival_time": "5:43:00",
@@ -10480,78 +10336,6 @@
    ],
    "4155": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "5:08:00",
-         "departure_time": "5:08:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "5:08:00",
-         "departure_time": "5:08:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "5:18:00",
-         "departure_time": "5:18:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "5:18:00",
-         "departure_time": "5:18:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225386,
-         "arrival_time": "5:28:00",
-         "departure_time": "5:28:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969979,
-         "arrival_time": "5:28:00",
-         "departure_time": "5:28:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225272,
          "arrival_time": "5:39:00",
          "departure_time": "5:39:00",
@@ -12569,78 +12353,6 @@
       }
    ],
    "4934": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:46:00",
-         "departure_time": "4:46:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:46:00",
-         "departure_time": "4:46:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225386,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969979,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225272,
          "arrival_time": "5:36:00",
@@ -20840,60 +20552,6 @@
    ],
    "6804": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:16:00",
-         "departure_time": "4:16:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:16:00",
-         "departure_time": "4:16:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:35:00",
-         "departure_time": "4:35:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:35:00",
-         "departure_time": "4:35:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225386,
          "arrival_time": "4:55:00",
          "departure_time": "4:55:00",
@@ -22930,60 +22588,6 @@
    ],
    "6805": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:19:00",
-         "departure_time": "4:19:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:19:00",
-         "departure_time": "4:19:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:38:00",
-         "departure_time": "4:38:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:38:00",
-         "departure_time": "4:38:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225385,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969978,
-         "arrival_time": "4:48:00",
-         "departure_time": "4:48:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225386,
          "arrival_time": "4:58:00",
          "departure_time": "4:58:00",
@@ -25019,42 +24623,6 @@
       }
    ],
    "6806": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:22:00",
-         "departure_time": "4:22:00",
-         "stop_sequence": 5,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:22:00",
-         "departure_time": "4:22:00",
-         "stop_sequence": 5,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:41:00",
-         "departure_time": "4:41:00",
-         "stop_sequence": 5,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:41:00",
-         "departure_time": "4:41:00",
-         "stop_sequence": 5,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225385,
          "arrival_time": "4:51:00",
@@ -27109,42 +26677,6 @@
       }
    ],
    "6807": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:23:00",
-         "departure_time": "4:23:00",
-         "stop_sequence": 6,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:23:00",
-         "departure_time": "4:23:00",
-         "stop_sequence": 6,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:42:00",
-         "departure_time": "4:42:00",
-         "stop_sequence": 6,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:42:00",
-         "departure_time": "4:42:00",
-         "stop_sequence": 6,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225385,
          "arrival_time": "4:52:00",
@@ -31290,24 +30822,6 @@
    ],
    "6816": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:44:00",
-         "departure_time": "4:44:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:44:00",
-         "departure_time": "4:44:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225384,
          "arrival_time": "5:03:00",
          "departure_time": "5:03:00",
@@ -33379,24 +32893,6 @@
       }
    ],
    "6817": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:42:00",
-         "departure_time": "4:42:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:42:00",
-         "departure_time": "4:42:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225384,
          "arrival_time": "5:01:00",
@@ -35470,24 +34966,6 @@
    ],
    "6818": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:40:00",
-         "departure_time": "4:40:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:40:00",
-         "departure_time": "4:40:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225384,
          "arrival_time": "4:59:00",
          "departure_time": "4:59:00",
@@ -37559,24 +37037,6 @@
       }
    ],
    "6819": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:38:00",
-         "departure_time": "4:38:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:38:00",
-         "departure_time": "4:38:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225384,
          "arrival_time": "4:57:00",
@@ -39650,24 +39110,6 @@
    ],
    "6820": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:36:00",
-         "departure_time": "4:36:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:36:00",
-         "departure_time": "4:36:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225384,
          "arrival_time": "4:55:00",
          "departure_time": "4:55:00",
@@ -41740,42 +41182,6 @@
    ],
    "6822": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:26:00",
-         "departure_time": "4:26:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:26:00",
-         "departure_time": "4:26:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225385,
          "arrival_time": "4:55:00",
          "departure_time": "4:55:00",
@@ -43829,42 +43235,6 @@
       }
    ],
    "6823": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:28:00",
-         "departure_time": "4:28:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:28:00",
-         "departure_time": "4:28:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:47:00",
-         "departure_time": "4:47:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:47:00",
-         "departure_time": "4:47:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225385,
          "arrival_time": "4:57:00",
@@ -45920,42 +45290,6 @@
    ],
    "6824": [
       {
-         "trip_id": 34225383,
-         "arrival_time": "4:30:00",
-         "departure_time": "4:30:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:30:00",
-         "departure_time": "4:30:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225384,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969977,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225385,
          "arrival_time": "4:59:00",
          "departure_time": "4:59:00",
@@ -48009,24 +47343,6 @@
       }
    ],
    "6825": [
-      {
-         "trip_id": 34225383,
-         "arrival_time": "4:32:00",
-         "departure_time": "4:32:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969976,
-         "arrival_time": "4:32:00",
-         "departure_time": "4:32:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225384,
          "arrival_time": "4:51:00",
@@ -89630,123 +88946,6 @@
    ],
    "9264": [
       {
-         "trip_id": 34224705,
-         "arrival_time": "4:41:00",
-         "departure_time": "4:41:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34225253,
-         "arrival_time": "4:41:00",
-         "departure_time": "4:41:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969846,
-         "arrival_time": "4:41:00",
-         "departure_time": "4:41:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225254,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969847,
-         "arrival_time": "4:51:00",
-         "departure_time": "4:51:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225255,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969848,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225256,
-         "arrival_time": "5:20:00",
-         "departure_time": "5:20:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969849,
-         "arrival_time": "5:20:00",
-         "departure_time": "5:20:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225257,
-         "arrival_time": "5:30:00",
-         "departure_time": "5:30:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969850,
-         "arrival_time": "5:30:00",
-         "departure_time": "5:30:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225258,
-         "arrival_time": "5:40:00",
-         "departure_time": "5:40:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969851,
-         "arrival_time": "5:40:00",
-         "departure_time": "5:40:00",
-         "stop_sequence": 1,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225638,
          "arrival_time": "5:50:00",
          "departure_time": "5:50:00",
@@ -91855,114 +91054,6 @@
    ],
    "9386": [
       {
-         "trip_id": 34225253,
-         "arrival_time": "4:47:00",
-         "departure_time": "4:47:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969846,
-         "arrival_time": "4:47:00",
-         "departure_time": "4:47:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225254,
-         "arrival_time": "4:57:00",
-         "departure_time": "4:57:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969847,
-         "arrival_time": "4:57:00",
-         "departure_time": "4:57:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225255,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969848,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225256,
-         "arrival_time": "5:26:00",
-         "departure_time": "5:26:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969849,
-         "arrival_time": "5:26:00",
-         "departure_time": "5:26:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225257,
-         "arrival_time": "5:36:00",
-         "departure_time": "5:36:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969850,
-         "arrival_time": "5:36:00",
-         "departure_time": "5:36:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225258,
-         "arrival_time": "5:46:00",
-         "departure_time": "5:46:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969851,
-         "arrival_time": "5:46:00",
-         "departure_time": "5:46:00",
-         "stop_sequence": 4,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
          "trip_id": 34225638,
          "arrival_time": "5:56:00",
          "departure_time": "5:56:00",
@@ -94070,114 +93161,6 @@
       }
    ],
    "9387": [
-      {
-         "trip_id": 34225253,
-         "arrival_time": "4:43:00",
-         "departure_time": "4:43:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969846,
-         "arrival_time": "4:43:00",
-         "departure_time": "4:43:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225254,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969847,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225255,
-         "arrival_time": "5:03:00",
-         "departure_time": "5:03:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969848,
-         "arrival_time": "5:03:00",
-         "departure_time": "5:03:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225256,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969849,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225257,
-         "arrival_time": "5:32:00",
-         "departure_time": "5:32:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969850,
-         "arrival_time": "5:32:00",
-         "departure_time": "5:32:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225258,
-         "arrival_time": "5:42:00",
-         "departure_time": "5:42:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969851,
-         "arrival_time": "5:42:00",
-         "departure_time": "5:42:00",
-         "stop_sequence": 2,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225638,
          "arrival_time": "5:52:00",
@@ -100286,114 +99269,6 @@
       }
    ],
    "9392": [
-      {
-         "trip_id": 34225253,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969846,
-         "arrival_time": "4:45:00",
-         "departure_time": "4:45:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225254,
-         "arrival_time": "4:55:00",
-         "departure_time": "4:55:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969847,
-         "arrival_time": "4:55:00",
-         "departure_time": "4:55:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225255,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969848,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225256,
-         "arrival_time": "5:24:00",
-         "departure_time": "5:24:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969849,
-         "arrival_time": "5:24:00",
-         "departure_time": "5:24:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225257,
-         "arrival_time": "5:34:00",
-         "departure_time": "5:34:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969850,
-         "arrival_time": "5:34:00",
-         "departure_time": "5:34:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34225258,
-         "arrival_time": "5:44:00",
-         "departure_time": "5:44:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
-      {
-         "trip_id": 34969851,
-         "arrival_time": "5:44:00",
-         "departure_time": "5:44:00",
-         "stop_sequence": 3,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SUN"
-      },
       {
          "trip_id": 34225638,
          "arrival_time": "5:54:00",
