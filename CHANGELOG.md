@@ -4,10 +4,11 @@ v0.9
 - clean up styles on responsive and mobile dimensions
 - refactor production code
 - test production
+- prototype to cache image offline
 
 v0.8
 - display schedule data
-- prototype to display all data while offline
+- displaying all data except for the image offline, need to fix
 
 v0.75
 - refactored GTFS data, generated train stop times
