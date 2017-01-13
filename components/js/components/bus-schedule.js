@@ -29,7 +29,7 @@
     var toTime;
 
     // holds the values of filtered data
-    var seen = {};
+    var seen;
 /* ===================================
 
     View
@@ -159,45 +159,51 @@
       // handles second click on load schedules
         var clicks = $(this).data('clicks');
         if (clicks) {
-           // odd clicks
+        // even clicks
+        // removes current selection data
+          sContainer.find('span').remove().end();
+          sContainer.addClass('hidden');
+          seen = null;
+        
         } else {
-           // even clicks
+          // odd clicks
+          // handles fetching of stop from data
+          sContainer.find('span').remove().end();
+          // sets the values of each stop value
+          rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
+          rFromText = routeFrom.children("option").filter(":selected").text();
+          
+          // creates the object for fetching the appropriate JSON data
+          routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
+        
+        // handles fetching stop to data
+          // sets the values of each stop value
+          rToVal = routeTo.children("option").filter(":selected").attr("alt");
+          rToText = routeTo.children("option").filter(":selected").text();
+
+          // creates the object for fetching the appropriate JSON data
+          routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
+
+          // handles data render filtering
+
+          seen = {};
+          $('.sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (seen[txt])
+                  $(this).remove();
+              else
+                  seen[txt] = true;
+          });
+
+          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
+          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+          sContainer.removeClass('hidden');
+
         }
         $(this).data("clicks", !clicks);
-      // handles fetching of stop from data
-        // removes current selection data
-        sContainer.find('span').remove().end();
-
-        // sets the values of each stop value
-        rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
-        rFromText = routeFrom.children("option").filter(":selected").text();
-        
-        // creates the object for fetching the appropriate JSON data
-        routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
       
-      // handles fetching stop to data
-        // sets the values of each stop value
-        rToVal = routeTo.children("option").filter(":selected").attr("alt");
-        rToText = routeTo.children("option").filter(":selected").text();
-
-        // creates the object for fetching the appropriate JSON data
-        routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
-
-        // handles data render filtering
-
-        
-        $('.sTimeContainer > span.sTime').each(function() {
-            var txt = $(this).text();
-            if (seen[txt])
-                $(this).remove();
-            else
-                seen[txt] = true;
-        });
-        $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
-        $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
-        $("#sToContainer .sTimeContainer > span:gt(30)").remove();
-        $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
-        sContainer.removeClass('hidden');
       });
       
       // sets option disabler
@@ -213,8 +219,8 @@
       $.each(JSON[rValue], function (key, value) {
           console.log(value.arrival_time);
           console.log(rText);
-          timeContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
           stationContainer.append($("<span></span>").attr("class", "sStation bus-schedule").text(rText));
+          timeContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
       });
           
     };
