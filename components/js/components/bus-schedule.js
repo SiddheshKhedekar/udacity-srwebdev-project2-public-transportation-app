@@ -205,7 +205,25 @@
       
       // sets option disabler
       this.optionDisable = new disableOptions(routeFrom, routeTo);
-      
+
+      // handles button state when from option state
+      routeTo.change(function(){
+
+        // sets the value of the date inputs
+        var rToValue = routeTo.children("option").filter(":selected").attr("alt");
+        
+        switch(rToValue) {
+
+          case "none":
+            sButton.attr('disabled');
+            sbutton.addClass('disabled');
+            break;
+
+          default:
+            sButton.removeAttr('disabled');
+            sbutton.removeClass('disabled');
+        };
+      });
     };
 
     // creates constructor for fetching route times
