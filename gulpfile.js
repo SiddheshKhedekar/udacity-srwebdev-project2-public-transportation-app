@@ -33,6 +33,7 @@ gulp.task('public', [
 	'copy-html-components',
 	'copy-images',
 	'copy-sw',
+	'copy-jsSW',
 	'copy-json'
 ]
 );
@@ -46,6 +47,13 @@ gulp.task('scripts', function() {
     }))
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./public/components/js/'));
+});
+
+
+// copies over js SW files
+gulp.task('copy-jsSW', function() {
+	gulp.src('./components/js/sw/*.js')
+		.pipe(gulp.dest('./public/components/js/sw'));
 });
 
 // copies over json files

@@ -22,6 +22,7 @@ self.addEventListener('install', function(event) {
         '/components/my-view2.html',
         '/components/my-view404.html',
         '/components/my-view404.html',
+        '/components/js/sw/sw-handle.js'
         '/components/json/stopts_sat.json',
         '/components/json/stopts_sun.json'
       ]);
