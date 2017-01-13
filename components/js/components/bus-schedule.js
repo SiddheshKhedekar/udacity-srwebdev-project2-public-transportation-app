@@ -30,6 +30,7 @@
 
     // holds the values of filtered data
     var seen;
+
 /* ===================================
 
     View
@@ -130,27 +131,20 @@
       // creates if handlers for route display
       if (dirValue === "NB") {
         this.nbHandle = new handleDisplay(nb, sb, false);
+        this.nbButton = new handleDisplay(sButton, sContainer, false);
         this.nbFetch = new fetchTimes(nbFrom, nbTo);
+
       }
       else if (dirValue === "SB") {
+        this.sbButton = new handleDisplay(sButton, sContainer, false);
         this.sbHandle = new handleDisplay(sb, nb, false);
         this.sbFetch = new fetchTimes(sbFrom, sbTo);
       }
       else {
-        this.sbHandle = new handleDisplay(sb, nb, true);
+        this.routesHandle = new handleDisplay(sb, nb, true);
+        this.sButtonHandle = new handleDisplay(sButton, sContainer, true);
       }
     });
-
-    // creates the constructor for setting element display
-    function handleDisplay(showEl, hideEl, hideBoth){
-        if (hideBoth === true) {
-          showEl.addClass('hidden');
-          hideEl.addClass('hidden');
-        } else {
-          showEl.removeClass('hidden');
-          hideEl.addClass('hidden');
-        }
-    }; 
 
     // creates the constructor for fetching route times
     function fetchTimes(routeFrom, routeTo){
@@ -212,8 +206,6 @@
       // sets option disabler
       this.optionDisable = new disableOptions(routeFrom, routeTo);
       
-      // hides button and schedule when either stop input changes
-
     };
 
     // creates constructor for fetching route times
@@ -228,6 +220,17 @@
           
     };
 
+    // creates the constructor for setting element display
+    function handleDisplay(showEl, hideEl, hideBoth){
+        if (hideBoth === true) {
+          showEl.addClass('hidden');
+          hideEl.addClass('hidden');
+        } else {
+          showEl.removeClass('hidden');
+          hideEl.addClass('hidden');
+        }
+    }; 
+    
     // disable options fiddle =  http://jsfiddle.net/q7He9/2/
     // creates constructor for disabled options
     function disableOptions(from, to){
