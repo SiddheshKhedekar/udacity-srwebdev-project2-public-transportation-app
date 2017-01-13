@@ -181,6 +181,7 @@
           var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
           // handles data render filtering
+          // will need to refactor this 
           checkFromValues = {}
           $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
               var txt = $(this).text();
@@ -265,9 +266,7 @@
 
     // handle schedule and button states
     function handleScheduleButton(state){
-      
         switch(state) {
-
           case "disabled and hidden":
             sButton.prop('disabled', true);
             sButton.addClass('disabled');

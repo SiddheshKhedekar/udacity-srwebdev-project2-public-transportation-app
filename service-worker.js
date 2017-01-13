@@ -7,24 +7,23 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v6.3';
+var staticCacheName = 'pta-static-v7';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
         '/',
-        /*'/index.html',
+        '/index.html',
         '/service-worker.js',
         '/components/my-app.html',
         '/components/my-icons.html',
         '/components/my-view1.html',
         '/components/my-view2.html',
         '/components/my-view404.html',
-        '/components/shared-styles.html',
-        '/components/js/app.js',
-        '/components/js/sw/sw-handle.js',
-        '/components/js/components/my-app.js' */
+        '/components/my-view404.html',
+        '/components/json/stopts_sat.json',
+        '/components/json/stopts_sun.json'
       ]);
     })
   );
@@ -46,7 +45,7 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-/*self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event) {
   
  // TODO: respond to requests for the root page with
   // the page skeleton from the cache
@@ -70,4 +69,4 @@ self.addEventListener('activate', function(event) {
       return response || fetch(event.request);
     })
   );
-});*/
+});
