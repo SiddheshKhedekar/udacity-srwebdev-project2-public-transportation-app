@@ -134,7 +134,8 @@
         sbHandle = new handleDisplay(sb, nb, true);
       }
     });
-
+    var testAlt = nbFrom.children("option").filter(":selected").attr("alt");
+    console.log(testAlt);
     // creates the constructor for setting element display
     function handleDisplay(showEl, hideEl, hideBoth){
         if (hideBoth === true) {
@@ -197,16 +198,16 @@
     
 
     // disable options fiddle =  http://jsfiddle.net/q7He9/2/
-    $('select[name=from]').on('change', function(){
+    nbFrom.on('change', function(){
         var self = this;
-        $('select[name=to]').find('option').prop('disabled', function(){
+        nbTo.find('option').prop('disabled', function(){
             return this.value && this.value < self.value && self.value
         });
     });
 
-    $('select[name=to]').on('change', function(){
+    nbTo.on('change', function(){
         var self = this;
-        $('select[name=from]').find('option').prop('disabled', function(){
+        nbFrom.find('option').prop('disabled', function(){
             return this.value && this.value > self.value && self.value
         });
     });
