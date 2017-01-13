@@ -171,8 +171,27 @@
 
         // creates the object for fetching the appropriate JSON data
         routeToFetch = new routeTimes(stop_times, rToVal, rToText, sTo);
+
+        // handles data render filtering
         $("#sFromContainer > span:gt(5)").remove();
         $("#sToContainer > span:gt(5)").remove();
+
+        var seen = {};
+        $('#sFromContainer > span').each(function() {
+            var txt = $(this).text();
+            if (seen[txt])
+                $(this).remove();
+            else
+                seen[txt] = true;
+        });
+        $('#sToContainer > span').each(function() {
+            var txt = $(this).text();
+            if (seen[txt])
+                $(this).remove();
+            else
+                seen[txt] = true;
+        });
+
         sContainer.removeClass('hidden');
       });
       
