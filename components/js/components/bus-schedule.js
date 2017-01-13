@@ -140,7 +140,7 @@
       else if (dirValue === "SB") {
         this.sbButton = new handleDisplay(sButton, sContainer, false);
         this.sbHandle = new handleDisplay(sb, nb, false);
-        this.sbFetch = new fetchTimes(sbFrom, sbTo);
+        sbFetch = new fetchTimes(sbFrom, sbTo);
       }
       else {
         this.routesHandle = new handleDisplay(sb, nb, true);
@@ -273,6 +273,7 @@
             sButton.addClass('disabled');
             sButton.addClass('disabled');
             sContainer.addClass('hidden');
+            sButton.html('Load Schedules');
             sContainer.find('span').remove().end();
             break;
           case "hidden":
