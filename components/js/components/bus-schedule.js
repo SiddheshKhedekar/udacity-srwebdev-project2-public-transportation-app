@@ -83,7 +83,8 @@
         dir.removeClass('hidden');
 
         //fetches JSON
-        $.getJSON("./components/json/stops_week.json", function(data){
+        // scrapped weeks json due to faulty formatting, will fix when time permits
+        $.getJSON("./components/json/stops_sat.json", function(data){
               stop_times = data;
               console.log(stop_times);
         });
