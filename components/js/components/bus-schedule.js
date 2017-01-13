@@ -216,7 +216,7 @@
 
           case "none":
             sButton.attr('disabled');
-            sbutton.addClass('disabled');
+            sButton.addClass('disabled');
             break;
 
           default:
