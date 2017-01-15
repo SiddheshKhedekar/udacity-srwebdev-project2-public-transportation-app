@@ -160,18 +160,13 @@
           // odd clicks
           // handles fetching of stop from data
           this.clearSchedule = new handleScheduleButton("clear");
-          // sets the values of each stop value
-          var rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
-          var rFromText = routeFrom.children("option").filter(":selected").text();
           
+          // sets the values of each stop value
+          var routeData =  new fetchTimeData(routeTo, routeFrom);
+
           // creates the object for fetching the appropriate JSON data
           var routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
         
-        // handles fetching stop to data
-          // sets the values of each stop value
-          var rToVal = routeTo.children("option").filter(":selected").attr("alt");
-          var rToText = routeTo.children("option").filter(":selected").text();
-
           // creates the object for fetching the appropriate JSON data
           var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
 
@@ -221,6 +216,16 @@
             this.enableBttn = new handleScheduleButton("show button");
         };
       });
+    };
+    
+    // sets the correct data to fetch from JSON
+    function fetchTimeData(routeTo, routeFrom){
+      // sets from data
+      rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
+      rFromText = routeFrom.children("option").filter(":selected").text();
+      // sets to data 
+      rToVal = routeTo.children("option").filter(":selected").attr("alt");
+      rToText = routeTo.children("option").filter(":selected").text();
     };
 
     // creates constructor for fetching route times
