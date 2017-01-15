@@ -50,6 +50,8 @@
     var nb = $('#nb');
     var sb = $('#sb');
     var sDisplay = $('#sDisplay');
+    var sFromContainer = $('#sFromContainer');
+    var sToContainer = $('#sToContainer');
     var sFromTime = $('#sFromContainer .sTimeContainer');
     var sFromStation = $('#sFromContainer .sStationContainer');
     var sToTime = $('#sToContainer .sTimeContainer');
@@ -169,30 +171,8 @@
         
           // creates the object for fetching the appropriate JSON data
           var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
-
-          // handles data render filtering
-          // will need to refactor this 
-          checkFromValues = {}
-          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (checkFromValues[txt])
-                  $(this).remove();
-              else
-                  checkFromValues[txt] = true;
-          });
-          checkToValues = {}
-          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (checkToValues[txt])
-                  $(this).remove();
-              else
-                  checkToValues[txt] = true;
-          });
-
-          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
-          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+          
+          var fetchData = new fetchDataFilter(checkFromValues, checkToValues);
           this.showClearButton = new handleScheduleButton();
       
       });
@@ -217,7 +197,34 @@
         };
       });
     };
-    
+
+    // sets data filters for each JSON fetch
+    function fetchDataFilter (routeToDataHandler, routeFromDataHandler){
+          // handles data render filtering
+          // will need to refactor this 
+          routeToDataHandler = {}
+          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeToDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeToDataHandler[txt] = true;
+          });
+          routeFromDataHandler = {}
+          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeFromDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeFromDataHandler[txt] = true;
+          });
+
+          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
+          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+    };
+
     // sets the correct data to fetch from JSON
     function fetchTimeData(routeTo, routeFrom){
       // sets from data
