@@ -133,17 +133,20 @@
       if (dirValue === "NB") {
         this.nbHandle = new handleDisplay(nb, sb, false);
         this.nbButton = new handleDisplay(sButton, sContainer, false);
-        this.nbFetch = fetchTimes(nbFrom, nbTo);
+        this.nbFetch = new fetchTimes(nbFrom, nbTo);
+        this.showClearButton = new handleScheduleButton("clear and hide");
 
       }
       else if (dirValue === "SB") {
         this.sbHandle = new handleDisplay(sb, nb, false);
         this.sbButton = new handleDisplay(sButton, sContainer, false);
-        this.sbFetch = fetchTimes(sbFrom, sbTo);
+        this.sbFetch = new fetchTimes(sbFrom, sbTo);
+        this.showClearButton = new handleScheduleButton("clear and hide");
       }
       else {
         this.routesHandle = new handleDisplay(sb, nb, true);
         this.sButtonHandle = new handleDisplay(sButton, sContainer, true);
+        this.showClearButton = new handleScheduleButton("clear and hide");
       }
     });
 
@@ -295,7 +298,7 @@
             sContainer.find('span').remove().end();
             break;
           default:
-            sButton.html('Clear Schedules');
+            sButton.html('Refresh Schedules');
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
             sContainer.removeClass('hidden');
