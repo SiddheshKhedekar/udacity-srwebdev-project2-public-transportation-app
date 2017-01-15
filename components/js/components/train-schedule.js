@@ -90,7 +90,8 @@
               stop_times = data;
               console.log(stop_times);
         });
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
           break;
 
         case "SAT":
@@ -102,7 +103,8 @@
               stop_times = data;
               console.log(stop_times);
         });    
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
           break;
 
         case "SUN":
@@ -114,7 +116,8 @@
               stop_times = data;
               console.log(stop_times);
         });
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
             break;
 
         default:
