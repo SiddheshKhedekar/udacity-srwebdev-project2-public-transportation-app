@@ -204,8 +204,8 @@
       $.each(JSON[rValue], function (key, value) {
           console.log(value.arrival_time);
           console.log(rText);
-          stationContainer.append($("<span></span>").attr("class", "sStation bus-schedule").text(rText));
-          timeContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
+          stationContainer.append($("<span></span>").attr("class", "sStation train-schedule").text(rText));
+          timeContainer.append($("<span></span>").attr("class", "sTime train-schedule").text(value.arrival_time));
       });
           
     };
