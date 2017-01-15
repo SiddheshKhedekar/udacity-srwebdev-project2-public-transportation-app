@@ -83,9 +83,8 @@
         
         dir.removeClass('hidden');
 
-        //fetches JSON
-        // scrapped weeks json due to faulty formatting, will fix when time permits
-        $.getJSON("./components/json/stops_sat.json", function(data){
+        // fetches JSON
+        $.getJSON("./components/json/stops_week.json", function(data){
               stop_times = data;
               console.log(stop_times);
         });
@@ -154,14 +153,7 @@
       // creates the handler for when the schedule button is clicked
       sButton.click(function(){
       
-      // handles second click on load schedules
-        var clicks = $(this).data('clicks');
-        if (clicks) {
-        // even clicks
-        // removes current selection data
-        this.loadSchedule = new handleScheduleButton("clear and hide");
-          
-        } else {
+
           // odd clicks
           // handles fetching of stop from data
           this.clearSchedule = new handleScheduleButton("clear");
@@ -204,8 +196,6 @@
           $("#sToContainer .sTimeContainer > span:gt(30)").remove();
           $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
           this.showClearButton = new handleScheduleButton();
-        }
-        $(this).data("clicks", !clicks);
       
       });
       
