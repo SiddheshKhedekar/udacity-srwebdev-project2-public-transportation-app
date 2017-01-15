@@ -198,43 +198,6 @@
       });
     };
 
-    // sets data filters for each JSON fetch
-    function fetchDataFilter (routeToDataHandler, routeFromDataHandler){
-          // handles data render filtering
-          // will need to refactor this 
-          routeToDataHandler = {}
-          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (routeToDataHandler[txt])
-                  $(this).remove();
-              else
-                  routeToDataHandler[txt] = true;
-          });
-          routeFromDataHandler = {}
-          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (routeFromDataHandler[txt])
-                  $(this).remove();
-              else
-                  routeFromDataHandler[txt] = true;
-          });
-
-          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
-          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
-    };
-
-    // sets the correct data to fetch from JSON
-    function fetchTimeData(routeTo, routeFrom){
-      // sets from data
-      rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
-      rFromText = routeFrom.children("option").filter(":selected").text();
-      // sets to data 
-      rToVal = routeTo.children("option").filter(":selected").attr("alt");
-      rToText = routeTo.children("option").filter(":selected").text();
-    };
-
     // creates constructor for fetching route times
     function routeTimes(JSON, rValue, rText, timeContainer, stationContainer){
 
@@ -315,4 +278,41 @@
             sButton.removeClass('disabled');
             sContainer.removeClass('hidden');
         };
+    };
+
+    // sets data filters for each JSON fetch
+    function fetchDataFilter (routeToDataHandler, routeFromDataHandler){
+          // handles data render filtering
+          // will need to refactor this 
+          routeToDataHandler = {}
+          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeToDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeToDataHandler[txt] = true;
+          });
+          routeFromDataHandler = {}
+          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeFromDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeFromDataHandler[txt] = true;
+          });
+
+          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
+          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+    };
+
+    // sets the correct data to fetch from JSON
+    function fetchTimeData(routeTo, routeFrom){
+      // sets from data
+      rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
+      rFromText = routeFrom.children("option").filter(":selected").text();
+      // sets to data 
+      rToVal = routeTo.children("option").filter(":selected").attr("alt");
+      rToText = routeTo.children("option").filter(":selected").text();
     };
