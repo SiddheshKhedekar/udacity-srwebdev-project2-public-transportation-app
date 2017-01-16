@@ -19,12 +19,14 @@ self.addEventListener('install', function(event) {
         '/components/my-app.html',
         '/components/my-icons.html',
         '/components/my-view1.html',
-        '/components/my-view2.html',
+        '/components/my-view3.html',
         '/components/my-view404.html',
         '/components/my-view404.html',
         '/components/js/sw/sw-handle.js',
         '/components/json/stops_sat.json',
-        '/components/json/stops_sun.json'
+        '/components/json/stops_sun.json',
+        'components/img/c-train.jpg',
+        'components/img/c-train-schedule.jpg'
       ]);
     })
   );
