@@ -82,7 +82,6 @@ gulp.task('copy-html', function() {
 // copies SW over from root to the public folder. 
 gulp.task('copy-sw', function() {
 	gulp.src('service-worker.js')
-	    .pipe(uglify())
 		.pipe(gulp.dest('./public'));
 });
 
@@ -102,8 +101,8 @@ gulp.task('copy-html-components', function() {
 
 // copies images over to the public folder
 gulp.task('copy-images', function() {
-	gulp.src('img/*')
-		.pipe(gulp.dest('public/components/img/*'));
+	gulp.src('img/*.jpg')
+		.pipe(gulp.dest('public/components/img'));
 });
 
 // copies css over to the public folder, after converting from scss
