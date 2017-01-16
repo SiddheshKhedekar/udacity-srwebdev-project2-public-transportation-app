@@ -104,6 +104,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-style: italic;
           margin: 5px 0px;
       }
+      .trainRoutes select {
+          float: none;
+          margin: 5px auto;
+      }
     </style>
 
     <section class="schedules-container">
@@ -124,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <option value="SB">SB</option>
         </select>
       </div>
-      <div class="hidden" id="nb">
+      <div class="hidden trainRoutes" id="nb">
         <select id="northBoundFrom">
           <option value="100" alt="none">Select your Starting Point</option>
           <option value="101" alt="9390">Somerset - Bridelwood</option>
@@ -181,7 +185,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </select>
         
       </div>
-      <div class="hidden" id="sb">
+      <div class="hidden trainRoutes" id="sb">
         <select id="southBoundFrom">
           <option value="100" alt="none">Select your Starting Point</option>
           <option value="101" alt="3641">Tuscany</option>
