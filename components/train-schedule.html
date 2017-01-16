@@ -10,13 +10,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="shared-styles.html">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<dom-module id="bus-schedule">
+<dom-module id="train-schedule">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
         padding: 0px;
         text-align: center;
+        width: 70%;
+        margin: auto;
       }
       h3 {
         margin: 0;
@@ -74,6 +76,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 15%;
           color: #fff;
           background-color: #02823b;
+          z-index: 5;
       }
       .sTimeContainer {
           width: 50%;
@@ -88,10 +91,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           color: #fff;
           background-color: #3f51b5;
       }
+      select {
+          width: 50%;
+          padding: 10px 15px;
+          margin: 5px 0px;
+          font-size: 14px;
+          border-radius: 3px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      p {
+          font-style: italic;
+          margin: 5px 0px;
+      }
+      .trainRoutes select {
+          float: none;
+          margin: 5px auto;
+      }
+
+      /* Responsive Custom Styles */
+      @media screen and (max-width: 750px) {
+      :host {
+        width: 100%;
+      }
+      select {
+          width: 100% !important;
+      }
+      #disSchedules {
+          width: 100% !important;
+      }
+      #sDisplay {
+          width: 100% !important;
+      }
+      h4.sFrom, h4.sTo {
+          display: none;
+      }
+
+      #sHeaders h4 {
+          width: 50% !important;
+      }
+      .sStationContainer {
+          display: none;
+      }
+      .sTimeContainer {
+          width: 100% !important;
+          float: left !important;
+      }
+      }
+      @media screen and (min-width: 751px) and (max-width: 1800px) {
+      :host {
+        width: 80%;
+      }
+      select {
+          width: 100% !important;
+      }
+      #disSchedules {
+          width: 100% !important;
+      }
+      #sDisplay {
+          width: 100% !important;
+      }}
     </style>
 
     <section class="schedules-container">
       <h3>View train Schedules</h3>
+      <p>Click on the options below to get started.</p>
       <div id="tripDate">
         <select id="dates">
             <option value="none">When are you traveling?</option>
@@ -107,7 +172,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <option value="SB">SB</option>
         </select>
       </div>
-      <div class="hidden" id="nb">
+      <div class="hidden trainRoutes" id="nb">
         <select id="northBoundFrom">
           <option value="100" alt="none">Select your Starting Point</option>
           <option value="101" alt="9390">Somerset - Bridelwood</option>
@@ -164,7 +229,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </select>
         
       </div>
-      <div class="hidden" id="sb">
+      <div class="hidden trainRoutes" id="sb">
         <select id="southBoundFrom">
           <option value="100" alt="none">Select your Starting Point</option>
           <option value="101" alt="3641">Tuscany</option>
@@ -250,12 +315,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </div>
       </div>
     </section>
- <script src="js/components/bus-schedule.js"></script>
+ <script src="js/components/train-schedule.js"></script>
   </template>
 
   <script>
     Polymer({
-      is: 'bus-schedule'
+      is: 'train-schedule'
     });
   </script>
 </dom-module>

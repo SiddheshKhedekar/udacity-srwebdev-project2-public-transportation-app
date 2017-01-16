@@ -50,6 +50,8 @@
     var nb = $('#nb');
     var sb = $('#sb');
     var sDisplay = $('#sDisplay');
+    var sFromContainer = $('#sFromContainer');
+    var sToContainer = $('#sToContainer');
     var sFromTime = $('#sFromContainer .sTimeContainer');
     var sFromStation = $('#sFromContainer .sStationContainer');
     var sToTime = $('#sToContainer .sTimeContainer');
@@ -83,13 +85,13 @@
         
         dir.removeClass('hidden');
 
-        //fetches JSON
-        // scrapped weeks json due to faulty formatting, will fix when time permits
-        $.getJSON("./components/json/stops_sat.json", function(data){
+        // fetches JSON
+        $.getJSON("./components/json/stops_week.json", function(data){
               stop_times = data;
               console.log(stop_times);
         });
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
           break;
 
         case "SAT":
@@ -101,7 +103,8 @@
               stop_times = data;
               console.log(stop_times);
         });    
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
           break;
 
         case "SUN":
@@ -113,7 +116,8 @@
               stop_times = data;
               console.log(stop_times);
         });
-
+        this.hideSchedule = new handleDisplay(sButton, sContainer, false);
+        this.disableButton = new handleScheduleButton("disable");
             break;
 
         default:
@@ -134,17 +138,20 @@
       if (dirValue === "NB") {
         this.nbHandle = new handleDisplay(nb, sb, false);
         this.nbButton = new handleDisplay(sButton, sContainer, false);
-        this.nbFetch = fetchTimes(nbFrom, nbTo);
+        this.nbFetch = new fetchTimes(nbFrom, nbTo);
+        this.showClearButton = new handleScheduleButton("clear and hide");
 
       }
       else if (dirValue === "SB") {
         this.sbHandle = new handleDisplay(sb, nb, false);
         this.sbButton = new handleDisplay(sButton, sContainer, false);
-        this.sbFetch = fetchTimes(sbFrom, sbTo);
+        this.sbFetch = new fetchTimes(sbFrom, sbTo);
+        this.showClearButton = new handleScheduleButton("clear and hide");
       }
       else {
         this.routesHandle = new handleDisplay(sb, nb, true);
         this.sButtonHandle = new handleDisplay(sButton, sContainer, true);
+        this.showClearButton = new handleScheduleButton("clear and hide");
       }
     });
 
@@ -154,58 +161,22 @@
       // creates the handler for when the schedule button is clicked
       sButton.click(function(){
       
-      // handles second click on load schedules
-        var clicks = $(this).data('clicks');
-        if (clicks) {
-        // even clicks
-        // removes current selection data
-        this.loadSchedule = new handleScheduleButton("clear and hide");
-          
-        } else {
+
           // odd clicks
           // handles fetching of stop from data
           this.clearSchedule = new handleScheduleButton("clear");
-          // sets the values of each stop value
-          var rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
-          var rFromText = routeFrom.children("option").filter(":selected").text();
           
+          // sets the values of each stop value
+          var routeData =  new fetchTimeData(routeTo, routeFrom);
+
           // creates the object for fetching the appropriate JSON data
           var routeFromFetch = new routeTimes(stop_times, rFromVal, rFromText, sFromTime, sFromStation);
         
-        // handles fetching stop to data
-          // sets the values of each stop value
-          var rToVal = routeTo.children("option").filter(":selected").attr("alt");
-          var rToText = routeTo.children("option").filter(":selected").text();
-
           // creates the object for fetching the appropriate JSON data
           var routeToFetch = new routeTimes(stop_times, rToVal, rToText, sToTime, sToStation);
-
-          // handles data render filtering
-          // will need to refactor this 
-          checkFromValues = {}
-          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (checkFromValues[txt])
-                  $(this).remove();
-              else
-                  checkFromValues[txt] = true;
-          });
-          checkToValues = {}
-          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
-              var txt = $(this).text();
-              if (checkToValues[txt])
-                  $(this).remove();
-              else
-                  checkToValues[txt] = true;
-          });
-
-          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
-          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
-          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+          
+          var fetchData = new fetchDataFilter(checkFromValues, checkToValues);
           this.showClearButton = new handleScheduleButton();
-        }
-        $(this).data("clicks", !clicks);
       
       });
       
@@ -236,8 +207,8 @@
       $.each(JSON[rValue], function (key, value) {
           console.log(value.arrival_time);
           console.log(rText);
-          stationContainer.append($("<span></span>").attr("class", "sStation bus-schedule").text(rText));
-          timeContainer.append($("<span></span>").attr("class", "sTime bus-schedule").text(value.arrival_time));
+          stationContainer.append($("<span></span>").attr("class", "sStation train-schedule").text(rText));
+          timeContainer.append($("<span></span>").attr("class", "sTime train-schedule").text(value.arrival_time));
       });
           
     };
@@ -305,9 +276,46 @@
             sContainer.find('span').remove().end();
             break;
           default:
-            sButton.html('Clear Schedules');
+            sButton.html('Refresh Schedules');
             sButton.removeAttr('disabled');
             sButton.removeClass('disabled');
             sContainer.removeClass('hidden');
         };
+    };
+
+    // sets data filters for each JSON fetch
+    function fetchDataFilter (routeToDataHandler, routeFromDataHandler){
+          // handles data render filtering
+          // will need to refactor this 
+          routeToDataHandler = {}
+          $('#sFromContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeToDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeToDataHandler[txt] = true;
+          });
+          routeFromDataHandler = {}
+          $('#sToContainer .sTimeContainer > span.sTime').each(function() {
+              var txt = $(this).text();
+              if (routeFromDataHandler[txt])
+                  $(this).remove();
+              else
+                  routeFromDataHandler[txt] = true;
+          });
+
+          $("#sFromContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sFromContainer .sStationContainer > span:gt(30)").remove(); 
+          $("#sToContainer .sTimeContainer > span:gt(30)").remove();
+          $("#sToContainer .sStationContainer > span:gt(30)").remove(); 
+    };
+
+    // sets the correct data to fetch from JSON
+    function fetchTimeData(routeTo, routeFrom){
+      // sets from data
+      rFromVal = routeFrom.children("option").filter(":selected").attr("alt");
+      rFromText = routeFrom.children("option").filter(":selected").text();
+      // sets to data 
+      rToVal = routeTo.children("option").filter(":selected").attr("alt");
+      rToText = routeTo.children("option").filter(":selected").text();
     };

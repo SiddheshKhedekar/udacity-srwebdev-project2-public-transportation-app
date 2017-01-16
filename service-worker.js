@@ -7,7 +7,7 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v7.1';
+var staticCacheName = 'pta-static-v7.4';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -19,12 +19,14 @@ self.addEventListener('install', function(event) {
         '/components/my-app.html',
         '/components/my-icons.html',
         '/components/my-view1.html',
-        '/components/my-view2.html',
+        '/components/my-view3.html',
         '/components/my-view404.html',
         '/components/my-view404.html',
         '/components/js/sw/sw-handle.js',
         '/components/json/stops_sat.json',
-        '/components/json/stops_sun.json'
+        '/components/json/stops_sun.json',
+        'components/img/c-train.jpg',
+        'components/img/c-train-schedule.jpg'
       ]);
     })
   );
@@ -70,4 +72,11 @@ self.addEventListener('fetch', function(event) {
       return response || fetch(event.request);
     })
   );
+});
+
+// skips waiting to update SW
+self.addEventListener('message', function(event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });

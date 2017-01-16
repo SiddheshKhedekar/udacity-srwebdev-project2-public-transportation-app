@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="shared-styles.html">
-<link rel="import" href="bus-schedule.html">
+<link rel="import" href="train-schedule.html">
 
 <dom-module id="my-view1">
   <template>
@@ -19,12 +19,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 10px;
         text-align: center;
       }
+      img{
+        width: 70%;
+        display: block;
+        float: none;
+        margin: auto;
+        padding: 20px 0px 60px;
+      }
+      /* Responsive Custom Styles */
+      @media screen and (max-width: 750px) {
+        h2 {display: none;}
+      main{
+          margin: 0 !important;
+      }
+      img {
+          width: 100% !important;
+      }}
+      @media screen and (min-width: 751px) and (max-width: 1800px) {
+        #appStateMenu {
+            display: none;
+        }
+      img {
+          width: 80% !important;
+      }
+      h2 {
+        margin: 5px;
+      }
+    }
+
     </style>
 
     <main class="card">
       <h2>Welcome to the Calgary Transit Public Transportation Application</h2>
-      <p>Click on the menu icon on the top left to navigate to the bus schedules and train routes.</p>
-      <bus-schedule></bus-schedule>
+      <train-schedule></train-schedule>
       <img id="cTrainImg" src="img/c-train.jpg" alt="">
     </main>
     
