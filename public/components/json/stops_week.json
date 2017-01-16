@@ -1,78 +1,6 @@
 {
    "3640": [
       {
-         "trip_id": 34224823,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969418,
-         "arrival_time": "4:56:00",
-         "departure_time": "4:56:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224824,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:25:00",
-         "departure_time": "5:25:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:35:00",
-         "departure_time": "5:35:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:35:00",
-         "departure_time": "5:35:00",
-         "stop_sequence": 19,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224712,
          "arrival_time": "5:46:00",
          "departure_time": "5:46:00",
@@ -4180,60 +4108,6 @@
       }
    ],
    "3816": [
-      {
-         "trip_id": 34224823,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969418,
-         "arrival_time": "4:53:00",
-         "departure_time": "4:53:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224824,
-         "arrival_time": "5:12:00",
-         "departure_time": "5:12:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:12:00",
-         "departure_time": "5:12:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:22:00",
-         "departure_time": "5:22:00",
-         "stop_sequence": 18,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224826,
          "arrival_time": "5:32:00",
@@ -10451,60 +10325,6 @@
    ],
    "4155": [
       {
-         "trip_id": 34224823,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969418,
-         "arrival_time": "4:49:00",
-         "departure_time": "4:49:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224824,
-         "arrival_time": "5:08:00",
-         "departure_time": "5:08:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:08:00",
-         "departure_time": "5:08:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:18:00",
-         "departure_time": "5:18:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:18:00",
-         "departure_time": "5:18:00",
-         "stop_sequence": 17,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224826,
          "arrival_time": "5:28:00",
          "departure_time": "5:28:00",
@@ -12540,60 +12360,6 @@
       }
    ],
    "4934": [
-      {
-         "trip_id": 34224823,
-         "arrival_time": "4:46:00",
-         "departure_time": "4:46:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969418,
-         "arrival_time": "4:46:00",
-         "departure_time": "4:46:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224824,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 16,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224826,
          "arrival_time": "5:25:00",
@@ -30865,42 +30631,6 @@
    ],
    "6816": [
       {
-         "trip_id": 34224824,
-         "arrival_time": "5:03:00",
-         "departure_time": "5:03:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:03:00",
-         "departure_time": "5:03:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:13:00",
-         "departure_time": "5:13:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:13:00",
-         "departure_time": "5:13:00",
-         "stop_sequence": 15,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224826,
          "arrival_time": "5:23:00",
          "departure_time": "5:23:00",
@@ -32937,60 +32667,6 @@
    ],
    "6817": [
       {
-         "trip_id": 34224824,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969419,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:11:00",
-         "departure_time": "5:11:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:11:00",
-         "departure_time": "5:11:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:21:00",
-         "departure_time": "5:21:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:21:00",
-         "departure_time": "5:21:00",
-         "stop_sequence": 14,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224712,
          "arrival_time": "5:32:00",
          "departure_time": "5:32:00",
@@ -35008,42 +34684,6 @@
       }
    ],
    "6818": [
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:09:00",
-         "departure_time": "5:09:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:09:00",
-         "departure_time": "5:09:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:19:00",
-         "departure_time": "5:19:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:19:00",
-         "departure_time": "5:19:00",
-         "stop_sequence": 13,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224712,
          "arrival_time": "5:30:00",
@@ -37063,42 +36703,6 @@
    ],
    "6819": [
       {
-         "trip_id": 34224825,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:17:00",
-         "departure_time": "5:17:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:17:00",
-         "departure_time": "5:17:00",
-         "stop_sequence": 12,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224712,
          "arrival_time": "5:28:00",
          "departure_time": "5:28:00",
@@ -39116,42 +38720,6 @@
       }
    ],
    "6820": [
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:15:00",
-         "departure_time": "5:15:00",
-         "stop_sequence": 11,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224712,
          "arrival_time": "5:26:00",
@@ -41171,24 +40739,6 @@
    ],
    "6822": [
       {
-         "trip_id": 34224826,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:05:00",
-         "departure_time": "5:05:00",
-         "stop_sequence": 7,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224712,
          "arrival_time": "5:16:00",
          "departure_time": "5:16:00",
@@ -43206,24 +42756,6 @@
       }
    ],
    "6823": [
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:07:00",
-         "departure_time": "5:07:00",
-         "stop_sequence": 8,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224712,
          "arrival_time": "5:18:00",
@@ -45243,24 +44775,6 @@
    ],
    "6824": [
       {
-         "trip_id": 34224826,
-         "arrival_time": "5:09:00",
-         "departure_time": "5:09:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:09:00",
-         "departure_time": "5:09:00",
-         "stop_sequence": 9,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
          "trip_id": 34224712,
          "arrival_time": "5:20:00",
          "departure_time": "5:20:00",
@@ -47278,42 +46792,6 @@
       }
    ],
    "6825": [
-      {
-         "trip_id": 34224825,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969420,
-         "arrival_time": "5:01:00",
-         "departure_time": "5:01:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34224826,
-         "arrival_time": "5:11:00",
-         "departure_time": "5:11:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
-      {
-         "trip_id": 34969421,
-         "arrival_time": "5:11:00",
-         "departure_time": "5:11:00",
-         "stop_sequence": 10,
-         "pickup_type": 0,
-         "drop_off_type": 0,
-         "schedule_day": "SAT"
-      },
       {
          "trip_id": 34224712,
          "arrival_time": "5:22:00",

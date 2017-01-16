@@ -7,7 +7,7 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v7.4';
+var staticCacheName = 'pta-static-v7.5';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -20,7 +20,6 @@ self.addEventListener('install', function(event) {
         '/components/my-icons.html',
         '/components/my-view1.html',
         '/components/my-view3.html',
-        '/components/my-view404.html',
         '/components/my-view404.html',
         '/components/js/sw/sw-handle.js',
         '/components/json/stops_sat.json',

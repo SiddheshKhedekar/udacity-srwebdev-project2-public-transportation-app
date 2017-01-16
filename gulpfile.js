@@ -82,9 +82,6 @@ gulp.task('copy-html', function() {
 // copies SW over from root to the public folder. 
 gulp.task('copy-sw', function() {
 	gulp.src('service-worker.js')
-	    .pipe(babel({
-	            presets: ['es2015']
-	    }))
 	    .pipe(uglify())
 		.pipe(gulp.dest('./public'));
 });

@@ -5,7 +5,7 @@
 ======================================*/
 // when this is enabled, browserSync does not work
 
-// does not register service worker if unsupported
+//does not register service worker if unsupported
 if (!navigator.serviceWorker) {
 
  } 
