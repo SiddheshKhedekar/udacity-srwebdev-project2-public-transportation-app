@@ -7,7 +7,7 @@
 // the following was imported from own code from notes of the Offline Web Applications course
 
 // sets the cache name
-var staticCacheName = 'pta-static-v7.1';
+var staticCacheName = 'pta-static-v7.2';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -72,4 +72,11 @@ self.addEventListener('fetch', function(event) {
       return response || fetch(event.request);
     })
   );
+});
+
+// skips waiting to update SW
+self.addEventListener('message', function(event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
