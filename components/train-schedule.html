@@ -111,15 +111,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       /* Responsive Custom Styles */
       @media screen and (max-width: 750px) {
-        #appStateMenu {
-            display: none;
-        }
-        #mainTitle {
-            font-size: 18px;
-        }
-        iron-pages {
-          padding: 0;
-        }
+      :host {
+        width: 100%;
+      }
+      select {
+          width: 100% !important;
+      }
+
+      #disSchedules {
+          width: 100% !important;
+      }
       }
     </style>
 
